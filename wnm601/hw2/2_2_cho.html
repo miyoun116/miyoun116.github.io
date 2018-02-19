@@ -65,7 +65,6 @@
             .rbutton {
                 float:  right;
             }
-            
         </style>
     </head>
 
@@ -101,33 +100,36 @@
             var text = document.getElementById("mouseovertext")
             text.style.color = "red";
         }
+
         function mouseout() {
             var text = document.getElementById("mouseovertext")
             text.style.color = "black";
         }
-        
+
         var sliderIndex = 1
+
         function moveSlide(step) {
             sliderIndex += step;
             slideShow()
         }
+
         function slideShow() {
             var slides = document.getElementsByClassName("myslides");
             if (sliderIndex < 0)
                 sliderIndex = slides.length - 1;
             if (sliderIndex >= slides.length)
                 sliderIndex = 0;
-            
             for (var i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             slides[sliderIndex].style.display = "inline-block";
             console.log(sliderIndex);
         }
-        slideShow()
-        
+
         function topbutton() {
             window.scroll(window.scrollX,0);
         }
+
+        slideShow()
     </script>
 </html>
