@@ -33,31 +33,97 @@
 
             .imagebox img{
                 width: 120px;
-                border: 1px solid #B2B6B8;
             }
+            .slider {
+                text-align: center;
+            }
+            .myslides {
+                text-align: center;
+                display:none;
+                width: 400px;
+                height: 300px;
+            }
+            .button {
+                margin-top:130px;
+                width:40px;
+                transition: 0.1s ease;
+            }
+            .button:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+                transition: 0.2s ease;
+            }
+            .lbutton {
+                float: left;
+            }
+            .rbutton {
+                float:  right;
+            }
+            
         </style>
     </head>
 
-<body>
-    <h1>Three Java Script Examples</h1>
-    <h2>1. Change Text Color on Mouseover</h2>
-    <div class="imagebox">
-        <p>It could be a good indicator to change text color when mouseover on text.</p>
-        <img class="imageboximg" src="1.png" alt="Change Text Color on Mouseover">
-    </div>
-    <h2>2. Manual Slideshow</h2>
-    <div class="slider" id="main-slider">
-        <p>Image slider with Prev/next button has become an almost integral part of web designing.<br/> 
-        It is available to make a web page look more attractive and is efficient to use.</p>
-        <img src="2.png" alt="Manual Slideshow">
-    </div>
-    <div class="imagebox">
-        <h2>3. Scroll to Top Button.</h2>
-        <p>The "scroll to top" button is very useful when the user starts to scroll the page.</p>
-        <img src="3.png" alt="Scroll to Top Button">
-    </div>
+    <body>
+        <h1>Three Java Script Examples</h1>
+        <h2>1. Change Text Color on Mouseover</h2>
+        <div class="imagebox">
+            <p>It could be a good indicator to change text color when mouseover on text.</p>
+            <p id="mouseovertext" onmouseover="mouseon()" onmouseout="mouseout()"> Move mouse here!! </p>
+        </div>
+        <h2>2. Manual Slideshow</h2>
+        <div class="slider">
+            <p>Image slider with Prev/next button has become an almost integral part of web designing.<br/> 
+            It is available to make a web page look more attractive and is efficient to use.</p>
 
-</body>
+            <div class="slides" style="display:inline-block;width:500px;height:300px">
+                <img class="myslides" src="slide1.JPG" alt="Manual Slideshow">
+                <img class="myslides" src="slide2.JPG" alt="Manual Slideshow">
+                <img class="myslides" src="slide3.JPG" alt="Manual Slideshow">
+                <img class="button lbutton" onclick="moveSlide(-1)" src="left.png">
+                <img class="button rbutton" onclick="moveSlide(1)" src="right.png">
+            </div>
+        </div>
+        <div class="imagebox">
+            <h2>3. Scroll to Top Button.</h2>
+            <p>The "scroll to top" button is very useful when the user starts to scroll the page.</p>
+            <button onclick="topbutton()" id="topbutton" title="TO P">Scroll to Top</button>
+        </div>
+
+    </body>
+    <script>
+        function mouseon() {
+            var text = document.getElementById("mouseovertext")
+            text.style.color = "red";
+        }
+        function mouseout() {
+            var text = document.getElementById("mouseovertext")
+            text.style.color = "black";
+        }
+        
+        var sliderIndex = 1
+        function moveSlide(step) {
+            sliderIndex += step;
+            slideShow()
+        }
+        function slideShow() {
+            var slides = document.getElementsByClassName("myslides");
+            if (sliderIndex < 0)
+                sliderIndex = slides.length - 1;
+            if (sliderIndex >= slides.length)
+                sliderIndex = 0;
+            
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[sliderIndex].style.display = "inline-block";
+            console.log(sliderIndex);
+        }
+        slideShow()
+        
+        function topbutton() {
+            window.scroll(window.scrollX,0);
+        }
+    </script>
 
 
 
