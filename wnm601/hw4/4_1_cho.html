@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A simple number guessin game.</title>
+        <style>
+            body {
+                width: 1280px;
+                height: 800;
+                margin: auto;
+                font-family: sans-serif;
+                background-color: blanchedalmond;
+            }
+            h1 {
+                height: 80px;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 30pt;
+            }
+            h2 {
+                height: 60px;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 20pt;
+                color: darksalmon;
+            }
+            p {
+                height: 100px;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 16pt;
+                color: darkblue;
+            }
+            div {
+                width: 1280px;
+                display: inline-block;
+                text-align: center;
+            }
+            input {
+                width: 200px;
+                height: 30px;
+                margin: 15px;
+                font-size: 20pt;
+                text-align: center;
+            }
+            button {
+                width: 100px;
+                height: 30px;
+                font-family: sans-serif;
+            }          
+        </style>
+    </head>
+    
+    <body>
+        <h1>Let's play a game!</h1>
+        <h2>Guess the number from 1-100.</h2>
+        <p>I am picking a number between 1 and 100.<br> 
+           You can keep guessing until you guess the correct number.<br>
+           Try it!!</p>
+        
+        <div>
+            <input type="text" id="inputBox"> <br>
+            <button type="button" onclick="guessNumFunction();">Submit</button>
+        </div>
+        <h2 id="output"></h2>
+        <script type = "text/javascript">
+            var a = Math.floor((Math.random() * 100) + 1); 
+            
+            function setOutput(output) {
+                document.getElementById("output").innerHTML = output
+            }
+            function guessNumFunction() {
+                var i = document.getElementById("inputBox").value
+                if (isNaN(i) || i < 1 || i > 100) {
+                    setOutput("Enter a number between 1 and 100.");
+                    return
+                }
+                if (i == a) {
+                    setOutput("You win!");
+                }
+                else if (i > a) {
+                    setOutput("Number is too high, Try again");
+                }
+                else {
+                    setOutput("Number is too low, Try again");
+                }
+             }
+        </script>
+     </body>
+</html>
+
+
+
+
+
