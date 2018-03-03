@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Assignment4.1: Guess the Number (easy) -->
+<!-- This is a "guess the number" game with JavaScript logic, variables and functions. -->
+
 <html>
     <head>
         <title>A simple number guessin game.</title>
@@ -58,29 +62,29 @@
            Try it!!</p>
         
         <div>
-            <input type="text" id="inputBox"> <br>
-            <button type="button" onclick="guessNumFunction();">Submit</button>
+            <input type="text" id="inputBox"> <br>                               <!-- inputBox for the guess number  -->
+            <button type="button" onclick="guessNumFunction();">Submit</button>  <!-- button for calling the guessNumFunction() -->
         </div>
         <h2 id="output"></h2>
         <script type = "text/javascript">
-            var a = Math.floor((Math.random() * 100) + 1); 
+            var a = Math.floor((Math.random() * 100) + 1);               // Generate a random number between 1 and 100.
             
-            function setOutput(output) {
-                document.getElementById("output").innerHTML = output
+            function setOutput(output) {                                 // Create a function for displaying the output. 
+                document.getElementById("output").innerHTML = output     // Set the HTML content of a <h2> element with id="output" 
             }
-            function guessNumFunction() {
-                var i = document.getElementById("inputBox").value
-                if (isNaN(i) || i < 1 || i > 100) {
-                    setOutput("Enter a number between 1 and 100.");
-                    return
+            function guessNumFunction() {                                // Create a function to compare random number and guess number
+                var i = document.getElementById("inputBox").value        // Get the value of an inputBox.(store the number in a variable)
+                if (isNaN(i) || i < 1 || i > 100) {                      // If the guess number is not a number or lower than 1 or higher than 100
+                    setOutput("Enter a number between 1 and 100.");      // show the message and 
+                    return                                               // return from the function.
                 }
-                if (i == a) {
+                if (i == a) {                                            // If guess number is same with random number
                     setOutput("You win!");
                 }
-                else if (i > a) {
+                else if (i > a) {                                        // If guess number is higher than random number
                     setOutput("Number is too high, Try again");
                 }
-                else {
+                else {                                                   // Otherwise (if guess number is lower than random number)
                     setOutput("Number is too low, Try again");
                 }
              }
