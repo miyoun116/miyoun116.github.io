@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Exercise 4.1: Guess the Number (Medium) -->
+<!-- This is a "guess the number" game with JavaScript logic, variables and functions. -->
+<html>
+    <head>
+        <title>Guess the number_Medium</title>
+        <style>
+            body {
+                width: 1280px;
+                height: 1000;
+                margin: auto;
+                font-family: sans-serif;
+                background-color: blanchedalmond;
+            }
+            h1 {
+                height: 80px;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 30pt;
+            }
+            h2 {
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 14pt;
+                color: cadetblue;
+            }
+            h3 {
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 14pt;
+                color: deeppink;
+            }
+            p {
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 16pt;
+                color: darkblue;
+            }
+            .buttonbox1 {
+                width: 1280px;
+                height: auto;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .buttonbox2 {
+                width: 1280px;
+                height: auto;
+                margin-top: 20px;
+                text-align: center;
+            }
+            output {
+                width: 200px;
+                height: 30px;
+                margin: 35px;
+                font-size: 20pt;
+                text-align: center;
+            }
+            .button {
+                width: 100px;
+                height: 40px;
+                background-color: darksalmon;
+                font-family: sans-serif;
+                margin-right: 30px;
+            }
+            .button2 {
+                width: 100px;
+                height: 40px;
+                background-color: cornflowerblue;
+                font-family: sans-serif;
+                margin-left: 30px
+            }     
+            .button3 {
+                width: 100px;
+                height: 40px;
+                background-color: darkblue;
+                font-family: sans-serif;
+                color: beige;
+            } 
+            .button4 {
+                width: 100px;
+                height: 40px;
+                background-color: cadetblue;
+                font-family: sans-serif;
+                color: beige;
+            }          
+        </style>
+    </head>
+    <body>
+        <h1>Let's play a game!</h1>
+        <p>Pick a number between 1 and 100. <br/>Let the computer know if its guess is "higher" or "lower"<br/>than the number you have picked.<br/>You can check how many guesses the computer has taken<br/> before finding the right number.<br/>Good lock!</p>
+        <div class="buttonbox1">
+            <button class="button" onclick="onLow()">Lower</button>
+            <output id="guess"></output>
+            <button class="button2" onclick="onHigh()">Heigher</button> 
+        </div>
+            <h3 id="error"> </h3>
+            <h2 id="output"> </h2>
+        <div class="buttonbox2">
+            <button class="button3" onclick="onReset()">Reset</button>
+            <button class="button4" onclick="onCorrect()">Correct</button>
+        </div>    
+            <script type="text/javascript">
+                // Global variables
+                var min = 1          // Minimum number for a guess
+                var max = 100        // Maximum number for a guess
+                var count = 1        // Number of guesses. Start with 1 because it guessed 50 in the beginning.
+                var finished = false // finished means the game is finished. becomes true when users clicks "Correct" button.
+                var guess = 50       // Number guessed by the computer. Start with 50.
+                var error = ""       // Error message to display on screen to indicate the incorrect user action or finish of the game.
+
+                function setError(err) {         //Create a function for setting the error message. 
+                    error = err;
+                }
+                function updateDisplay() {
+                    document.getElementById("output").innerHTML = "count:" + count + " min:" + min + " max:" + max;    // Update the number of count, min and max displayed to value in output.
+                    document.getElementById("error").innerHTML = error;                                                // Update the error message displayed to value in error.
+                    document.getElementById("guess").innerHTML = "Guess: " + guess;                                    // Update the guess number displayed to value in guess.
+                }
+                function makeGuess() {                               // Create a function for guessing a number.
+                    guess = Math.floor((min + max) / 2);             // Guess the mid point between min and max.
+                    count++;                                         // Increment the count of guesses.                                
+                }
+                function onHigh() {                                  // Create a function for higher button.
+                    if (finished) return;                            // If the guess is finished then return.
+                    if (guess < max) {                               // If the guess is lower than max,
+                        min = guess + 1;                             // Set the min to "guess + 1."
+                        makeGuess();                                 // Make the next guess.
+                        setError("");                                // No error message.
+                    } else {                                         // If the guess is equal or higher than max,
+                        setError("cannot be higher than " + guess);  // Show the error message because the number cannot be higher than the max.
+                    }                
+                    updateDisplay();                                 // Update the message shown.
+                }
+                function onLow() {                                   // Create a function for lower button.
+                    if (finished) return;                            // If the guess is finished then return.
+                    if (guess > min) {                               // If the guess is higher than min,
+                        max = guess - 1;                             // Set the max to "guess - 1."
+                        makeGuess();                                 // Make the next guess.
+                        setError("");                                // No error message.
+                    } else {                                         // If the guess is equal or lower than min,
+                        setError("cannot be lower than " + guess);   // Show the error message because the number cannot be lower than the min.
+                    }
+                    updateDisplay();                                 // Update the message shown.
+                }
+                function onReset() {                                 // Create a function for reset button.
+                    min = 1;                                         // Set the min to 1.
+                    max = 100;                                       // Set the max to 100.
+                    count = 0;                                       // Set the count to 0.
+                    finished = false;                                // Game is not finished.
+                    makeGuess();                                     // Make a new guess.
+                    setError("");                                    // No error message.
+                    updateDisplay();                                 // Update the value for the different situations.
+                }
+                function onCorrect() {                                            // Create a function for correct button.
+                    finished = true;                                              // Set game to finished.
+                    setError("The computer has taken "  + count + " guesses.");   // update the error message to indicate the game is finsihed and display the number of guesses. 
+                    updateDisplay();                                              // update the message shown.
+                }
+                updateDisplay();                                     // Update the message shown.
+            </script>
+    </body>
+</html>
+    
