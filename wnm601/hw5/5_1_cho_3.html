@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <!-- Miyoun Cho -->
 <!-- Assignment 5.1_3: Practive DIV Making -->
-<!-- -->
+<!-- I added a transition and a transformation effect. -->
 <html>
     <head>
         <title>Korean Traditional Foods_3</title>
         <style>
             h1 {
-                
+                color:#392822;
+                font-weight: 900;
+                font-size: 30pt;
+                padding-top: 30px;
+                margin-left: 60px;
+                text-align: center;
             }
             body {
                 background-image: url("https://miyoun116.github.io/wnm601/hw5/images/5.jpg");
             }
-            div {
-                width:15em;
-                border:2px solid #000;
-                padding:2em;
-                margin:2em;
-                float:left;
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);   /* 3-column grid with with the repeat() function. */
+            }
+            .title {
+                color: #9C4322;
+                font-size: 24pt;
+                font-weight: bold;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .container {
+                border: 4px solid #C1A79D;
+                padding: 2em;
+                margin: 2em;
+            }
+            .imagebox {                       
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+            .container img {
+                            width: 50%;
+                            transition: width 2s, height 2s, transform 2s;  /* Transition effect with a duration of 2 seconds for the width, 2 seconds for the height and 2 seconds for the transformation effect. */
+            }
+            .container img:hover {                      /* The image's width and height is changed from 50% to 100% with 360-degree rotation when mouse over. */
+                        width: 100%;
+                        height: 100%;
+                        transform: rotate(360deg);
+            }
+            .container p {
+                        color: #651E03;
+                        font-weight: 600;
             }
         </style>
     </head>
-    <body>
-        <h1> Korean Traditional Foods </h1>
-        <div class= "container">
-            <div class= "title">Bulgogi</div>
-            <img src= "https://miyoun116.github.io/wnm601/hw5/images/1.jpg" alt= "bulgogi" >
-            <p><em>Div 1: </em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ipsum imperdiet urna mattis, sed tempor quam malesuada. Fusce porta risus vitae metus tempor congue. Curabitur erat lorem, sagittis sed erat sit amet, interdum venenatis nibh. Phasellus rutrum magna sed dignissim mollis. Nullam blandit ullamcorper rutrum.
-            </p>
-        </div>
-        <div class= "container">
-            <div class= "title">Japchae</div>
-            <img src= "https://miyoun116.github.io/wnm601/hw5/images/2.jpg" alt= "japchae">
-            <p><em>Div 2: </em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ipsum imperdiet urna mattis, sed tempor quam malesuada. Fusce porta risus vitae metus tempor congue. Curabitur erat lorem, sagittis sed erat sit amet, interdum venenatis nibh. Phasellus rutrum magna sed dignissim mollis. Nullam blandit ullamcorper rutrum.
-            </p>
-        </div>
-        <div class= "container">
-            <div class= "title">Bibimbap</div>
-            <img src= "https://miyoun116.github.io/wnm601/hw5/images/3.jpg" alt= "bibimbap">
-            <p><em>Div 3: </em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ipsum imperdiet urna mattis, sed tempor quam malesuada. Fusce porta risus vitae metus tempor congue. Curabitur erat lorem, sagittis sed erat sit amet, interdum venenatis nibh. Phasellus rutrum magna sed dignissim mollis. Nullam blandit ullamcorper rutrum.
-            </p>
+  <body>
+        <h1>Korean Traditional Foods</h1>
+        <div class = "grid">
+            <div class = "container">
+                <div class = "imagebox"> 
+                    <div class = "title">Bulgogi</div>
+                    <img src = "https://miyoun116.github.io/wnm601/hw5/images/1.jpg" alt= "bulgogi" >
+                </div>
+                <p><em>Div 1: </em>Bulgogi is a Korean-style grilled or roasted dish. It made of thin, marinated slices of beef or pork grilled on a barbecue or on a stove-top griddle. It is also often stir-fried in a pan in home cooking. Sirloin, rib eye or brisket are frequently used cuts of beef for the dish. 
+                </p>
+            </div>
+            <div class= "container">
+                <div class = "imagebox"> 
+                    <div class= "title">Japchae</div>
+                    <img src= "https://miyoun116.github.io/wnm601/hw5/images/2.jpg" alt= "japchae">
+                </div>
+                <p><em>Div 2: </em>Japchae is a sweet and savory dish of stir-fried glass noodles and vegetables that is popular in Korean cuisine. The noodles made from sweet potato starch are topped with assorted vegetables, meat, and mushrooms, and seasoned with soy sauce and sesame oil.
+                </p>
+            </div>
+            <div class= "container">
+                <div class = "imagebox">
+                    <div class= "title">Bibimbap</div>
+                    <img src= "https://miyoun116.github.io/wnm601/hw5/images/3.jpg" alt= "bibimbap">
+                </div>
+                <p><em>Div 3: </em>Bibimbap. The word literally means "mixed rice". Bibimbap is served as a bowl of warm rice topped with vegetables and gochujang (chili pepper paste). A raw or fried egg and sliced meat (usually beef) are common additions. The hot dish is stirred together thoroughly just before eating.
+                </p>
+            </div>
         </div>
     </body>
 </html>

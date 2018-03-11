@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <!-- Miyoun Cho -->
 <!-- Assignment 5.1_1: Practive DIV Making -->
-<!-- -->
+<!-- Simple 3-column grid with images with the grid-column CSS property.-->
 <html>
     <head>
         <title>Korean Traditional Foods_1</title>
         <style>
             h1 {
                 color: #959597;
-                text-align: left; 
+                text-align: center; 
                 font-family: sans-serif;
-                margin-left: 30px;
+                padding-top: 30px;
             }
             body {
                 background-color: #2A2A2B;
+                text-align: center;
             }
             .title {
                 color: #BE91F9;
@@ -23,41 +24,53 @@
                 padding-bottom: 30px;
                 text-align: center;
             }
-            .container {
-                        width: 15em;
-                        border: 4px double #8056D3;
-                        padding: 2em;
-                        margin: 2em;
-                        float: left;
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);   /* 3-column grid with with the repeat() function. */
             }
+            .container {
+                border: 4px double #8056D3;
+                padding: 2em;
+                margin: 2em;
+            }   
             .container img {
-                            width: 100%;
+                width: 100%;
+                border-radius: 50%;
             }
             .container p {
-                        font-family: sans-serif;
-                        color: #D4D4D7;
+                font-family: sans-serif;
+                color: #D4D4D7;
+                text-align: left;
             }
         </style>
     </head>
-    <body>
+   <body>
         <h1>Korean Traditional Foods</h1>
-        <div class= "container">
-            <div class= "title">Bulgogi</div>
-            <img src= "https://miyoun116.github.io/wnm601/hw5/images/1.jpg" alt= "bulgogi" >
-            <p><em>Div 1: </em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ipsum imperdiet urna mattis, sed tempor quam malesuada. Fusce porta risus vitae metus tempor congue. Curabitur erat lorem, sagittis sed erat sit amet, interdum venenatis nibh. Phasellus rutrum magna sed dignissim mollis. Nullam blandit ullamcorper rutrum.
-            </p>
-        </div>
-        <div class= "container">
-            <div class= "title">Japchae</div>
-            <img src= "https://miyoun116.github.io/wnm601/hw5/images/2.jpg" alt= "japchae">
-            <p><em>Div 2: </em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ipsum imperdiet urna mattis, sed tempor quam malesuada. Fusce porta risus vitae metus tempor congue. Curabitur erat lorem, sagittis sed erat sit amet, interdum venenatis nibh. Phasellus rutrum magna sed dignissim mollis. Nullam blandit ullamcorper rutrum.
-            </p>
-        </div>
-        <div class= "container">
-            <div class= "title">Bibimbap</div>
-            <img src= "https://miyoun116.github.io/wnm601/hw5/images/3.jpg" alt= "bibimbap">
-            <p><em>Div 3: </em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ipsum imperdiet urna mattis, sed tempor quam malesuada. Fusce porta risus vitae metus tempor congue. Curabitur erat lorem, sagittis sed erat sit amet, interdum venenatis nibh. Phasellus rutrum magna sed dignissim mollis. Nullam blandit ullamcorper rutrum.
-            </p>
+        <div class = "grid">
+            <div class = "container">
+                <div class = "imagebox"> 
+                    <div class = "title">Bulgogi</div>
+                    <img src = "https://miyoun116.github.io/wnm601/hw5/images/1.jpg" alt= "bulgogi" >
+                </div>
+                <p><em>Div 1: </em>Bulgogi is a Korean-style grilled or roasted dish. It made of thin, marinated slices of beef or pork grilled on a barbecue or on a stove-top griddle. It is also often stir-fried in a pan in home cooking. Sirloin, rib eye or brisket are frequently used cuts of beef for the dish. 
+                </p>
+            </div>
+            <div class= "container">
+                <div class = "imagebox"> 
+                    <div class= "title">Japchae</div>
+                    <img src= "https://miyoun116.github.io/wnm601/hw5/images/2.jpg" alt= "japchae">
+                </div>
+                <p><em>Div 2: </em>Japchae is a sweet and savory dish of stir-fried glass noodles and vegetables that is popular in Korean cuisine. The noodles made from sweet potato starch are topped with assorted vegetables, meat, and mushrooms, and seasoned with soy sauce and sesame oil.
+                </p>
+            </div>
+            <div class= "container">
+                <div class = "imagebox">
+                    <div class= "title">Bibimbap</div>
+                    <img src= "https://miyoun116.github.io/wnm601/hw5/images/3.jpg" alt= "bibimbap">
+                </div>
+                <p><em>Div 3: </em>Bibimbap. The word literally means "mixed rice". Bibimbap is served as a bowl of warm rice topped with vegetables and gochujang (chili pepper paste). A raw or fried egg and sliced meat (usually beef) are common additions. The hot dish is stirred together thoroughly just before eating.
+                </p>
+            </div>
         </div>
     </body>
 </html>
