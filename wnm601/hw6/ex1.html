@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clears With box-sizing</title>
+    <style type="text/css">
+        *, *:before, *:after {
+            box-sizing:border-box;
+        }
+        body {
+                        font-family:arial, helvetica, sans-serif;
+        }
+        #container {
+            width:600px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        #maininfo{
+            float:left;
+            width:66.66%;
+            padding-right:20px;
+        }
+        #sidebar {
+            width:33.33%;
+            float:left;
+            padding:20px;
+            background-color:#ccc;
+            font-size:smaller;
+        }
+        #footer {
+            clear:both;
+            text-align:center;
+        }
+        img {
+            margin:.25em;
+            float:left;
+        }
+        p {
+            float:left;
+        }
+        h2, h3 {
+            text-align:center;
+        }
+        a {
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+<div id="maininfo">
+<h2>News You Need</h2>
+<p><img src="http://lorempixel.com/200/400/business" width=200 height=400 alt="Man at Work">CNN leaves it there A.J. Liebling TechCrunch 5% corruption MinnPost Gutenberg parenthesis David Cohn, TechCrunch cancel my subscription MinnPost Aron Pilhofer Kindle Single. Zite Does my yes, but look big in this corner office? church of the savvy Robin Sloan Google+ information overload This Week in Review scoop abundance Free Darko, tweets morgue Flipboard stream West Seattle Blog gotta grok it before you rock it Instagram dying Pictures of Goats section, Project Thunderdome Journal Register iPhone app bloggers in their mother's basement Quora tablets fourth estate Foursquare.
+<br>
+Content is king data visualization nonprofit West Seattle Blog retweet the other longer Book Review net neutrality Like button future of narrative, Facebook newsonomics Tumblr gamification meme Romenesko reporting horse-race coverage, Voice of San Diego tweets Wikipedia Facebook recontextualize Aron Pilhofer Lucius Nieman.</p>
+</div>
+<div id="sidebar">
+<h3>Sidebar, Your Honor?</h3>
+<p>Blog Android abundance Kindle Single engagement Gutenberg, Julian Assange bot future of context Fuego, anonymity Encyclo get me rewrite bot. Jeff Jarvis local sports The Weekender tweets curmudgeon nut graf Lucius Nieman David Foster Wallace privacy, HuffPo cops beat scoop mthomps tablets linkbait hyperlocal MinnPost, linking abundance Dan Fleckner just across the wire John Dewey Tumblr curmudgeon data journalism.</p>
+</div>
+<div id="footer">Links you can use: <a href="#">News</a> | <a href="#">Business</a> | <a href="#">World</a> | <a href="#">Sports</a> | <a href="#">Weather</a></div>
+</div>
+</body>
+</html>
