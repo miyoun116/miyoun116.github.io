@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- Mi-Youn Cho -->
+<!-- Assignment 7.1: Customize card-->
+<!-- Creating custom card flip.-->
+<html>
+    <head>
+        <title>The custom card flip</title>
+        <style type="text/css">      
+            .container { 
+                        width: 200px;
+                        height: 260px;
+                        position: relative;
+                        perspective: 800px;
+                        }      
+            #card {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        transform-style: preserve-3d;
+                        transition: transform 1s;
+                    }
+            #card figure {
+                        margin: 0;
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                        }
+            #card.front1 {
+                        background: red;
+                        }
+            #card.front2 {
+                        background: red;
+                        }
+            #card.back {
+                        transform: rotateY( 180deg );
+                        }
+            #card.flipped {
+                        transform: rotateY( 180deg );
+                        }
+        
+        </style>   
+        <script type="text/javascript">
+            function flip (event)
+                {
+	           var element = event.currentTarget;
+	           element.className = (element.className == 'card') ? 'card flipped' : 'card';
+                }    
+        </script>
+    </head>
+
+    <body>
+        <div id= "card.front1">
+            <p>&spades;</p>
+        </div>
+        <div id= "card.front2">
+            <p>&hearts;</p>
+        </div>
+        <div id= "card.back">
+        <img id= "card_back" src= "https://miyoun116.github.io/wnm601/hw7/card_back.jpg" width= "100%" alt= "wedding_1">
+        </div>
+    </body>
+
+</html>
+
+
+
