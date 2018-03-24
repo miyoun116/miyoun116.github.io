@@ -61,6 +61,7 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--The HTML lang attribute is used to declare the language of a Web page.-->
 <html lang="en">
 <head>
     	<title>Card Flip</title>
@@ -73,27 +74,26 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 </head>
 <body>
 	<div id="container">
-		<!-- Shows a card with suit characters. We use the ascii table to display these suit characters. -->
+        <!-- Shows the card1.-->
 		<div id="card1" class="card" onclick="flip(event)">
-			<!-- The front and face classes are respectively used to style the front and back of the card -->
-			<!-- Shows the front of the card. Shown when this page initially loads in Safari on iPhone 2.0 or in iPhone simulator. -->
-			<div id="front" class="front face">
-				<p>&spades;<br>&spades;</p>
+            <!-- The front and face classes are respectively used to style the front and back of the card -->
+			<div class="front face blue">
+                <!-- Use the ASCII table to display these suit characters. -->
+				<p>&spades;<br><br>&spades;</p>
 			</div>
-			<!-- Shows the back of the card. Hidden when this page initially loads in Safari on iPhone 2.0 or in iPhone simulator. -->
-			<div id="back" class="back face">
+			<!-- Shows the back of the card. -->
+			<div class="back face">
+                <!--Add the card backing image.-->
 				<img src= "https://miyoun116.github.io/wnm601/hw7/image1.jpg" height= "300px" width= "200px" alt= "backimage">
 			</div>
 		</div>
         
+        <!-- Shows the card2.-->
         <div id="card2" class="card" onclick="flip(event)">
-			<!-- The front and face classes are respectively used to style the front and back of the card -->
-			<!-- Shows the front of the card. Shown when this page initially loads in Safari on iPhone 2.0 or in iPhone simulator. -->
-			<div id="front" class="front face">
-				<p>&hearts; &hearts;<br>&hearts; &hearts;</p>
+			<div class="front face red">
+				<p>&hearts; &hearts;<br><br>&hearts; &hearts;</p>
 			</div>
-			<!-- Shows the back of the card. Hidden when this page initially loads in Safari on iPhone 2.0 or in iPhone simulator. -->
-			<div id="back" class="back face">
+			<div class="back face">
 				<img src= "https://miyoun116.github.io/wnm601/hw7/image1.jpg" height= "300px" width= "200px" alt= "backimage">
 			</div>
 		</div>

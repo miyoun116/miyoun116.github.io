@@ -71,10 +71,9 @@ body
 }
 
 
-/* Styles the "Card Flip" page and creates a placeholder for the card */
 #container
 {
-	/* Set these dimensions so the card can be properly displayed in Safari on iPhone */
+	/* Set these dimensions */
 	height: 356px;
 	width: 560px;
     padding: 20px;
@@ -89,17 +88,14 @@ body
 }
 
 
-/* Applies 3D transform and transition effects to the card. The card has two states: regular and flipped.
-   A card is in a regular state when there is an empty transform applied to it, and otherwise in a flipped
-   state, where there is a rotational transformation applied. This class is used when the card is in the regular state.
-   The "card flipped" class is used when the card is in the flipped state. 
-*/
+/* The card has two states as regular and flipped.*/
 .card 
 {
 	float: left;
 	height: 300px;
 	width: 200px;
 	margin: 40px;
+  
 	
 	/* Ensure that the card lives correctly in 3D space */
 	-webkit-transform-style: preserve-3d;
@@ -113,13 +109,11 @@ body
 }
 
 
-/* Applies the flip animation to the card */
 .card.flipped
 {
-
 	/* Rotate the card 360 degrees aling the x-axis and 180 degrees along the y-axis. This animation allows the card to
 	  toggle between its regular and flipped states. */
-	-webkit-transform: rotateX(360deg) rotateY(180deg);
+	-webkit-transform: rotateX(360deg)  rotateY(180deg);
 }
 
 /* Styles the card and hides its "back side" when the card is flipped */
@@ -128,29 +122,40 @@ body
 	position: absolute;
 	height: 300px;
 	width: 200px;
+    border-radius: 10px;
 	/*Setting this property to hidden ensures that the "back side" is hidden when the card is flipped*/
 	-webkit-backface-visibility: hidden;
 }
 
+
+
 /* Styles the suit characters */
-.face > p 
+.face >p 
 {
-	margin-top: 50px;
+	margin-top: 60px;
 	margin-bottom: 0;
 	text-align: center;
-	font-size: 92px;
+	font-size: 50px;
 }
 
 
 /* Styles the front of the card */
 .front 
 {
-	/* Set the color of the suit characters on the card */
-	color: rgb(3,12,186);
-	/* Background color of this side of the card */
-	background-color: rgb(255,191,0);
+	background-color: rgb(250,220,220);
 }
 
+.red 
+{
+    /* Set the red color of the characters on the card */
+    color: rgb(255,28,28);
+}
+
+.blue 
+{
+    /* Set the blue color of the characters on the card */
+    color: rgb(37,47,196);
+}
 
 /* Styles the back of the card */
 .back 
