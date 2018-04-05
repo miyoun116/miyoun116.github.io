@@ -24,6 +24,7 @@
             h3 {
                 font-family: 'Open Sans', sans-serif;
                 color: #AB7D77;
+                font-size: 12pt;
             }
             p {
                 font-family: 'Open Sans', sans-serif;
@@ -57,17 +58,50 @@
             #sidebar {                                                    /* 30% width second column */
                 width: 30%; 
                 float: right;
+                margin-top: 20px;
                 padding: 20px;
                 background-color: #F3ECEA;
             }
+            #sidebartitle {
+                text-align: center;
+            }
             #sidebarbox {
-                float: left;
                 padding 10px;
             }
             #sidebarbox img {
-                float: left;
-                padding-right: 20px;
+                margin-left: 120px;
             }
+            .sidebarsubtitle {
+                font-family: 'Lora', serif;
+                color: #AB7D77;
+                font-size: 14pt;
+                text-align: center;
+                font-weight: bold;
+            }
+            #sidebaritem {
+                font-family: 'Open Sans', sans-serif;
+                color: #3C6278;
+                font-size: 14pt;
+            }
+            .sidebartext {
+                float: left;
+                font-family: 'Open Sans', sans-serif;
+                color: #5C5C5C;
+                font-size: 11pt;
+                margin: 30px;
+            }
+            #button {
+                background-color: #AB7D77; 
+                border: none;
+                color: #F9FBFA;
+                padding: 15px 32px;
+                text-align: center;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 12px;
+                margin-left: 130px;
         </style>
     </head>
     <body>
@@ -95,8 +129,8 @@
         
          
             <h2>Moscato Food Pairing</h2>
-           <div id = "maininfoimg">
-                <img src= "https://miyoun116.github.io/wnm601/hw8/food.jpg" width= "100%" alt= "food">
+            <div id = "maininfoimg">
+            <img src= "https://miyoun116.github.io/wnm601/hw8/food2.jpg" width= "100%" alt= "food2">
             </div>
             <div id = "maininfobox2">
                 <h3>1. Spicy food</h3> 
@@ -107,17 +141,36 @@
                 <p>Brie Cheese, blue cheese</p>
                 <h3>4. Fruit Desserts</h3> 
                 <p>Any dessert with fruit or berry components</p>
-           
-        </div>
-            
-        <div id = "sidebar">    
-        <h2>The recommendation of this month</h2>
-            <div id = "sidebarbox">
-            <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "150px" alt= "bottle">
             </div>
+        </div> 
+            
+        <div id = "sidebar">   
+            <div id ="sidebartitle">
+                <h2>The recommended wine</h2>
+            </div>
+            <div id = "sidebarbox">
+                <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "100px" alt= "bottle">
+                <div class = "sidebarsubtitle">
+                Kim Crawford ROSÉ
+                </div>
+                <div class = "sidebartext">
+                    <div id = "sidebaritem"> COLOR </div> : Pretty pale pink color.
+                </div>
+                <div class = "sidebartext">
+                    <div id = "sidebaritem"> AROMA </div> : A lively nose, brimming with bright berry and tropical fruit.
+                </div>
+                <div class = "sidebartext">
+                    <div id = "sidebaritem"> PALATE </div> : Soft and luscious, this refreshing Rosé is richly fruited with hints of watermelon and strawberry.
+                </div>
+                <div class = "sidebartext">
+                    <div id = "sidebaritem"> FOOD PAIRINGS </div> : Ideal as an apéritif or summer sipper, this easy-drinking wine also pairs perfectly with lighter salads and other fare.
+                </div>
+                <button id="button">Shop</button>
+               
+            </div>
+            
         </div>
-        
-        </div>
+        </div> 
     </body>
 </html>
 
