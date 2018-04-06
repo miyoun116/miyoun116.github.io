@@ -87,10 +87,13 @@
     <body>
         <div id = "container">
          <div id = "maininfo">  
-             <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "20%" alt= "bottle">
-             <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "5%" alt= "bottle">
-             <img src= "https://miyoun116.github.io/wnm601/hw8/imagebutton.jpg" width= "10%" alt= "imagebutton">
-            
+             <div id = "upperdisplay">
+                <img id = "currentimg" src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "20%" alt= "bottle" title = "bottle">
+             </div>
+             <div id = "lownav">
+                <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "5%" alt= "bottle" title = "bottle">
+                <img src= "https://miyoun116.github.io/wnm601/hw8/imagebutton.jpg" width= "10%" alt= "imagebutton" title = "imagebutton">
+             </div>
          </div>
          <div id = "detailbox">
             <div id = "detailboxtitle">Kim Crawford ROSÉ</div>
@@ -102,18 +105,23 @@
                     <li>A lively nose, brimming with bright berry and tropical fruit.</li> <br> <br>
                     <li>Soft and luscious, this refreshing Rosé is richly fruited with hints of watermelon and strawberry.</li> 
                 </div>
-                
+                </div>
              </div>   
              <button id="button">Add to Cart</button>
          </div>   
            
-        </div>
         
-        <button onclick="myFunction()">Try it</button>
+       
 
-<script>
-function myFunction() {
-    alert("1 item add to cart!");
+<script type="text/javascript">
+function showImage(imgName) {
+   var curImage = document.getElementById('currentImg');
+   var thePath = 'images/';
+   var theSource = thePath + imgName;
+    
+    curImage.src = theSource;
+    curImage.alt = imgName;
+    curImage.title = imgName;
 }
 </script>
       
