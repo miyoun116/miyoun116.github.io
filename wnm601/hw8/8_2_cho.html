@@ -25,15 +25,24 @@
                 margin-right: auto;
                 margin-bottom: auto;
             }
-            #maininfo {
+            #imageinfo {
                 float: left;                                             
                 width: 50%; 
-                padding-right: 40px;
                 background-color: #F3ECEA;
+                text-align: center;
             } 
-            #maininfo img{
-                margin : 100px 250px;
-            }  
+
+            #upperdisplay {
+                margin : 50px 250px;
+            }
+            #lownav {
+                float: left;
+				width: 100%;
+                margin-bottom: 100px;
+            }
+            #lownav img {
+                margin: 30px;
+            }     
             #detailbox {                                                    
                 width: 50%; 
                 float: right;
@@ -44,8 +53,7 @@
                 text-align: center;
                 margin-top: 60px;
                 margin-bottom: 50px;
-                font-size: 20pt;
-                
+                font-size: 20pt;     
             }
             #detailboxsubtitle {
                 font-family: 'Lora', serif;
@@ -82,17 +90,25 @@
                 margin-left: 240px;
                 margin-top: 100px;
             }
+            #backbutton {
+                text-align: left;
+                margin: 20px 50px;
+                font-family: 'Open Sans', sans-serif;
+                color: #82204D;
+            }
+
         </style>
     </head>
     <body>
         <div id = "container">
-         <div id = "maininfo">  
-             <div id = "lownav">
-                <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "5%" alt= "bottle" title = "bottle" onclick="showImage('bottle');" />
-                <img src= "https://miyoun116.github.io/wnm601/hw8/imagebutton.jpg" width= "10%" alt= "cup" title = "cup" onclick="showImage('cup');"/>
-             </div>
+         <div id = "imageinfo"> 
+             <a href="http://miyoun116.github.io/wnm601/hw8/8_1_cho.html"> <div id = "backbutton"> Back </div></a>
              <div id = "upperdisplay">
-                <img id = "currentImg" src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "20%" alt= "bottle" title = "bottle" />
+                <img id = "currentImg" src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "100%" alt= "bottle" title = "bottle" />
+             </div>
+             <div id = "lownav">
+                <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "20px" alt= "bottle" title = "bottle" onclick="showImage('bottle');" />
+                <img src= "https://miyoun116.github.io/wnm601/hw8/imagebutton.jpg" width= "50px" alt= "cup" title = "cup" onclick="showImage('cup');"/>
              </div>
          </div>
          <div id = "detailbox">
@@ -107,23 +123,24 @@
                 </div>
                 </div>
              </div>   
-             <button id="button">Add to Cart</button>
+             <button id="button">Add to Cart</button> <br> <br>
+           
          </div>   
            
         
        
 
 <script type="text/javascript">
-function showImage(imgName) {
-   var curImage = document.getElementById('currentImg');
-   var thePath = 'images/';
-   var theSource = thePath + imgName;
-    
-    curImage.src = theSource;
-    curImage.alt = imgName;
-    curImage.title = imgName;
-}
-</script>
+			function showImage(imgName) {
+				var curImage = document.getElementById('currentImg');
+				var thePath = 'images/';
+				var theSource = thePath + imgName;
+				
+				curImage.src = theSource;
+				curImage.alt = imgName;
+				curImage.title = imgName;
+			}
+		</script>
       
       
    
