@@ -27,6 +27,12 @@ p, .description {
     font-size: 11pt;
 }
 
+/* set image to not overflow the box */
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .description {
     text-align: left;
     margin: auto;
