@@ -108,7 +108,9 @@ img {
 /* button style for both pages */
 .button {
     margin:10px;
-    background-color: #AB7D77; 
+    background-color: #AB7D77;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
     border: none;
     color: #F9FBFA;
     padding: 16px 32px;
