@@ -24,6 +24,7 @@
                 <div class="mainbox" >
                     <img id="mainimage" src= "https://miyoun116.github.io/wnm601/hw8/1.png" alt= "bottle" title = "bottle" />
                 </div>
+                <!-- Showing a larger image from a mouse hover thumbnail -->
                 <div class = "thumbnail">
                     <div class = "box" onmouseover="showImage('1.png');">
                         <img src= "https://miyoun116.github.io/wnm601/hw8/1.png" alt= "bottle" title = "bottle" />
@@ -40,8 +41,10 @@
                 <h2>Kim Crawford ROSÉ</h2>
                 <h2>$14.99</h2> 
                 <div class = "description"> 
+                <!-- The <ul> tag defines an unordered (bulleted) list -->
                 <ul>
-                    <li>From Marlborough, New Zealand.</li> 
+                    <!-- The list items are marked with bullets (small black circles) --> 
+                    <li>From Marlborough, New Zealand.</li>  
                     <li>13% ABV</li>
                     <li>A lively nose, brimming with bright berry and tropical fruit.</li>
                     <li>Soft and luscious, this refreshing Rosé is richly fruited with hints of watermelon and strawberry.</li>
@@ -50,8 +53,15 @@
                 <button class="button">Add to Cart</button> 
             </div>
             <div class = "clear"></div>
+            <div class= "footer"> 
+                 <p>https://www.kimcrawfordwines.com/us/products/rose/</p>
+                 <p>https://www.rd.com/health/wellness/limit-alcohol/</p>
+                 <p>https://www.kimcrawfordwines.com/us/</p>
+                <p>https://www.marketviewliquor.com/blog/2016/11/what-is-moscato/</p>
+             </div>
         </div>
-        <script type="text/javascript">
+        <script type="text/javascript"> 
+            /* Showing a larger image from a thumbnail With JavaScript */
 			function showImage(imgName) {
 				var curImage = document.getElementById('mainimage');
 				var thePath = 'https://miyoun116.github.io/wnm601/hw8/';

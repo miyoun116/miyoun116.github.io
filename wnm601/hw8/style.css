@@ -181,3 +181,13 @@ p, .description {
     margin-bottom: 30px;
     list-style-position: inside;
 }
+
+/* source area on the bottom */
+.footer {                                                     
+    clear: both;
+    text-align: center;
+    padding-top: 5%;                                         
+    padding-bottom: 5%;
+    background-color: #1D1D1E;
+    color: #EBEBEB;
+}
