@@ -34,13 +34,15 @@ p, .description {
     margin-right: auto;
     margin-bottom: auto;
 }
+
+/* maininfo is left column on the main page */
 .maininfo {
     float: left;                                              /* flowing text with floats */
     width: 70%; 
     padding-right: 40px;
 }
 
-.maininfo img {
+#foodparing-img {
     position: relative;
     float: left;
     width: 50%;
