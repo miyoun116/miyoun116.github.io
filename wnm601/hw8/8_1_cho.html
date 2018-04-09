@@ -7,115 +7,19 @@
         <title>Moscato Wine1</title>
         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="style.css">
         <style type="text/css">   
-             *, *:before, *:after {
+            *, *:before, *:after {
                 box-sizing:border-box;
             }
-            h1 {
-                font-family: 'Lora', serif;  
-                color: #313030;
-                padding-bottom: 20px;
-                text-align: center;
-            }
-            h2 {
-                font-family: 'Lora', serif;               
-                color: #82204D;
-            }
-            h3 {
-                font-family: 'Open Sans', sans-serif;
-                color: #AB7D77;
-                font-size: 12pt;
-            }
-            p {
-                font-family: 'Open Sans', sans-serif;
-                color: #313030;
-            }
-            #container {                                                   
-                position: relative;
-                width: 70%;
-                min-width: 80em;
-                margin-top: 50px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: auto;
-            }
-            #maininfo {
-                float: left;                                              /* flowing text with floats */
-                width: 70%; 
-                padding-right: 40px;
-            }
-            #maininfoimg {
-                position: relative;
-                float: left;
-                width: 50%;
-                padding-right: 20px;
-            }
-            #maininfobox2 {
-                position: relative;
-                float: left;
-                width: 320px;
-                padding-left: 20px;
-            }
-            #sidebar {                                                    /* 30% width second column */
-                width: 30%; 
-                float: right;
-                margin-top: 20px;
-                padding: 20px;
-                background-color: #F3ECEA;
-
-            }
-            #sidebartitle {
-                text-align: center;
-                margin-bottom: 50px;
-            }
-            #sidebarbox {
-                padding 10px;
-                text-align: center;
-            }
-            #sidebarbox img {
-                margin:auto;
-            }
-            .sidebarsubtitle {
-                font-family: 'Lora', serif;
-                color: #AB7D77;
-                font-size: 12pt;
-                text-align: center;
-                font-weight: bold;
-                margin: 30px;
-            }
-            #sidebaritem {
-                font-family: 'Open Sans', sans-serif;
-                color: #3C6278;
-                font-size: 14pt;
-                margin-bottom: 10px;
-            }
-            .sidebartext {
-                text-align: left;
-                font-family: 'Open Sans', sans-serif;
-                color: #5C5C5C;
-                font-size: 11pt;
-                margin: 30px;
-            }
-            #button {
-                background-color: #AB7D77; 
-                border: none;
-                color: #F9FBFA;
-                padding: 15px 32px;
-                text-align: center;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 12px;
-                margin-top: 50px;
         </style>
     </head>
     <body>
-        <div id= "container">
+        <div class= "container">
         <h1>Moscato Wine</h1>
         <img src= "https://miyoun116.github.io/wnm601/hw8/winary2.jpg" width= "100%" alt= "winary2">
         
-        <div id = "maininfo">
+        <div class = "maininfo">
             <h2>What is Moscato Wine?</h2>
             <p>Moscato (pronounced mo-ska-toh) is a sweet Italian wine known for its fruity notes. Made from the Muscat grape, this white wine is typically thought of as a dessert wine with a hint of fizz. Though there’s some variation between the different types, Moscato generally has a pretty low alcohol content, hovering around 5-7%. As a point of reference, most red wines have an alcohol content of about 10-12% ABV. The low alcohol content makes Moscato a great dessert drink for casual sipping, or the perfect addition to a brunch-time spritzer that won’t derail your entire day.</p>
         
@@ -135,10 +39,10 @@
         
          
             <h2>Moscato Food Pairing</h2>
-            <div id = "maininfoimg">
+            <div class = "maininfoimg">
             <img src= "https://miyoun116.github.io/wnm601/hw8/food2.jpg" width= "100%" alt= "food2">
             </div>
-            <div id = "maininfobox2">
+            <div class = "maininfobox2">
                 <h3>1. Spicy food</h3> 
                 <p>Thai larb, Indian vindaloo curries, habanero-spiked chicken wings</p>
                 <h3>2. Crudites</h3> 
@@ -150,28 +54,28 @@
             </div>
         </div> 
             
-        <div id = "sidebar">   
-            <div id ="sidebartitle">
+        <div class = "sidebar">   
+            <div class ="sidebartitle">
                 <h2>The recommended wine</h2>
             </div>
-            <div id = "sidebarbox">
+            <div class = "sidebarbox">
                 <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "100px" alt= "bottle">
                 <div class = "sidebarsubtitle">
                 Kim Crawford ROSÉ
                 </div>
                 <div class = "sidebartext">
-                    <div id = "sidebaritem"> COLOR </div> : Pretty pale pink color.
+                    <div class = "sidebaritem"> COLOR </div> : Pretty pale pink color.
                 </div>
                 <div class = "sidebartext">
-                    <div id = "sidebaritem"> AROMA </div> : A lively nose, brimming with bright berry and tropical fruit.
+                    <div class = "sidebaritem"> AROMA </div> : A lively nose, brimming with bright berry and tropical fruit.
                 </div>
                 <div class = "sidebartext">
-                    <div id = "sidebaritem"> PALATE </div> : Soft and luscious, this refreshing Rosé is richly fruited with hints of watermelon and strawberry.
+                    <div class = "sidebaritem"> PALATE </div> : Soft and luscious, this refreshing Rosé is richly fruited with hints of watermelon and strawberry.
                 </div>
                 <div class = "sidebartext">
-                    <div id = "sidebaritem"> FOOD PAIRINGS </div> : Ideal as an apéritif or summer sipper, this easy-drinking wine also pairs perfectly with lighter salads and other fare.
+                    <div class = "sidebaritem"> FOOD PAIRINGS </div> : Ideal as an apéritif or summer sipper, this easy-drinking wine also pairs perfectly with lighter salads and other fare.
                 </div>
-                <a href="http://miyoun116.github.io/wnm601/hw8/8_2_cho.html"><button id="button">Shop</button></a>
+                <a href="http://miyoun116.github.io/wnm601/hw8/8_2_cho.html"><button class="button">Shop</button></a>
                
             </div>
             

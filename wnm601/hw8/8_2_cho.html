@@ -11,12 +11,20 @@
              *, *:before, *:after {
                 box-sizing:border-box;
             }
+            h2 {
+                font-family: 'Lora', serif;               
+                color: #82204D;
+            }
+            h3 {
+                font-family: 'Open Sans', sans-serif;
+                color: #AB7D77;
+                font-size: 12pt;
+            }
             p {
                 font-family: 'Open Sans', sans-serif;
                 color: #313030;
-                text-align: center;
             }
-            #container {                                                   
+            .container {                                                   
                 position: relative;
                 width: 70%;
                 min-width: 80em;
@@ -25,72 +33,84 @@
                 margin-right: auto;
                 margin-bottom: auto;
             }
-            #imageinfo {
+            .imagebox {
                 float: left;                                             
                 width: 50%; 
                 background-color: #F3ECEA;
                 text-align: center;
             } 
 
-            #upperdisplay {
-                margin : 50px 250px;
+            .imagebox .mainimage {
+                max-width: 400px;
+                max-height: 400px;
+                margin: auto;
+                margin-top: 100px;
+                margin-bottom: 100px;
             }
-            #lownav {
+            .thumbnail {
                 float: left;
 				width: 100%;
                 margin-bottom: 100px;
+
             }
-            #lownav img {
-                margin: 30px;
-            }     
-            #detailbox {                                                    
+            .thumbnail .box {
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                border-color: #AB7D77;
+                border-width: 1px;
+                border-style: solid;
+                margin: 10px;
+            }
+            .thumbnail .box img {
+                max-height: 48px;
+                max-width: 48px;
+            } 
+            .detailbox {                                                    
                 width: 50%; 
                 float: right;
                 margin-top: 20px;
                 padding: 20px;
+                text-align: center;
             }
-            #detailboxtitle {
+            .detailbox h1 {
+                font-weight: normal;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                font-size: 20pt;     
+            }
+            .detailbox .description{
+                text-align: left;
+                margin: auto;
+                width: 70%; 
+                float:none;
+                font-family: 'Open Sans', sans-serif;
+                color: #5C5C5C;
+                font-size: 11pt;
+            }
+            .detailbox .description li {
+                margin-bottom: 30px;
+                list-style-position: inside;
+                
+            }
+            .detailboxtitle {
                 text-align: center;
                 margin-top: 60px;
                 margin-bottom: 50px;
                 font-size: 20pt;     
             }
-            #detailboxsubtitle {
-                font-family: 'Lora', serif;
-                color: #AB7D77;
-                font-size: 12pt;
-                text-align: left;
-                font-weight: bold;
-                margin: 30px;
-            }
-            #detailboxtext {
-                float: left;
-                font-family: 'Open Sans', sans-serif;
-                color: #5C5C5C;
-                font-size: 11pt;
-            }
-            #detailinfo {
-                width: 70%; 
-                margin-left: 100px;
-            }
-            ul.a {
-                list-style-position: inside;
-            }
-            #button {
+            .button {
                 background-color: #AB7D77; 
                 border: none;
                 color: #F9FBFA;
-                padding: 15px 32px;
-                text-align: center;
+                padding: 16px 32px;
                 display: inline-block;
                 font-size: 16px;
-                margin: 4px 2px;
                 cursor: pointer;
                 border-radius: 12px;
-                margin-left: 240px;
-                margin-top: 100px;
+                align-self: center;
             }
-            #backbutton {
+            .navbutton {
                 text-align: left;
                 margin: 20px 50px;
                 font-family: 'Open Sans', sans-serif;
@@ -100,36 +120,46 @@
         </style>
     </head>
     <body>
-        <div id = "container">
-         <div id = "imageinfo"> 
-             <a href="http://miyoun116.github.io/wnm601/hw8/8_1_cho.html"> <div id = "backbutton"> Back </div></a>
-             <div id = "upperdisplay">
-                <img id = "currentImg" src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "100%" alt= "bottle" title = "bottle" />
-             </div>
-             <div id = "lownav">
-                <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" width= "20px" alt= "bottle" title = "bottle" onclick="showImage('bottle');" />
-                <img src= "https://miyoun116.github.io/wnm601/hw8/imagebutton.jpg" width= "50px" alt= "cup" title = "cup" onclick="showImage('cup');"/>
-             </div>
-         </div>
-         <div id = "detailbox">
-            <div id = "detailboxtitle">Kim Crawford ROSÉ</div>
-            <div id = "detailboxtitle">$14.99</div>  
-            <div id = "detailinfo">
-                <div id = "detailboxtext">
-                    <li>From Marlborough, New Zealand.</li> <br> <br> 
-                    <li>13% ABV</li> <br> <br>
-                    <li>A lively nose, brimming with bright berry and tropical fruit.</li> <br> <br>
-                    <li>Soft and luscious, this refreshing Rosé is richly fruited with hints of watermelon and strawberry.</li> 
+        <div class = "container">
+            <div class = "navbutton"> 
+                    <a href="http://miyoun116.github.io/wnm601/hw8/8_1_cho.html"> Back </a> 
+            </div>
+            <div class = "imagebox"> 
+                <img id="mainimage" class = "mainimage" src= "https://miyoun116.github.io/wnm601/hw8/bottle.png"  alt= "bottle" title = "bottle" />
+                <div class = "thumbnail">
+                    <div class = "box">
+                        <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" alt= "bottle" title = "bottle" onmouseover="showImage('bottle.png');" />
+                    </div>
+                    <div class = "box">
+                        <img src= "https://miyoun116.github.io/wnm601/hw8/imagebutton.jpg"  alt= "cup" title = "cup" onmouseover="showImage('imagebutton.jpg');"/>
+                    </div>  
                 </div>
+            </div>
+            <div class = "detailbox">
+                <h2>Kim Crawford ROSÉ</h2>
+                <h3>$14.99</h3> 
+                <p>
+                    <li>From Marlborough, New Zealand.</li> 
+                    <li>13% ABV</li>
+                    <li>A lively nose, brimming with bright berry and tropical fruit.</li>
+                    <li>Soft and luscious, this refreshing Rosé is richly fruited with hints of watermelon and strawberry.</li>
+                </p>
+                <div class = "description"> 
+                <ul>
+                    <li>From Marlborough, New Zealand.</li> 
+                    <li>13% ABV</li>
+                    <li>A lively nose, brimming with bright berry and tropical fruit.</li>
+                    <li>Soft and luscious, this refreshing Rosé is richly fruited with hints of watermelon and strawberry.</li>
+                </ul>
                 </div>
+                <button class="button">Add to Cart</button> 
              </div>   
-             <button id="button">Add to Cart</button> <br> <br> 
          </div>   
 
         <script type="text/javascript">
 			function showImage(imgName) {
-				var curImage = document.getElementById('currentImg');
-				var thePath = 'images/';
+				var curImage = document.getElementById('mainimage');
+				var thePath = 'https://miyoun116.github.io/wnm601/hw8/';
 				var theSource = thePath + imgName;
 				
 				curImage.src = theSource;
