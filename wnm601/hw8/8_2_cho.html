@@ -7,143 +7,38 @@
         <title>Moscato Wine2</title>
         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="style.css">
         <style type="text/css">   
-             *, *:before, *:after {
+            *, *:before, *:after {
                 box-sizing:border-box;
             }
-            h2 {
-                font-family: 'Lora', serif;               
-                color: #82204D;
-            }
-            h3 {
-                font-family: 'Open Sans', sans-serif;
-                color: #AB7D77;
-                font-size: 12pt;
-            }
-            p {
-                font-family: 'Open Sans', sans-serif;
-                color: #313030;
-            }
-            .container {                                                   
-                position: relative;
-                width: 70%;
-                min-width: 80em;
-                margin-top: 50px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: auto;
-            }
-            .imagebox {
-                float: left;                                             
-                width: 50%; 
-                background-color: #F3ECEA;
-                text-align: center;
-            } 
-
-            .imagebox .mainimage {
-                max-width: 400px;
-                max-height: 400px;
-                margin: auto;
-                margin-top: 100px;
-                margin-bottom: 100px;
-            }
-            .thumbnail {
-                float: left;
-				width: 100%;
-                margin-bottom: 100px;
-
-            }
-            .thumbnail .box {
-                width: 50px;
-                height: 50px;
-                display: inline-block;
-                border-color: #AB7D77;
-                border-width: 1px;
-                border-style: solid;
-                margin: 10px;
-            }
-            .thumbnail .box img {
-                max-height: 48px;
-                max-width: 48px;
-            } 
-            .detailbox {                                                    
-                width: 50%; 
-                float: right;
-                margin-top: 20px;
-                padding: 20px;
-                text-align: center;
-            }
-            .detailbox h1 {
-                font-weight: normal;
-                margin-top: 50px;
-                margin-bottom: 50px;
-                font-size: 20pt;     
-            }
-            .detailbox .description{
-                text-align: left;
-                margin: auto;
-                width: 70%; 
-                float:none;
-                font-family: 'Open Sans', sans-serif;
-                color: #5C5C5C;
-                font-size: 11pt;
-            }
-            .detailbox .description li {
-                margin-bottom: 30px;
-                list-style-position: inside;
-                
-            }
-            .detailboxtitle {
-                text-align: center;
-                margin-top: 60px;
-                margin-bottom: 50px;
-                font-size: 20pt;     
-            }
-            .button {
-                background-color: #AB7D77; 
-                border: none;
-                color: #F9FBFA;
-                padding: 16px 32px;
-                display: inline-block;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 12px;
-                align-self: center;
-            }
-            .navbutton {
-                text-align: left;
-                margin: 20px 50px;
-                font-family: 'Open Sans', sans-serif;
-                color: #82204D;
-            }
-
         </style>
     </head>
     <body>
         <div class = "container">
-            <div class = "navbutton"> 
-                    <a href="http://miyoun116.github.io/wnm601/hw8/8_1_cho.html"> Back </a> 
+            <h1>Moscato Wine</h1>
+            <div class = "navbutton">
+                <a href="http://miyoun116.github.io/wnm601/hw8/8_1_cho.html">Back</a> 
             </div>
             <div class = "imagebox"> 
-                <img id="mainimage" class = "mainimage" src= "https://miyoun116.github.io/wnm601/hw8/bottle.png"  alt= "bottle" title = "bottle" />
+                <div class="mainbox" >
+                    <img id="mainimage" src= "https://miyoun116.github.io/wnm601/hw8/1.png" alt= "bottle" title = "bottle" />
+                </div>
                 <div class = "thumbnail">
-                    <div class = "box">
-                        <img src= "https://miyoun116.github.io/wnm601/hw8/bottle.png" alt= "bottle" title = "bottle" onmouseover="showImage('bottle.png');" />
+                    <div class = "box" onmouseover="showImage('1.png');">
+                        <img src= "https://miyoun116.github.io/wnm601/hw8/1.png" alt= "bottle" title = "bottle" />
                     </div>
-                    <div class = "box">
-                        <img src= "https://miyoun116.github.io/wnm601/hw8/imagebutton.jpg"  alt= "cup" title = "cup" onmouseover="showImage('imagebutton.jpg');"/>
+                    <div class = "box" onmouseover="showImage('2.png');">
+                        <img src= "https://miyoun116.github.io/wnm601/hw8/2.png" alt= "cup" title = "cup" />
                     </div>  
+                    <div class = "box" onmouseover="showImage('3.png');">
+                        <img src= "https://miyoun116.github.io/wnm601/hw8/3.png" alt= "cup2" title = "cup2" />
+                    </div>
                 </div>
             </div>
             <div class = "detailbox">
                 <h2>Kim Crawford ROSÉ</h2>
-                <h3>$14.99</h3> 
-                <p>
-                    <li>From Marlborough, New Zealand.</li> 
-                    <li>13% ABV</li>
-                    <li>A lively nose, brimming with bright berry and tropical fruit.</li>
-                    <li>Soft and luscious, this refreshing Rosé is richly fruited with hints of watermelon and strawberry.</li>
-                </p>
+                <h2>$14.99</h2> 
                 <div class = "description"> 
                 <ul>
                     <li>From Marlborough, New Zealand.</li> 
@@ -153,9 +48,9 @@
                 </ul>
                 </div>
                 <button class="button">Add to Cart</button> 
-             </div>   
-         </div>   
-
+            </div>
+            <div class = "clear"></div>
+        </div>
         <script type="text/javascript">
 			function showImage(imgName) {
 				var curImage = document.getElementById('mainimage');
@@ -168,5 +63,4 @@
 			}
 		</script>    
     </body>
-
 </html>
