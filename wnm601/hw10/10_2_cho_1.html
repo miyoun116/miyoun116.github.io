@@ -1,82 +1,99 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> jQuery Animate </title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <style>
-    #button { 
-            margin-top: 40px;
-            margin-left: 20px;
-            margin:10px;
-            background-color: #F2AFAF;
-            text-decoration: none;
-            border: none;
-            color: #FDFDFD;
-            padding: 16px 32px;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 12px;
-            align-self: center;
-      }
-    #effect { 
-        position: relative; 
-        padding: 0.4em;
-        width: 240px; 
-        height: 170px; 
-        background: #D9E5FF; 
-      }
-    #title { 
-        position: relative;
-        margin: 0; 
-        border: 2px solid #97CBFE;
-        padding: 0.4em;
-        text-align: center; 
-      }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> jQuery Animate </title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+        <style>
+                #toggle {
+                    width: 100px;
+                    height: 100px;
+                    background: #ccc;
+                }
+                .toggler { width: 500px; height: 200px; position: relative; }
+                #button { 
+                    margin-top: 40px;
+                    margin-left: 20px;
+                    margin:10px;
+                    background-color: #F2AFAF;
+                    text-decoration: none;
+                    border: none;
+                    color: #FDFDFD;
+                    padding: 16px 32px;
+                    display: inline-block;
+                    font-size: 16px;
+                    cursor: pointer;
+                    border-radius: 12px;
+                    align-self: center;
+                }
+                #effect { 
+                    position: relative; 
+                    padding: 0.4em;
+                    width: 240px; 
+                    height: 600px; 
+                    background: #D9E5FF; 
+                }
+                #title { 
+                    position: relative;
+                    margin: 0; 
+                    border: 2px solid #97CBFE;
+                    padding: 0.4em;
+                    text-align: center; 
+                }
+        </style>
     
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    var state = true;
-    $( "#button" ).on( "click", function() {
-      if ( state ) {
-        $( "#effect" ).animate({
-          backgroundColor: "#426F97",
-          color: "#fff",
-          width: 500
-        }, 1000 );
-      } else {
-        $( "#effect" ).animate({
-          backgroundColor: "#D9E5FF",
-          color: "#000",
-          width: 240
-        }, 1000 );
-      }
-      state = !state;
-    });
-  } );
-  </script>
-</head>
-<body>
- 
-<div class="toggler">
-  <div id="effect" class="ui-widget-content ui-corner-all">
-    <div id = "title">Animate</div>
-    <p>
-    <img src= "https://miyoun116.github.io/wnm601/hw10/img1.jpg" alt= "baby">
-      Mickey Mouse is a funny animal cartoon character and the mascot of The Walt Disney Company. He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey is one of the world's most recognizable characters.<br>
-    Mickey first appeared in the short Plane Crazy, debuting publicly in the short film Steamboat Willie (1928), one of the first sound cartoons. He went on to appear in over 130 films, including The Band Concert (1935), Brave Little Tailor (1938), and Fantasia (1940). Mickey appeared primarily in short films, but also occasionally in feature-length films. Ten of Mickey's cartoons were nominated for the Academy Award for Best Animated Short Film, one of which, Lend a Paw, won the award in 1942. In 1978, Mickey became the first cartoon character to have a star on the Hollywood Walk of Fame.
-    </p>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $( function() {
+                var state = true;
+                $( "#button" ).on( "click", function() {
+                    if ( state ) {
+                        $( "#effect" ).animate({
+                            backgroundColor: "#426F97",
+                            color: "#fff",
+                            width: 500
+                        }, 1000 );
+                    } else {
+                        $( "#effect" ).animate({
+                            backgroundColor: "#D9E5FF",
+                            color: "#000",
+                            width: 240
+                        }, 1000 );
+                    }
+                    state = !state;
+                    });
+            } );
+        </script>
+
+        <script>
+            $( document ).click(function() {
+                $( "#toggle" ).toggle( "bounce", { times: 3 }, "slow" );
+            });
+        </script>
+    
+    </head>
+
+    <body>
+        <div id="toggle"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey.jpg" alt= "mickey"></div>
+        <div class="toggler">
+        <div id="effect" class="ui-widget-content ui-corner-all">
+        <div id = "title">Mickey Mouse</div>
+        <p>
+        Mickey Mouse is a funny animal cartoon character and the mascot of The Walt Disney Company. He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey is one of the world's most recognizable characters.<br>
+        Mickey first appeared in the short Plane Crazy, debuting publicly in the short film Steamboat Willie (1928), one of the first sound cartoons. He went on to appear in over 130 films, including The Band Concert (1935), Brave Little Tailor (1938), and Fantasia (1940). Mickey appeared primarily in short films, but also occasionally in feature-length films. Ten of Mickey's cartoons were nominated for the Academy Award for Best Animated Short Film, one of which, Lend a Paw, won the award in 1942. In 1978, Mickey became the first cartoon character to have a star on the Hollywood Walk of Fame.
+        </p>
   </div>
+            <button id="button" class="ui-state-default ui-corner-all">Click Me</button>
 </div>
  
-<button id="button" class="ui-state-default ui-corner-all">Click Me</button>
+
  
  
+ 
+
 </body>
 </html>
