@@ -7,41 +7,59 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+    
+   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans" rel="stylesheet">
+    
         <style>
-                #toggle {
-                    width: 100px;
-                    height: 100px;
-                    background: #ccc;
+                .container {
+                    position: relative;
+                    float: left;
+                    text-align: center;
+                    margin: 30px;
                 }
-                .toggler { width: 500px; height: 200px; position: relative; }
-                #button { 
-                    margin-top: 40px;
-                    margin-left: 20px;
-                    margin:10px;
-                    background-color: #F2AFAF;
-                    text-decoration: none;
-                    border: none;
-                    color: #FDFDFD;
-                    padding: 16px 32px;
-                    display: inline-block;
-                    font-size: 16px;
-                    cursor: pointer;
-                    border-radius: 12px;
-                    align-self: center;
+                #imagebox {
+                    width: 400px;
+                    height: 260px;
+                    text-align: center;
                 }
-                #effect { 
+                .toggler { 
                     position: relative; 
-                    padding: 0.4em;
-                    width: 240px; 
-                    height: 600px; 
+                }
+                #textbox { 
+                    position: relative; 
+                    padding: 20px;
+                    border-radius: 12px;
+                    width: 400px; 
+                    height: 500px; 
                     background: #D9E5FF; 
                 }
                 #title { 
                     position: relative;
-                    margin: 0; 
                     border: 2px solid #97CBFE;
-                    padding: 0.4em;
+                    border-radius: 12px;
+                    padding: 10px;
                     text-align: center; 
+                    font-family: 'Abril Fatface', cursive;
+                    font-size: 20pt;
+                }
+                p {
+                    text-align: left;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                #button { 
+                    margin-top: 40px;
+                    margin-left: 20px;
+                    margin:10px;
+                    background-color: #FB8484;
+                    border: none;
+                    border-radius: 12px;
+                    color: #FDFDFD;
+                    padding: 16px 32px;
+                    display: inline-block;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 16px;
+                    cursor: pointer;
+                    align-self: center;
                 }
         </style>
     
@@ -52,16 +70,16 @@
                 var state = true;
                 $( "#button" ).on( "click", function() {
                     if ( state ) {
-                        $( "#effect" ).animate({
+                        $( "#textbox" ).animate({
                             backgroundColor: "#426F97",
                             color: "#fff",
-                            width: 500
+                            width: 800
                         }, 1000 );
                     } else {
-                        $( "#effect" ).animate({
+                        $( "#textbox" ).animate({
                             backgroundColor: "#D9E5FF",
                             color: "#000",
-                            width: 240
+                            width: 400
                         }, 1000 );
                     }
                     state = !state;
@@ -71,16 +89,17 @@
 
         <script>
             $( document ).click(function() {
-                $( "#toggle" ).toggle( "bounce", { times: 3 }, "slow" );
+                $( "#imagebox" ).toggle( "bounce", { direction: 'up', times: 3, distance:100 }, "slow" );
             });
         </script>
     
     </head>
 
     <body>
-        <div id="toggle"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey.png" alt= "mickey"></div>
+        <div class= "container">
+        <div id="imagebox"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey.png" width= 240px; alt= "mickey"></div>
         <div class="toggler">
-        <div id="effect" class="ui-widget-content ui-corner-all">
+        <div id="textbox" class="ui-widget-content ui-corner-all">
         <div id = "title">Mickey Mouse</div>
         <p>
         Mickey Mouse is a funny animal cartoon character and the mascot of The Walt Disney Company. He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey is one of the world's most recognizable characters.<br>
@@ -91,7 +110,7 @@
 </div>
  
 
- 
+ </div>
  
  
 

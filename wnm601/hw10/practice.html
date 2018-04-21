@@ -1,54 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Assignment 10.1: jQuery Effects -->
+<!--              -->
+
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Effects - Animate demo</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <style>
-    .toggler { width: 500px; height: 200px; position: relative; }
-    #button { padding: .5em 1em; text-decoration: none; }
-    #effect { width: 240px; height: 170px; padding: 0.4em; position: relative; background: #fff; }
-    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
-  </style>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    var state = true;
-    $( "#button" ).on( "click", function() {
-      if ( state ) {
-        $( "#effect" ).animate({
-          backgroundColor: "#aa0000",
-          color: "#fff",
-          width: 500
-        }, 1000 );
-      } else {
-        $( "#effect" ).animate({
-          backgroundColor: "#fff",
-          color: "#000",
-          width: 240
-        }, 1000 );
-      }
-      state = !state;
-    });
-  } );
-  </script>
-</head>
-<body>
- 
-<div class="toggler">
-  <div id="effect" class="ui-widget-content ui-corner-all">
-    <h3 class="ui-widget-header ui-corner-all">Animate</h3>
-    <p>
-      Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
-    </p>
-  </div>
-</div>
- 
-<button id="button" class="ui-state-default ui-corner-all">Toggle Effect</button>
- 
- 
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>show demo</title>
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Righteous" rel="stylesheet">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        
+        <style>
+
+            .container {
+                position: relative;
+                text-align: center;
+                margin: 50px;
+                
+            }
+            .titlebox {
+                position: relative
+            }
+            .imgbox {
+                width: 100%;
+                height: auto;
+                border: 30px;
+                margin-left: 20px;
+                width: 100px;
+            }
+         
+            .title {
+                position: relative;
+                font-family: 'Righteous', cursive;
+                font-size: 40pt;
+                font-weight: bold;
+                text-align: left;
+                color: #6E9EE7; 
+            }
+            .firstline{
+             
+            }
+            .secondline {
+
+            }
+            .thirdline {
+                color: #EE6464;
+            }
+            #button {
+                position: relative;
+                float: left;
+                margin-top: 40px;
+                margin-left: 20px;
+                margin:10px;
+                background-color: #F2AFAF;
+                font-family: 'Comfortaa', cursive;
+                border: none;
+                color: #FDFDFD;
+                padding: 16px 32px;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 12px;
+                align-self: center;
+            }
+           
+        </style>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+        <script type = "text/javascript"  src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
+
+       
+    </head>
+
+    <body>
+        <div class = "container">
+        <div class = "titlebox">
+        <div class = "title">
+                <div class = "firstline"> Age-by-Age Guide </div> <br> 
+                <div class = "secondline"> to Play </div> <br>
+                <div class = "thirdline"> with Your Baby. </div>
+                 
+        </div>
+            <button id = "button"> Click Me </button>  
+        </div>
+        <div class = "imgbox"> <img src= "https://miyoun116.github.io/wnm601/hw10/img1.jpg" alt= "baby"> </div>
+
+       
+        <script type = "text/javascript" language = "javascript">
+            $(document).ready(function() {
+                $("#button").click(function(){
+                    $( ".firstline" ).slideUp( 300 ).delay( 400 ).fadeIn( 400 );
+                    $( ".secondline" ).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+                    $( ".thirdline" ).slideUp( 300 ).delay( 1200 ).fadeIn( 400 );
+                    $(".thirdline").effect( "bounce", { direction:'down', times:5 }, 600 );
+
+                });
+            });
+            
+            
+        </script>
+ </div>
+     
+    </body>
 </html>
+
+
+
+
