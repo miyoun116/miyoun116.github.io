@@ -6,11 +6,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> jQuery Animate </title>
+        <title>Assignment 10.2 - jQuery Animate</title>
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
         <style>
             .container {
@@ -59,44 +59,43 @@
             }
         </style>
 
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </head>
 
     <body>
-        <div class= "container">
-            <div id="textbox" class="ui-widget-content ui-corner-all">
+        <div class = "container">
+            <div id ="textbox" class = "ui-widget-content ui-corner-all">
                 <div id = "title">Mickey Mouse</div>
                 <p>
-                Mickey Mouse is a funny animal cartoon character and the mascot of The Walt Disney Company. He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey is one of the world's most recognizable characters.<br>
-                Mickey first appeared in the short Plane Crazy, debuting publicly in the short film Steamboat Willie (1928), one of the first sound cartoons. He went on to appear in over 130 films, including The Band Concert (1935), Brave Little Tailor (1938), and Fantasia (1940). Mickey appeared primarily in short films, but also occasionally in feature-length films. Ten of Mickey's cartoons were nominated for the Academy Award for Best Animated Short Film, one of which, Lend a Paw, won the award in 1942. In 1978, Mickey became the first cartoon character to have a star on the Hollywood Walk of Fame.
+                    Mickey Mouse is a funny animal cartoon character and the mascot of The Walt Disney Company. He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey is one of the world's most recognizable characters.<br>
+                    Mickey first appeared in the short Plane Crazy, debuting publicly in the short film Steamboat Willie (1928), one of the first sound cartoons. He went on to appear in over 130 films, including The Band Concert (1935), Brave Little Tailor (1938), and Fantasia (1940). Mickey appeared primarily in short films, but also occasionally in feature-length films. Ten of Mickey's cartoons were nominated for the Academy Award for Best Animated Short Film, one of which, Lend a Paw, won the award in 1942. In 1978, Mickey became the first cartoon character to have a star on the Hollywood Walk of Fame.
                 </p>
             </div>
-            <div id = "comment"> Mouse over mickey images below </div>
-            <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey1.png" alt= "mickey1"></div>
-            <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey2.png" alt= "mickey2"></div>
-            <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey3.png" alt= "mickey3"></div>
-            <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey4.png" alt= "mickey4"></div>
-            <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey5.png" alt= "mickey5"></div>
-        </div>
+            <div id = "comment">Mouse over mickey images below</div>
+            <div class = "image"><img src = "https://miyoun116.github.io/wnm601/hw10/mickey1.png" alt = "mickey1"></div>
+            <div class = "image"><img src = "https://miyoun116.github.io/wnm601/hw10/mickey2.png" alt = "mickey2"></div>
+            <div class = "image"><img src = "https://miyoun116.github.io/wnm601/hw10/mickey3.png" alt = "mickey3"></div>
+            <div class = "image"><img src = "https://miyoun116.github.io/wnm601/hw10/mickey4.png" alt = "mickey4"></div>
+            <div class = "image"><img src = "https://miyoun116.github.io/wnm601/hw10/mickey5.png" alt = "mickey5"></div>
+        </div>    
+        <script>
+            $(document).ready(function(){
+                // bind an event handler to be triggered when the mouse enters an image
+                $(".image").on("mouseenter", function(e) {
+                  // stop the currently-running animation on the image that mouse cursor has entered
+                  $(e.currentTarget).stop();
+                  // enlarge image to 180px over 500 ms
+                  $(e.currentTarget).animate({width:"180px"}, 500);
+                });
+                // bind an event handler to be triggered when the mouse leaves an image
+                $(".image").on("mouseleave", function(e) {
+                  // stop the currently-running animation on the image that mouse cursor has left
+                  $(e.currentTarget).stop();
+                  // shrink image to 120px over 500ms
+                  $(e.currentTarget).animate({"width":"120px"}, 500);
+                });
+            });
+        </script>
     </body>
-    
-    <script>
-        $(document).ready(function(){
-            // bind an event handler to be fired when the mouse enters an image //
-            $(".image").on("mouseenter", function(e) {
-              // stop the currently-running animation on the matched elements //
-              $(e.currentTarget).stop();
-              // do stuff with mouseenter element //
-              $(e.currentTarget).animate({width:"180px"}, 500);
-            });
-            // bind an event handler to be fired when the mouse leaves an image //
-            $(".image").on("mouseleave", function(e) {
-              // stop the currently-running animation on the matched elements //
-              $(e.currentTarget).stop();
-              // do stuff with mouseleave element //
-              $(e.currentTarget).animate({"width":"120px"}, 500);
-            });
-        });
-    </script>
 </html>

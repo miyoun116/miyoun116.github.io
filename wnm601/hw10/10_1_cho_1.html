@@ -6,8 +6,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Assignment 10.1</title>
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Righteous" rel="stylesheet">
+        <title>Assignment 10.1 - jQuery Effects</title>
+        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
         <style>
             .container {
@@ -52,8 +53,8 @@
         </style>
 
         <script src = "https://code.jquery.com/jquery-1.10.2.js"> </script>
-        <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
-        <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
     </head>
 
     <body>
@@ -69,44 +70,43 @@
         <div id= "imgbox">
             <img src = "https://miyoun116.github.io/wnm601/hw10/img1.jpg" alt= "baby">  
         </div>
-    </body>
 
-    <script>
-         $(document).ready(function() {
-            // when click the "Click Me" button //
-            $("#button_go").click(function(){
-                // delay and fadeIn effects on message1 and 2 //
-                // the speed of the delay is each 400ms, 800ms and 1200ms //
-                // fadeIn speed is 400ms //
-                $("#message1").delay(400).fadeIn(400);
-                $("#message2").delay(800).fadeIn(400);
-                $("#message3").delay(1200).fadeIn(400);
-                // bounce down 5times (600ms) on message3 //
-                $("#message3").effect("bounce", {direction: 'down', times: 5}, 600);
-                // hide and explode message in 16pieces (1600ms) //
-                $("#imgbox").hide("explode", {pieces: 16 }, 1600);
-                // hide the "click Me" button //
-                $("#button_go").hide();
-                // show the "Back" button with dealy and fadeIn function //
-                $("#button_back").delay(1600).fadeIn(400);
-            });
-             
-            // when click the "Back" button //
-            $("#button_back").click(function(){
-                // hide the message //
+        <script>
+             $(document).ready(function() {
+                // on click the "Click Me" button
+                $("#button_go").click(function(){
+                    // delay and fadeIn effects on message1 and message2
+                    // the speed of the delay is each 400ms, 800ms and 1200ms
+                    // fadeIn speed is 400ms
+                    $("#message1").delay(400).fadeIn(400);
+                    $("#message2").delay(800).fadeIn(400);
+                    // bounce down message3 5times for 600ms after fade in.
+                    $("#message3").delay(1200).fadeIn(400).effect("bounce", {direction: 'down', times: 5}, 600);
+                    // hide and explode background iamge in 16pieces (1600ms)
+                    $("#imgbox").hide("explode", {pieces: 16 }, 1600);
+                    // hide the "click Me" button
+                    $("#button_go").hide();
+                    // show the "Back" button with dealy and fadeIn function
+                    $("#button_back").delay(1600).fadeIn(400);
+                });
+
+                // on click the "Back" button
+                $("#button_back").click(function(){
+                    // hide all messages
+                    $(".message").hide();
+                    // show the image with explode effect
+                    $("#imgbox").show("explode", {pieces: 16}, 1600);
+                    // fadeOut "Back" button
+                    $("#button_back").fadeOut(400);
+                    // show the "Click Me" button with fadeIn function
+                    $("#button_go").delay(1600).fadeIn(400);
+                });
+
+                // hide "Back" button
+                $("#button_back").hide();
+                // hide all messages
                 $(".message").hide();
-                // show the image with explode function //
-                $("#imgbox").show("explode", {pieces: 16}, 1600);
-                // fadeOut "Back" button //
-                $("#button_back").fadeOut(400);
-                // show the "Click Me" button with fadeIn function //
-                $("#button_go").delay(1600).fadeIn(400);
-            });
-             
-            // hide "Back" button // 
-            $("#button_back").hide();
-            // hide message //
-            $(".message").hide();
-         });			
-    </script>
+             });			
+        </script>
+    </body>
 </html>
