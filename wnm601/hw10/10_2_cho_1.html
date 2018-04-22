@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> jQuery Animate </title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     
    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans" rel="stylesheet">
@@ -61,6 +61,19 @@
                     cursor: pointer;
                     align-self: center;
                 }
+            .image {
+                position: relative;
+                display: inline-block;
+                width: 120px;
+                height: 180px;
+            }
+            .image img {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                max-width: 100%;
+            }
         </style>
     
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -87,32 +100,43 @@
             } );
         </script>
 
-        <script>
-            $( document ).click(function() {
-                $( "#imagebox" ).toggle( "bounce", { direction: 'up', times: 3, distance:100 }, "slow" );
-            });
-        </script>
+
     
     </head>
 
     <body>
         <div class= "container">
-        <div id="imagebox"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey.png" width= 240px; alt= "mickey"></div>
-        <div class="toggler">
-        <div id="textbox" class="ui-widget-content ui-corner-all">
-        <div id = "title">Mickey Mouse</div>
-        <p>
-        Mickey Mouse is a funny animal cartoon character and the mascot of The Walt Disney Company. He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey is one of the world's most recognizable characters.<br>
-        Mickey first appeared in the short Plane Crazy, debuting publicly in the short film Steamboat Willie (1928), one of the first sound cartoons. He went on to appear in over 130 films, including The Band Concert (1935), Brave Little Tailor (1938), and Fantasia (1940). Mickey appeared primarily in short films, but also occasionally in feature-length films. Ten of Mickey's cartoons were nominated for the Academy Award for Best Animated Short Film, one of which, Lend a Paw, won the award in 1942. In 1978, Mickey became the first cartoon character to have a star on the Hollywood Walk of Fame.
-        </p>
-  </div>
-            <button id="button" class="ui-state-default ui-corner-all">Click Me</button>
-</div>
- 
-
- </div>
+            <div id="textbox" class="ui-widget-content ui-corner-all">
+                <div id = "title">Mickey Mouse</div>
+                <p>
+                Mickey Mouse is a funny animal cartoon character and the mascot of The Walt Disney Company. He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey is one of the world's most recognizable characters.<br>
+                Mickey first appeared in the short Plane Crazy, debuting publicly in the short film Steamboat Willie (1928), one of the first sound cartoons. He went on to appear in over 130 films, including The Band Concert (1935), Brave Little Tailor (1938), and Fantasia (1940). Mickey appeared primarily in short films, but also occasionally in feature-length films. Ten of Mickey's cartoons were nominated for the Academy Award for Best Animated Short Film, one of which, Lend a Paw, won the award in 1942. In 1978, Mickey became the first cartoon character to have a star on the Hollywood Walk of Fame.
+                </p>
+            </div>
+            <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey.png" alt= "mickey"></div>
+            <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey.png" alt= "mickey"></div>
+            <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey.png" alt= "mickey"></div>
+            <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey.png" alt= "mickey"></div>
+            <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey.png" alt= "mickey"></div>
+        </div>
  
  
 
 </body>
+    
+        <script>
+            $( document ).click(function() {
+                $( "#imagebox" ).toggle( "bounce", { direction: 'up', times: 3, distance:100 }, "slow" );
+            });
+            $(document).ready(function(){
+                $(".image").on("mouseenter", function(e) {
+                  $(e.currentTarget).stop();
+                  $(e.currentTarget).animate({width:"180px"}, 500);
+                });
+                $(".image").on("mouseleave", function(e) {
+                  $(e.currentTarget).stop();
+                  $(e.currentTarget).animate({"width":"120px"}, 500);
+                });
+            });
+        </script>
 </html>
