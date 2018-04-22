@@ -22,9 +22,6 @@
                     height: 260px;
                     text-align: center;
                 }
-                .toggler { 
-                    position: relative; 
-                }
                 #textbox { 
                     position: relative; 
                     padding: 20px;
@@ -64,30 +61,6 @@
     
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script>
-            $( function() {
-                var state = true;
-                $( "#button" ).on( "click", function() {
-                    if ( state ) {
-                        $( "#textbox" ).animate({
-                            backgroundColor: "#426F97",
-                            color: "#fff",
-                            width: 800
-                        }, 1000 );
-                    } else {
-                        $( "#textbox" ).animate({
-                            backgroundColor: "#D9E5FF",
-                            color: "#000",
-                            width: 400
-                        }, 1000 );
-                    }
-                    state = !state;
-                    });
-            } );
-        </script>
-
-
-    
     </head>
 
     <body>
@@ -105,10 +78,7 @@
             <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey4.png" alt= "mickey4"></div>
             <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey5.png" alt= "mickey5"></div>
         </div>
- 
- 
-
-</body>
+    </body>
     
         <script>
             $( document ).click(function() {
