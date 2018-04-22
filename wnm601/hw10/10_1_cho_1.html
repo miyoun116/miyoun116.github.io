@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Miyoun Cho -->
 <!-- Assignment 10.1: jQuery Effects -->
-<!--              -->
+<!-- Bounce, delay, fade in/out, show/hide and explode Effects with jQuery -->
 
 <html lang="en">
     <head>
@@ -71,26 +71,41 @@
         </div>
     </body>
 
-    <script type = "text/javascript" language = "javascript">
+    <script>
          $(document).ready(function() {
+            // when click the "Click Me" button //
             $("#button_go").click(function(){
+                // delay and fadeIn effects on message1 and 2 //
+                // the speed of the delay is each 400ms, 800ms and 1200ms //
+                // fadeIn speed is 400ms //
                 $("#message1").delay(400).fadeIn(400);
                 $("#message2").delay(800).fadeIn(400);
                 $("#message3").delay(1200).fadeIn(400);
+                // bounce down 5times (600ms) on message3 //
                 $("#message3").effect("bounce", {direction: 'down', times: 5}, 600);
+                // hide and explode message in 16pieces (1600ms) //
                 $("#imgbox").hide("explode", {pieces: 16 }, 1600);
+                // hide the "click Me" button //
                 $("#button_go").hide();
+                // show the "Back" button with dealy and fadeIn function //
                 $("#button_back").delay(1600).fadeIn(400);
             });
-
+             
+            // when click the "Back" button //
             $("#button_back").click(function(){
+                // hide the message //
                 $(".message").hide();
+                // show the image with explode function //
                 $("#imgbox").show("explode", {pieces: 16}, 1600);
+                // fadeOut "Back" button //
                 $("#button_back").fadeOut(400);
+                // show the "Click Me" button with fadeIn function //
                 $("#button_go").delay(1600).fadeIn(400);
             });
-
+             
+            // hide "Back" button // 
             $("#button_back").hide();
+            // hide message //
             $(".message").hide();
          });			
     </script>

@@ -1,59 +1,57 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> jQuery Animate </title>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    
-   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans" rel="stylesheet">
-    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> jQuery Animate </title>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans" rel="stylesheet">
+
         <style>
-                .container {
-                    position: relative;
-                    float: left;
-                    text-align: center;
-                    margin: 30px;
-                }
-                #textbox { 
-                    position: relative; 
-                    padding: 20px;
-                    border-radius: 12px;
-                    width: 400px; 
-                    height: 500px; 
-                    background: #D9E5FF; 
-                }
-                #title { 
-                    position: relative;
-                    border: 2px solid #97CBFE;
-                    border-radius: 12px;
-                    padding: 10px;
-                    text-align: center; 
-                    font-family: 'Abril Fatface', cursive;
-                    font-size: 20pt;
-                }
-                p {
-                    text-align: left;
-                    font-family: 'Open Sans', sans-serif;
-                }
-                .image {
-                    position: relative;
-                    display: inline-block;
-                    width: 120px;
-                    height: 180px;
-                }
-                .image img {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    right: 0;
-                    max-width: 100%;  
-                    
-                }
+            .container {
+                position: relative;
+                text-align: center;
+                margin: 30px;
+                min-width: 800px;
+            }
+            #textbox { 
+                margin: auto;
+                padding: 20px;
+                border-radius: 12px;
+                max-width: 800px;
+                #width: 400px; 
+                #height: 500px; 
+                background: #D9E5FF; 
+            }
+            #title { 
+                position: relative;
+                border: 2px solid #97CBFE;
+                border-radius: 12px;
+                padding: 10px;
+                text-align: center; 
+                font-family: 'Abril Fatface', cursive;
+                font-size: 20pt;
+            }
+            p {
+                text-align: left;
+                font-family: 'Open Sans', sans-serif;
+            }
+            .image {
+                position: relative;
+                display: inline-block;
+                width: 120px;
+                height: 180px;
+            }
+            .image img {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                max-width: 100%;  
+            }
         </style>
-    
+
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </head>
@@ -75,16 +73,16 @@
         </div>
     </body>
     
-        <script>
-            $(document).ready(function(){
-                $(".image").on("mouseenter", function(e) {
-                  $(e.currentTarget).stop();
-                  $(e.currentTarget).animate({width:"180px"}, 500);
-                });
-                $(".image").on("mouseleave", function(e) {
-                  $(e.currentTarget).stop();
-                  $(e.currentTarget).animate({"width":"120px"}, 500);
-                });
+    <script>
+        $(document).ready(function(){
+            $(".image").on("mouseenter", function(e) {
+              $(e.currentTarget).stop();
+              $(e.currentTarget).animate({width:"180px"}, 500);
             });
-        </script>
+            $(".image").on("mouseleave", function(e) {
+              $(e.currentTarget).stop();
+              $(e.currentTarget).animate({"width":"120px"}, 500);
+            });
+        });
+    </script>
 </html>
