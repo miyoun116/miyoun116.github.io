@@ -1,4 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Assignment 10.2: jQuery Animate -->
+<!-- jQuery animate with mouse enter/leave events -->
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -27,7 +31,6 @@
                 border: 2px solid #97CBFE;
                 border-radius: 12px;
                 padding: 10px;
-                text-align: center; 
                 font-family: 'Abril Fatface', cursive;
                 font-size: 20pt;
             }
@@ -35,6 +38,12 @@
                 text-align: left;
                 font-family: 'Open Sans', sans-serif;
             }
+            #comment {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold;
+                color: #9D9D9F;
+                margin: 20px;
+            }    
             .image {
                 position: relative;
                 display: inline-block;
@@ -63,6 +72,7 @@
                 Mickey first appeared in the short Plane Crazy, debuting publicly in the short film Steamboat Willie (1928), one of the first sound cartoons. He went on to appear in over 130 films, including The Band Concert (1935), Brave Little Tailor (1938), and Fantasia (1940). Mickey appeared primarily in short films, but also occasionally in feature-length films. Ten of Mickey's cartoons were nominated for the Academy Award for Best Animated Short Film, one of which, Lend a Paw, won the award in 1942. In 1978, Mickey became the first cartoon character to have a star on the Hollywood Walk of Fame.
                 </p>
             </div>
+            <div id = "comment"> Mouse over mickey images below </div>
             <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey1.png" alt= "mickey1"></div>
             <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey2.png" alt= "mickey2"></div>
             <div class="image"><img src= "https://miyoun116.github.io/wnm601/hw10/mickey3.png" alt= "mickey3"></div>
@@ -73,12 +83,18 @@
     
     <script>
         $(document).ready(function(){
+            // bind an event handler to be fired when the mouse enters an image //
             $(".image").on("mouseenter", function(e) {
+              // stop the currently-running animation on the matched elements //
               $(e.currentTarget).stop();
+              // do stuff with mouseenter element //
               $(e.currentTarget).animate({width:"180px"}, 500);
             });
+            // bind an event handler to be fired when the mouse leaves an image //
             $(".image").on("mouseleave", function(e) {
+              // stop the currently-running animation on the matched elements //
               $(e.currentTarget).stop();
+              // do stuff with mouseleave element //
               $(e.currentTarget).animate({"width":"120px"}, 500);
             });
         });
