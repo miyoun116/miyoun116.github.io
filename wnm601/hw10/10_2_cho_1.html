@@ -17,11 +17,6 @@
                     text-align: center;
                     margin: 30px;
                 }
-                #imagebox {
-                    width: 400px;
-                    height: 260px;
-                    text-align: center;
-                }
                 #textbox { 
                     position: relative; 
                     padding: 20px;
@@ -81,9 +76,6 @@
     </body>
     
         <script>
-            $( document ).click(function() {
-                $( "#imagebox" ).toggle( "bounce", { direction: 'up', times: 3, distance:100 }, "slow" );
-            });
             $(document).ready(function(){
                 $(".image").on("mouseenter", function(e) {
                   $(e.currentTarget).stop();
