@@ -22,6 +22,9 @@
 	           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             }
             .news-item { display:inline-block; vertical-align:top; width:300px;}   
+            img {
+                width: 120px;
+            }
         </style> 
         
         
@@ -42,7 +45,7 @@
                     <label for="checkbox-nested-3"> Orange
                         <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
                     </label>
-                    <label for="checkbox-nested-4"> Green
+                    <label for="checkbox-nested-4"> All Fruits
                         <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
                     </label>
             </fieldset>
@@ -60,10 +63,11 @@
         
     
         <select name="sort-news" id="sort-news">
-	       <option value="All">All news</option>
-	       <option value="Cat1">Category 1</option>
-	       <option value="Cat2">Category 2</option>
-	       <option value="Cat3">Category 3</option>
+	       <option value="All">All Fruits</option>
+	       <option value="Cat1">Apple</option>
+	       <option value="Cat2">Banana</option>
+	       <option value="Cat3">Orange</option>
+           
         </select> 
         <hr />
 
@@ -73,30 +77,32 @@
 		          <img alt="Apple" title="Apple" src="https://miyoun116.github.io/wnm601/hw11/apple.jpg">
 	           </div>
 	           <div class="news-txt">
-                  <h3><a href="">A news title</a></h3>
+                  <h3><a href="">Apple</a></h3>
 		          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
 	           </div>
             </article>
 
             <article class="news-item" data-category="Cat2">
 	           <div class="thumb">
-		          <img alt="Our ALT text here" title="Our title here" src="https://placehold.it/150x150">
+		          <img alt="Banana" title="Banana" src="https://miyoun116.github.io/wnm601/hw11/banana.jpg">
 	           </div>
 	           <div class="news-txt">
-		          <h3><a href="">A news title</a></h3>
+		          <h3><a href="">Banana</a></h3>
 		          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
 	           </div>
             </article>
 
             <article class="news-item" data-category="Cat3">
 	           <div class="thumb">
-		          <img alt="Our ALT text here" title="Our title here" src="https://placehold.it/150x150">
+		          <img alt="Orange" title="Orange" src="https://miyoun116.github.io/wnm601/hw11/orange.jpg">
 	           </div>
 	           <div class="news-txt">
-		          <h3><a href="">A news title</a></h3>
+		          <h3><a href="">Orange</a></h3>
 		          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
 	           </div>
             </article>
+            
+            
         </section>
   
         <script >//Filter News
