@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+    <head>
+       <script src='//static.codepen.io/assets/editor/live/console_runner-ce3034e6bde3912cc25f83cccb7caa2b0f976196f2f2d52303a462c826d54a73.js'></script><script src='//static.codepen.io/assets/editor/live/css_live_reload_init-890dc39bb89183d4642d58b1ae5376a0193342f9aed88ea04330dc14c8d52f55.js'></script>
+        <meta name="robots" content="noindex">
+        <link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+        <link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+        <link rel="canonical" href="https://codepen.io/NickyCDK/pen/lhaiz" />
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-12/jquery-2.0.3.min_1.js"></script>
+        <script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Droppable - Simple photo manager</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+        
+        <style>
+            body {
+	           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+            
+            
+            #gallery { float: left; width: 60%; min-height: 12em; }
+            .gallery.custom-state-active { background: #eee; }
+            .listbox { float: left; width: 300px; padding: 0.4em; margin: 0 0.4em 0.4em 0; text-align: center; }
+            .listbox h5 { margin: 0 0 0.4em; cursor: move; }
+            .listbox a { float: right; }
+            .listbox a.ui-icon-zoomin { float: left; width: 30px;}
+            .listbox img { width: 200px; cursor: move; }
+
+            #trash { float: right; width: 20%; min-height: 36em; padding: 1%; border-style: solid}
+            #trash h4 { line-height: 16px; margin: 0 0 0.4em; }
+            #trash h4 .ui-icon { float: left; }
+            #trash .gallery h5 { display: none; }
+        </style> 
+        
+        
+    </head>
+    
+    <body>
+       
+        <select name="sort-news" id="sort-news">
+	       <option value="All">All Fruits</option>
+	       <option value="fruit1">Apple</option>
+	       <option value="fruit2">Banana</option>
+	       <option value="fruit3">Orange</option>
+        </select> 
+       
+        
+  
+        <script >//Filter News
+            $('select#sort-news').change(function() {
+	           var filter = $(this).val()
+	               filterList(filter);
+                });
+
+            //News filter function
+                function filterList(value) {
+	               var list = $(".list .item");
+                    $(list).fadeOut("fast");
+	                   if (value == "All") {
+                           $(".list").find("article").each(function (i) {
+		                      	$(this).delay(200).slideDown("fast");
+		                  });
+	
+                        } else {
+		                  //Notice this *=" <- This means that if the data-category contains multiple options, it will find them
+		                  //Ex: data-category="Cat1, Cat2"
+		                  $(".list").find("article[data-category*=" + value + "]").each(function (i) {
+			                 $(this).delay(200).slideDown("fast");
+		                  });
+	                   }
+                }
+                //# sourceURL=pen.js
+        </script>
+        
+        
+        
+        <div class="ui-widget ui-helper-clearfix">
+            <ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+                <div class = "listbox" >
+                    <div class="ui-widget-content ui-corner-tr">
+                        <section class="list">
+                            <article class="item" data-category="fruit1">
+                                <div class="thumb">
+		                          <img alt="Apple" title="Apple" src="https://miyoun116.github.io/wnm601/hw11/apple.jpg">
+	                            </div>
+                                <div class="text">
+                                    <h3>Apple</h3>
+		                            <p>$2.00</p>
+                                </div>
+                            </article>
+                        </section>
+                        <a href="images/high_tatras.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+                        <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+                    </div>
+                </div>
+   
+                <div class = "listbox" >
+                    <div class="ui-widget-content ui-corner-tr">
+                        <section class="list">
+                            <article class="item" data-category="fruit2">
+	                            <div class="thumb">
+                                    <img alt="Banana" title="Banana" src="https://miyoun116.github.io/wnm601/hw11/banana.jpg">
+                                </div>
+                                <div class="text">
+		                          <h3><a href="">Banana</a></h3>
+		                          <p>$1.00</p>
+                                </div>
+                            </article>
+                        </section>
+                        <a href="images/high_tatras2.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+                        <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+                    </div>
+                </div>
+    
+                <div class = "listbox" >
+                    <div class="ui-widget-content ui-corner-tr">
+                        <section class="list">
+                            <article class="item" data-category="fruit3">
+                                <div class="thumb">
+                                    <img alt="Orange" title="Orange" src="https://miyoun116.github.io/wnm601/hw11/orange.jpg">
+	                            </div>
+                                <div class="text">
+		                          <h3><a href="">Orange</a></h3>
+                                  <p>$2.00</p>
+	                            </div>
+                            </article>
+                        </section>
+                        <a href="images/high_tatras3.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+                        <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+                    </div>
+                </div>
+            </ul>
+ 
+        <div id="trash" class="ui-widget-content ui-state-default">
+            <h4 class="ui-widget-header"><span class="ui-icon ui-icon-trash">Shopping Cart</span></h4>
+        
+    </div>
+ </div>
+        
+        <script>
+  $( function() {
+ 
+    // There's the gallery and the trash
+    var $gallery = $( "#gallery" ),
+      $trash = $( "#trash" );
+ 
+    // Let the gallery items be draggable
+    $( ".listbox", $gallery ).draggable({
+      cancel: "a.ui-icon", // clicking an icon won't initiate dragging
+      revert: "invalid", // when not dropped, the item will revert back to its initial position
+      containment: "document",
+      helper: "clone",
+      cursor: "move"
+    });
+ 
+    // Let the trash be droppable, accepting the gallery items
+    $trash.droppable({
+      accept: "#gallery > .listbox",
+      classes: {
+        "ui-droppable-active": "ui-state-highlight"
+      },
+      drop: function( event, ui ) {
+        deleteImage( ui.draggable );
+      }
+    });
+ 
+    // Let the gallery be droppable as well, accepting items from the trash
+    $gallery.droppable({
+      accept: "#trash > .listbox",
+      classes: {
+        "ui-droppable-active": "custom-state-active"
+      },
+      drop: function( event, ui ) {
+        recycleImage( ui.draggable );
+      }
+    });
+ 
+    // Image deletion function
+    var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
+    function deleteImage( $item ) {
+      $item.fadeOut(function() {
+        var $list = $( "ul", $trash ).length ?
+          $( "ul", $trash ) :
+          $( "<ul class='gallery ui-helper-reset'/>" ).appendTo( $trash );
+ 
+        $item.find( "a.ui-icon-trash" ).remove();
+        $item.append( recycle_icon ).appendTo( $list ).fadeIn(function() {
+          $item
+            .animate({ width: "48px" })
+            .find( "img" )
+              .animate({ height: "36px" });
+        });
+      });
+    }
+ 
+    // Image recycle function
+    var trash_icon = "<a href='link/to/trash/script/when/we/have/js/off' title='Delete this image' class='ui-icon ui-icon-trash'>Delete image</a>";
+    function recycleImage( $item ) {
+      $item.fadeOut(function() {
+        $item
+          .find( "a.ui-icon-refresh" )
+            .remove()
+          .end()
+          .css( "width", "96px")
+          .append( trash_icon )
+          .find( "img" )
+            .css( "height", "72px" )
+          .end()
+          .appendTo( $gallery )
+          .fadeIn();
+      });
+    }
+ 
+    // Image preview function, demonstrating the ui.dialog used as a modal window
+    function viewLargerImage( $link ) {
+      var src = $link.attr( "href" ),
+        title = $link.siblings( "img" ).attr( "alt" ),
+        $modal = $( "img[src$='" + src + "']" );
+ 
+      if ( $modal.length ) {
+        $modal.dialog( "open" );
+      } else {
+        var img = $( "<img alt='" + title + "' width='384' height='288' style='display: none; padding: 8px;' />" )
+          .attr( "src", src ).appendTo( "body" );
+        setTimeout(function() {
+          img.dialog({
+            title: title,
+            width: 400,
+            modal: true
+          });
+        }, 1 );
+      }
+    }
+ 
+    // Resolve the icons behavior with event delegation
+    $( "ul.gallery > .lixtbox" ).on( "click", function( event ) {
+      var $item = $( this ),
+        $target = $( event.target );
+ 
+      if ( $target.is( "a.ui-icon-trash" ) ) {
+        deleteImage( $item );
+      } else if ( $target.is( "a.ui-icon-zoomin" ) ) {
+        viewLargerImage( $target );
+      } else if ( $target.is( "a.ui-icon-refresh" ) ) {
+        recycleImage( $item );
+      }
+ 
+      return false;
+    });
+  } );
+  </script>
+   
+    </body> 
+</html>
+
