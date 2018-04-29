@@ -15,63 +15,124 @@
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        
         <style>
             body {
                 font-family: 'Montserrat', sans-serif;
-            }   
+                text-align: center;
+                font-size: 20pt;
+            } 
+            #contentbox {
+                height : 300px;
+            }
+            img {
+                width : 600px;
+            }
+                
         </style>
 
     </head>
     
     <body>
-        <div data-role="page" id="homePage">
+        
+        
+
+	
+
+	
+
+
+        
+         <!-- Start of first page -->
+        <div data-role="page" id="foo">
+            
             <div data-role= "header"> Do It Yourself! </div>
+            
+            <div role="main" class="ui-content">
+                
             <div data-role="content">
+                <div class = "contentbox">
+                <div id= "imgbox1">
+                <img src = "https://miyoun116.github.io/wnm601/hw11/delivery.png" alt= "delivery">  
+                </div>
                 <p>
                 You can do it yourself - but you do not have to! <br>
                 Delivery starting at $29
                 </p>
+                </div>
             </div>
             
             <div data-role="content">
-                <p>
-                Working together to create a safer home
-                </p>
-            </div>
+                <div class = "contentbox">
+                    <div id= "imgbox2">
+                        <img src = "https://miyoun116.github.io/wnm601/hw11/home.jpg" alt= "home">  
+                    </div>
+                    <p>
+                        Working together to create a safer home
+                    </p>
+                </div>
+             </div>   
+                
             
             <div data-role="content">
-                <p>
-                Salmon Fillet <br>
-                Family Price $4.99 <br>
-                regular Price $6.99
-                </p>
+                <div class = "contentbox">
+                    <div id= "imgbox3">
+                        <img src = "https://miyoun116.github.io/wnm601/hw11/salmon.jpg" alt= "salmon">  
+                    </div>
+                    <p>
+                        Salmon Fillet <br>
+                        Family Price $4.99 <br>
+                        regular Price $6.99
+                    </p>
+                </div>
+            </div>
+            
+            </div>
+                
+            <div data-role="collapsible-set" data-corners="false" data-theme="c" data-content-theme="d">
+                <div data-role="collapsible">
+                    <h3> When is my birthday? </h3>
+                    <p> 1943 </p>
+                </div>
+                <div data-role="collapsible">
+                    <h3> What are my theme colors? </h3>
+                    <p> Blue and Yellow </p>
+                </div>
+                <div data-role="collapsible">
+                    <h3> What Kind of items for sale? </h3>
+                    <p> Furniture, kitchen supplies, Home electronics, Food </p>
+                </div>
             </div>
             
             <div data-role="footer">
                 <p>
-                <i >copyright Branding with ThemeRoller. 2018. </i>
+                <i > copyright Branding with ThemeRoller. 2018. </i>
                 </p>
             </div>
          
-    </div>
+        </div>
+    
+        <!-- Start of second page -->
+<div data-role="page" id="bar">
+
+	<div data-role="header">
+		<h1>Bar</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+		<p><a href="#foo">Back to foo</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4> <i > copyright Branding with ThemeRoller. 2018. </i> </h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+        
     </body>
 </html>
 
-<h1>Incredibly Basic Slider</h1>
-<div id="slider">
-  <a href="#" class="control_next">>></a>
-  <a href="#" class="control_prev"><</a>
-  <ul>
-    <li>SLIDE 1</li>
-    <li style="background: #aaa;">SLIDE 2</li>
-    <li>SLIDE 3</li>
-    <li style="background: #aaa;">SLIDE 4</li>
-  </ul>  
-</div>
 
-<div class="slider_option">
-  <input type="checkbox" id="checkbox">
-  <label for="checkbox">Autoplay Slider</label>
-</div> 
 
         
