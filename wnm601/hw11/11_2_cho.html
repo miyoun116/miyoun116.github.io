@@ -29,6 +29,11 @@
             img {
                 width : 300px;
             }
+            #textbox {
+                position: relative;
+                margin: auto;
+                text-align: left;
+            }
                 
         </style>
     </head>
@@ -47,7 +52,7 @@
                 <p>  Yellow and Blue </p>
                 <img src = "https://miyoun116.github.io/wnm601/hw11/color1.png" alt= "ikea">
                 <p><a href="#two" class="ui-btn ui-shadow ui-corner-all"> Try to Guess </a></p>
-                <p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop"> The answer is... </a></p>
+                <p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop"> Related Image </a></p>
 	        </div>
 
 	        <!-- footer -->
@@ -65,10 +70,10 @@
 
 	        <div role="main" class="ui-content">
 		      <h2>Hints</h2>
-                <p>
+                <div id = "textbox">
                 1. I am born in Sweden in 1943. <br> 
                 2. My theme colors are blue and yellow. <br>
-                3. I sell items such as Furniture, kitchen supplies, Home electronics and Food. </p>
+                3. I sell items such as Furniture, kitchen supplies, Home electronics and Food. </div>
 		        <p><a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b"> Go Back </a></p>
             </div>
 
@@ -85,7 +90,7 @@
 	       </div>
             
 	       <div role="main" class="ui-content">
-		      <h2> Realated image </h2>
+		      <h2> Related Image </h2>
 		      <img src = "https://miyoun116.github.io/wnm601/hw11/salmon.jpg" alt= "ikea">
                
 		      <p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"> Go Back </a></p>
