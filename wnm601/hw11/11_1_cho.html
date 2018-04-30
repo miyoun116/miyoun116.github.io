@@ -1,4 +1,8 @@
 <!doctype html>
+<!-- Miyoun Cho -->
+<!-- Assignment 11.1: jQuery UI Effects -->
+<!-- Photo slide using jQuery UI Effects -->
+
 <html lang="en">
     <head>
         <title>Assignment 11.1 - photo slider with effect</title>
@@ -33,9 +37,9 @@
                 color:#4D4D4D;
                 text-align: center;
             }
-           .button {
+            .button {
                position: relative;
-                margin-top:256px;
+                margin-top:300px;
                 width:40px;
                 transition: 0.1s ease;
             }
@@ -57,7 +61,7 @@
                 overflow: hidden;
                 width: 512px;
                 height: 512px;
-                margin-top: 20px;
+                margin-top: 50px;
                 margin-left: 128px;
             }
             .page {
@@ -71,23 +75,20 @@
                 max-width: 100%;
                 max-height: 100%;
             }
-            .hideleft {
+            .hide-left {
                 visibility: hidden;
-                overflow: hidden;
                 transform: translate3d(-100%,0,0);
                 opacity: 0.5;
                 transition: all 1s;            
             }
             .show {
-                overflow: hidden;
                 visibility: visible;
                 opacity: 1.0;
                 transform: translate3d(0,0,0);
                 transition: all 1s;
             }
-            .hideright {
+            .hide-right {
                 visibility: hidden;
-                overflow: hidden;
                 opacity: 0.5;
                 transform: translate3d(100%,0,0);
                 transition: all 1s;            
@@ -123,16 +124,16 @@
                 <div id="page-1" class="page show">
                     <img src = "https://miyoun116.github.io/wnm601/hw11/tiffany1.jpg" alt= "tiffany1">  
                 </div>
-                <div id="page-2" class="page hideright">
+                <div id="page-2" class="page hide-right">
                     <img src = "https://miyoun116.github.io/wnm601/hw11/tiffany2.jpg" alt= "tiffany2">  
                 </div>
-                <div id="page-3" class="page hideright">
+                <div id="page-3" class="page hide-right">
                     <img src = "https://miyoun116.github.io/wnm601/hw11/tiffany3.jpg" alt= "tiffany3">  
                 </div>
-                <div id="page-4" class="page hideright">
+                <div id="page-4" class="page hide-right">
                     <img src = "https://miyoun116.github.io/wnm601/hw11/tiffany4.jpg" alt= "tiffany4">  
                 </div>
-                <div id="page-5" class="page hideright">
+                <div id="page-5" class="page hide-right">
                     <img src = "https://miyoun116.github.io/wnm601/hw11/tiffany5.jpg" alt= "tiffany5">  
                 </div>
             </div>
@@ -143,39 +144,58 @@
     <script>
         $(document).ready(function() {
             var curPage = 1;
-            var numOfPages = $(".page").length;
-            var animTime = 1500;
-            var scrolling = false;
+            var numPages = $(".page").length;
             var pagePrefix = "#page-"
+            var buttonFadeDuration = 500;
+            var sliding = false;
             
-            function scroll() {
-                console.warn("new page:" + curPage);
-                // set scrolling to ture so that it will not trigger another effect.
-                scrolling = true;
-                $(pagePrefix + curPage).removeClass("hideleft").removeClass("hideright").addClass("show");
+            // slide to new picture.
+            function slide() {
+                // prevent another effect from starting before the prior one finishes.
+                sliding = true;
+                // slide in the new photo using the jquery UI effect.
+                $(pagePrefix + curPage).removeClass("hide-left").removeClass("hide-right").addClass("show");
                 if (curPage > 1) {
-                    $(pagePrefix + (curPage - 1)).removeClass("show").addClass("hideleft");
+                    // slide out the existing photo using the jquery UI effect.
+                    $(pagePrefix + (curPage - 1)).removeClass("show").addClass("hide-left");
+                    // reshow right button if there are more pictures on the left.
+                    if (!$(".lbutton").is(":visible"))
+                        $(".lbutton").fadeIn(buttonFadeDuration);
+                } else {
+                    // hide left button if it reaches the left end.
+                    $(".lbutton").fadeOut(buttonFadeDuration);
                 }
-                if (curPage < numOfPages) {
-                    $(pagePrefix + (curPage + 1)).removeClass("show").addClass("hideright");
+                if (curPage < numPages) {
+                    // slide out the existing photo using the jquery UI effect.
+                    $(pagePrefix + (curPage + 1)).removeClass("show").addClass("hide-right");
+                    // reshow right button if there are more pictures on the right.
+                    if (!$(".rbutton").is(":visible"))
+                        $(".rbutton").fadeIn(buttonFadeDuration);
+                } else {
+                    // hide right button if it reaches the left end.
+                    $(".rbutton").fadeOut(buttonFadeDuration);
                 }
-
-                // set timer to reset scrolling.
+                
+                // reset the sliding flag when the effect finishes.
                 setTimeout(function() {
-                    scrolling = false;
-                }, animTime);
+                    sliding = false;
+                }, 1000)
             };
             
+            // left button handler
             function left() {
+                if (sliding) return;
                 if (curPage == 1) return;
                 curPage--;
-                if (curPage == 1) {};
-                scroll();
+                slide();
             }
+            
+            // right button handler
             function right() {
-                if (curPage == numOfPages) return;
+                if (sliding) return;
+                if (curPage == numPages) return;
                 curPage++;
-                scroll();
+                slide();
             }
             
             $(".lbutton").on("click", function() {left();});
