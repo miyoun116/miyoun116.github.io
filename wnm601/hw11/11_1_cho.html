@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Assignment 11.1 - photo slider with effect</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            *, *:before, *:after {
+                box-sizing:border-box;
+                margin: 0;
+            }
+            .body {
+                background: #15181A;
+            }
+            .container {
+                position: relative;
+                height: 100vh;
+            }
+           .button {
+               position: relative;
+                margin-top:48vh;
+                width:40px;
+                transition: 0.1s ease;
+                z-index: 1;
+            }
+            .button:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+                transition: 0.2s ease;
+            }
+            .lbutton {
+                float: left;
+                left: 5%;
+            }
+            .rbutton {
+                float: right;
+                right: 5%;
+            }
+            .page {
+                position: relative;
+                margin: auto;
+                width: 80vw;    
+            }
+            .page img {
+                max-width: 100%;
+                max-height: 100%;
+                z-index: -1;
+            }
+            .hideleft {
+                visibility: hidden;
+                overflow: hidden;
+                transform: translate3d(-100%,0,0);
+                opacity: 0.5;
+                transition: all 1s;            
+            }
+            .show {
+                overflow: hidden;
+                visibility: visible;
+                opacity: 1.0;
+                transform: translate3d(0,0,0);
+                transition: all 1s;
+            }
+            .hideright {
+                visibility: hidden;
+                overflow: hidden;
+                opacity: 0.5;
+                transform: translate3d(100%,0,0);
+                transition: all 1s;            
+            }
+
+        </style>
+    </head>
+    
+    <body> 
+        <div class="container">
+            <img class="button lbutton" src="https://miyoun116.github.io/wnm601/hw2/left.png">
+            <img class="button rbutton" src="https://miyoun116.github.io/wnm601/hw2/right.png">
+            
+            <div id="page-1" class="page">
+                <img src = "https://miyoun116.github.io/wnm601/hw2/slide1.JPG" alt= "page1">  
+            </div>
+            <div id="page-2" class="page hideright">
+                <img src = "https://miyoun116.github.io/wnm601/hw2/slide2.JPG" alt= "page2">  
+            </div>
+            <div id="page-3" class="page hideright">
+                <img src = "https://miyoun116.github.io/wnm601/hw2/slide3.JPG" alt= "page3">  
+            </div>
+
+        </div>
+    </body> 
+    <script>
+        $(document).ready(function() {
+            var curPage = 1;
+            var numOfPages = $(".page").length;
+            var animTime = 1500;
+            var scrolling = false;
+            var pagePrefix = "#page-"
+            
+            function scroll() {
+                console.warn("new page:" + curPage);
+                // set scrolling to ture so that it will not trigger another effect.
+                scrolling = true;
+                $(pagePrefix + curPage).removeClass("hideleft").removeClass("hideright").addClass("show");
+                if (curPage > 1) {
+                    $(pagePrefix + (curPage - 1)).removeClass("show").addClass("hideleft");
+                }
+                if (curPage < numOfPages) {
+                    $(pagePrefix + (curPage + 1)).removeClass("show").addClass("hideright");
+                }
+
+                // set timer to reset scrolling.
+                setTimeout(function() {
+                    scrolling = false;
+                    $(".hideleft").hide();
+                    $(".hideright").hide();
+                }, animTime);
+            };
+            
+            function left() {
+                $(".hideright").show();
+                $(".hideleft").show();
+                if (curPage == 1) return;
+                curPage--;
+                if (curPage == 1) {};
+                scroll();
+            }
+            function right() {
+                $(".hideright").show();
+                $(".hideleft").show();
+                if (curPage == numOfPages) return;
+                curPage++;
+                scroll();
+            }
+            
+            $(".lbutton").on("click", function() {left();});
+            $(".rbutton").on("click", function() {right();});
+        });
+    </script>
+</html>
+
