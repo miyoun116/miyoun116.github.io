@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script> 
-$(document).ready(function(){
-    $("button").click(function(){
-        var div = $("div");  
-        div.animate({left: '100px'}, "slow");
-        div.animate({fontSize: '3em'}, "slow");
-    });
-});
-</script> 
+    <title>Using on() and off()</title>
 </head>
 <body>
-
-<button>Start Animation</button>
-
-<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
-
-<div style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
-
+    <p><em>This list will respond to clicks:</em></p>
+    <ul id="main-list">
+        <li>Larry</li>
+        <li>Moe</li>
+        <li>Curly</li>
+    </ul>
+    
+    <button id="onbutton">On</button>
+    <button id="offbutton">Off</button>
+    <button id="add">Add an LI Item</button>
+    
+    <p id="placeholder" />
+        <em>This list will not respond to clicks:</em>
+        <ul>
+            <li>Lonely element</li>
+            <li>I will never change</li>
+        </ul>
+    </p>
+    
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#onbutton').click(function() {
+                $('#main-list').on('click', 'li', function() {
+                    $('#placeholder').append('<li>Clicked ' + $(this).html() + '</li>');
+                });
+            });
+            
+            $('#offbutton').click(function() {
+            console.log("click");
+                $('#main-list').off('click', 'li');
+            });
+            
+            $('#add').click(function() {
+                $('#main-list').append($('<li>Another li!</li>'));
+            });		
+        });
+    </script>		
 </body>
 </html>
