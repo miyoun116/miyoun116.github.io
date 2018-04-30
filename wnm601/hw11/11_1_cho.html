@@ -149,40 +149,40 @@
             var buttonFadeDuration = 500;
             var sliding = false;
             
-            // slide to new picture.
+            <!-- slide to new picture. -->
             function slide() {
-                // prevent another effect from starting before the prior one finishes.
+                <!-- prevent another effect from starting before the prior one finishes. -->
                 sliding = true;
-                // slide in the new photo using the jquery UI effect.
+                <!-- slide in the new photo using the jquery UI effect.-->
                 $(pagePrefix + curPage).removeClass("hide-left").removeClass("hide-right").addClass("show");
                 if (curPage > 1) {
-                    // slide out the existing photo using the jquery UI effect.
+                    <!-- slide out the existing photo using the jquery UI effect. -->
                     $(pagePrefix + (curPage - 1)).removeClass("show").addClass("hide-left");
-                    // reshow right button if there are more pictures on the left.
+                    <!-- reshow right button if there are more pictures on the left. -->
                     if (!$(".lbutton").is(":visible"))
                         $(".lbutton").fadeIn(buttonFadeDuration);
                 } else {
-                    // hide left button if it reaches the left end.
+                    <!-- hide left button if it reaches the left end.-->
                     $(".lbutton").fadeOut(buttonFadeDuration);
                 }
                 if (curPage < numPages) {
-                    // slide out the existing photo using the jquery UI effect.
+                    <!-- slide out the existing photo using the jquery UI effect. -->
                     $(pagePrefix + (curPage + 1)).removeClass("show").addClass("hide-right");
-                    // reshow right button if there are more pictures on the right.
+                    <!-- reshow right button if there are more pictures on the right. -->
                     if (!$(".rbutton").is(":visible"))
                         $(".rbutton").fadeIn(buttonFadeDuration);
                 } else {
-                    // hide right button if it reaches the left end.
+                    <!-- hide right button if it reaches the left end. -->
                     $(".rbutton").fadeOut(buttonFadeDuration);
                 }
                 
-                // reset the sliding flag when the effect finishes.
+                <!-- reset the sliding flag when the effect finishes. -->
                 setTimeout(function() {
                     sliding = false;
                 }, 1000)
             };
             
-            // left button handler
+            <!-- left button handler -->
             function left() {
                 if (sliding) return;
                 if (curPage == 1) return;
@@ -190,7 +190,7 @@
                 slide();
             }
             
-            // right button handler
+            <!-- right button handler -->
             function right() {
                 if (sliding) return;
                 if (curPage == numPages) return;
