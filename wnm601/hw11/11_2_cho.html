@@ -27,8 +27,9 @@
             #contentbox {
                 height : 300px;
             }
+           
             img {
-                width : 600px;
+                width : 300px;
             }
                 
         </style>
@@ -45,7 +46,7 @@
 	        <!-- /content -->
             <div role="main" class="ui-content">
 		       <h2> My Color is... </h2>
-                <p>  Blue and Yellow </p>
+                <p>  Yellow and Blue </p>
                 <img src = "https://miyoun116.github.io/wnm601/hw11/color1.png" alt= "ikea">
                 <p><a href="#two" class="ui-btn ui-shadow ui-corner-all"> Try to Guess </a></p>
                 <p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop"> The answer is... </a></p>
@@ -86,33 +87,15 @@
 	       </div>
             
 	       <div role="main" class="ui-content">
-		      <h2> The answer is... </h2>
-		      <p>IKEA</p>
-            
-              <div id = "imgbox">
-                <img src = "https://miyoun116.github.io/wnm601/hw11/ikea.jpg" alt= "ikea">
-              </div>
+		      <h2> Realated image </h2>
+		      <img src = "https://miyoun116.github.io/wnm601/hw11/salmon.jpg" alt= "ikea">
                
-              <button id = "click"> Click Me! </button> 
 		      <p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"> Go Back </a></p>
 	       </div>
 
 	       <div data-role="footer">
 		      <h4><i> copyright miyoun cho. 2018. </i></h4>
 	       </div>
-        </div>
-        
-        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
- 
-
-        <script>
-        $( "button" ).click(function() {
-          $( "#imgbox" ).show( "fold", 2000 );
-        });
-        </script>
-        
-        
+        </div> 
     </body>
 </html>
