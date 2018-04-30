@@ -8,14 +8,13 @@
         <title>jQuery Mobile page</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="themes/yellow_blue.min.css" />
-        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw11/themes/yellow_blue.min.css" />
+        <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw11/themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         
         <style>
             body {
@@ -26,113 +25,80 @@
             #contentbox {
                 height : 300px;
             }
+           
             img {
-                width : 600px;
+                width : 300px;
+            }
+            #textbox {
+                position: relative;
+                margin: auto;
+                text-align: left;
             }
                 
         </style>
-
     </head>
     
     <body>
-        
-        
+        <!-- Start of first page -->
+        <div data-role="page" id="one">
+            <!-- header -->
+            <div data-role="header">
+		      <h1> Who am I? </h1>
+	        </div>
 
-	
-
-	
-
-
-        
-         <!-- Start of first page -->
-        <div data-role="page" id="foo">
-            
-            <div data-role= "header"> Do It Yourself! </div>
-            
+	        <!-- /content -->
             <div role="main" class="ui-content">
-                
-            <div data-role="content">
-                <div class = "contentbox">
-                <div id= "imgbox1">
-                <img src = "https://miyoun116.github.io/wnm601/hw11/delivery.png" alt= "delivery">  
-                </div>
-                <p>
-                You can do it yourself - but you do not have to! <br>
-                Delivery starting at $29
-                </p>
-                </div>
+		       <h2> My Color is... </h2>
+                <p>  Yellow and Blue </p>
+                <img src = "https://miyoun116.github.io/wnm601/hw11/color1.png" alt= "ikea">
+                <p><a href="#two" class="ui-btn ui-shadow ui-corner-all"> Try to Guess </a></p>
+                <p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop"> Related Image </a></p>
+	        </div>
+
+	        <!-- footer -->
+            <div data-role="footer" data-theme="a">
+                <p><i> copyright miyoun cho. 2018. </i></p>
             </div>
-            
-            <div data-role="content">
-                <div class = "contentbox">
-                    <div id= "imgbox2">
-                        <img src = "https://miyoun116.github.io/wnm601/hw11/home.jpg" alt= "home">  
-                    </div>
-                    <p>
-                        Working together to create a safer home
-                    </p>
-                </div>
-             </div>   
-                
-            
-            <div data-role="content">
-                <div class = "contentbox">
-                    <div id= "imgbox3">
-                        <img src = "https://miyoun116.github.io/wnm601/hw11/salmon.jpg" alt= "salmon">  
-                    </div>
-                    <p>
-                        Salmon Fillet <br>
-                        Family Price $4.99 <br>
-                        regular Price $6.99
-                    </p>
-                </div>
-            </div>
-            
-            </div>
-                
-            <div data-role="collapsible-set" data-corners="false" data-theme="c" data-content-theme="d">
-                <div data-role="collapsible">
-                    <h3> When is my birthday? </h3>
-                    <p> 1943 </p>
-                </div>
-                <div data-role="collapsible">
-                    <h3> What are my theme colors? </h3>
-                    <p> Blue and Yellow </p>
-                </div>
-                <div data-role="collapsible">
-                    <h3> What Kind of items for sale? </h3>
-                    <p> Furniture, kitchen supplies, Home electronics, Food </p>
-                </div>
-            </div>
-            
-            <div data-role="footer">
-                <p>
-                <i > copyright Branding with ThemeRoller. 2018. </i>
-                </p>
-            </div>
-         
         </div>
-    
+
         <!-- Start of second page -->
-<div data-role="page" id="bar">
+        <div data-role="page" id="two" data-theme="a">
+            <!-- header -->
+            <div data-role="header">
+		      <h1> Try to Guess </h1>
+	        </div>
 
-	<div data-role="header">
-		<h1>Bar</h1>
-	</div><!-- /header -->
+	        <div role="main" class="ui-content">
+		      <h2>Hints</h2>
+                <div id = "textbox">
+                1. I am born in Sweden in 1943. <br> 
+                2. My theme colors are blue and yellow. <br>
+                3. I sell items such as Furniture, kitchen supplies, Home electronics and Food. </div>
+		        <p><a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b"> Go Back </a></p>
+            </div>
 
-	<div role="main" class="ui-content">
-		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-		<p><a href="#foo">Back to foo</a></p>
-	</div><!-- /content -->
+	        <div data-role="footer">
+                <h4><i> copyright miyoun cho. 2018. </i></h4>
+	        </div>
+        </div>
 
-	<div data-role="footer">
-		<h4> <i > copyright Branding with ThemeRoller. 2018. </i> </h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-        
+        <!-- Start of third page: #popup -->
+        <div data-role="page" id="popup">
+
+	       <div data-role="header" data-theme="b">
+		      <h1> Hello </h1>
+	       </div>
+            
+	       <div role="main" class="ui-content">
+		      <h2> Related Image </h2>
+		      <img src = "https://miyoun116.github.io/wnm601/hw11/salmon.jpg" alt= "ikea">
+               
+		      <p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left"> Go Back </a></p>
+	       </div>
+
+	       <div data-role="footer">
+		      <h4><i> copyright miyoun cho. 2018. </i></h4>
+	       </div>
+        </div> 
     </body>
 </html>
-
-
-
-        
