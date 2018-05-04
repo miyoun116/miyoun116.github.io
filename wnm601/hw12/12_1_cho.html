@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Assignment 12.1: Simple Scene -->
+<!-- Draw a simple scene using HTML5 anvas -->
+
+<html lang="en">
+    <html>
+        <head>
+            <title>HTML5 Canvas</title>
+            
+            <style>
+                #container {
+                width: 800px;
+                height: 600px;
+                margin: 0px auto;
+                background-color: #EDEAEA; 
+                }
+               
+            </style>
+        </head>
+       
+        <body>
+            <div id= "container">
+               <canvas id="label" width="420" height="60" style="border:1px solid #d3d3d3;">
+</canvas>
+                <canvas id="canvas" width="200" height="200"></canvas>
+                <canvas id="canvas2" width="300" height="300"></canvas>
+            </div>
+
+            <script>
+                var c = document.getElementById("label");
+                var ctx = c.getContext("2d");
+                ctx.font = "900 50px Verdana";
+                var gradient=ctx.createLinearGradient(0,0,c.width,0);
+                gradient.addColorStop("0","blue");
+                gradient.addColorStop("0.5","skyblue");
+                gradient.addColorStop("1.0","blue");
+                // Fill with gradient
+                ctx.fillStyle=gradient;
+                ctx.fillText("SUMMER SAIL",10,50);
+            </script>
+
+            <script>
+                  var c = document.getElementById("canvas");
+                  var ctx = c.getContext("2d");
+                  var centerX = c.width / 2;
+                  var centerY = c.height / 2;
+                  var radius = 100;
+                  var eyeRadius = 10;
+                  var eyeXOffset = 30;
+                  var eyeYOffset = 30;
+
+                  // draw the yellow circle
+                  ctx.beginPath();
+                  ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+                  ctx.fillStyle = "#F6D42C";
+                  ctx.fill();
+                 
+                
+
+                  // draw the eyes
+                  ctx.beginPath();
+                  var eyeX = centerX - eyeXOffset;
+                  var eyeY = centerY - eyeYOffset;
+                  ctx.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI);
+                  var eyeX = centerX + eyeXOffset;
+                  ctx.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI);
+                  ctx.fillStyle = "#151515";
+                  ctx.fill();
+
+                  // draw the mouth
+                  ctx.beginPath();
+                  ctx.arc(centerX, centerY, 60, 0, Math.PI);
+                  ctx.stroke();
+            </script>
+            
+            <script>
+                  var c = document.getElementById("canvas2");
+                  var ctx = c.getContext("2d");
+                  var centerX = c.width / 2;
+                  var centerY = c.height / 2;
+                  var radius = 80;
+                  var seedRadius = 4;
+        
+                  ctx.rotate(-30*Math.PI/360);
+
+                  // draw the watermelon
+                  ctx.beginPath();
+                  ctx.arc(centerX, centerY, radius, 0, Math.PI);
+                  ctx.fillStyle = "#EB3333";
+                  ctx.fill();
+             
+                
+
+                  // draw seeds 
+                  ctx.beginPath();
+                  var seedX = centerX -20;
+                  var seedY = centerY +30;
+                  ctx.arc(seedX, seedY, seedRadius, 0, 2 * Math.PI, false);
+              
+                  var seedX = centerX + 50;
+                  ctx.arc(seedX, seedY, seedRadius, 0, 2 * Math.PI, false);
+                
+                  var seedX = centerX -40;
+                  var seedY = centerY +30;
+                  ctx.arc(seedX, seedY, seedRadius, 0, 2 * Math.PI, false);
+                
+                  var seedX = centerX +20;
+                  ctx.arc(seedX, seedY, seedRadius, 0, 2 * Math.PI, false);
+
+                  ctx.fillStyle = "#151515";
+                  ctx.fill();
+            
+
+                  // draw the peel
+                  ctx.beginPath();
+                  ctx.arc(centerX, centerY, 80, 0, Math.PI);
+                  ctx.lineWidth = 20;
+                  ctx.strokeStyle = "#01A90B";
+                  ctx.stroke();
+            
+            </script>
+        </body>
+</html>

@@ -1,46 +1,109 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Using on() and off()</title>
-</head>
-<body>
-    <p><em>This list will respond to clicks:</em></p>
-    <ul id="main-list">
-        <li>Larry</li>
-        <li>Moe</li>
-        <li>Curly</li>
-    </ul>
-    
-    <button id="onbutton">On</button>
-    <button id="offbutton">Off</button>
-    <button id="add">Add an LI Item</button>
-    
-    <p id="placeholder" />
-        <em>This list will not respond to clicks:</em>
-        <ul>
-            <li>Lonely element</li>
-            <li>I will never change</li>
-        </ul>
-    </p>
-    
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0px;
+            overflow: hidden;
+        } 
+        #container{
+            position: fixed;
+            top:0;
+            left:0;
+            width:100vw;
+            height:100vh;
+            z-index:1;
+        }
+        canvas{
+            width:100vw;
+            height:100vh;
+        }
+        h1{
+            color:white;
+            position: fixed;
+            top:0;
+            left:100px; 
+            z-index: 2;
+        }
+    </style>
     <script>
-        $(document).ready(function() {
-            $('#onbutton').click(function() {
-                $('#main-list').on('click', 'li', function() {
-                    $('#placeholder').append('<li>Clicked ' + $(this).html() + '</li>');
-                });
-            });
-            
-            $('#offbutton').click(function() {
-            console.log("click");
-                $('#main-list').off('click', 'li');
-            });
-            
-            $('#add').click(function() {
-                $('#main-list').append($('<li>Another li!</li>'));
-            });		
-        });
-    </script>		
+        window.onload = () => {
+            var quality = 3;
+
+            var container, canvas, context, imageData;
+            var buffer1, buffer2, tempbuffer;
+            var WIDTH, HEIGHT;
+
+            var isMouseDown, mouseX, mouseY;
+
+            init();
+            setInterval(loop, 1000 / 60);
+            emit(mouseX, mouseY); 
+            setInterval(()=>{
+                emit(mouseX, mouseY); 
+            }, 1000)
+
+            function init() {
+                container = document.getElementById('container'); 
+                WIDTH = Math.floor(window.innerWidth / quality);
+                HEIGHT = Math.floor(window.innerHeight / quality);
+
+                buffer1 = [];
+                buffer2 = [];
+
+                for (var i = 0; i < WIDTH * HEIGHT; i++) {
+                    buffer1[i] = 0; 
+                    buffer2[i] = 0;
+                }
+
+                canvas = document.createElement("canvas");
+                canvas.width = WIDTH;
+                canvas.height = HEIGHT;  
+                container.appendChild(canvas);
+
+                context = canvas.getContext("2d");
+                context.fillStyle = "rgb(0, 0, 0)";
+                context.fillRect(0, 0, WIDTH, HEIGHT);
+                imageData = context.getImageData(0, 0, WIDTH, HEIGHT);   
+            } 
+            function emit() { 
+                var x = ~~(window.innerWidth / (2 * quality)); 
+                var y = ~~(window.innerHeight / (2 * quality));   
+                buffer1[x + (y * WIDTH)] = 255;
+            }  
+            function loop() {    
+                for (var i = WIDTH; i < (WIDTH * HEIGHT) - WIDTH; i++) {
+                    var 수평성분 = buffer1[i - 1] + buffer1[i + 1];
+                    var 수직성분 = buffer1[i - WIDTH] + buffer1[i + WIDTH];
+                    buffer2[i] = ((수평성분 + 수직성분) >>1) - buffer2[i]; 
+                    //서서히 감소되는 부분을 담당 이부분이 크면 
+                    //spread효과가 없어짐. 
+                    buffer2[i] -= buffer2[i] >> 8;  
+                    //블루
+                    imageData.data[4 * i + 1] = buffer2[i]; 
+                    //그린
+                    imageData.data[4 * i + 2] = buffer2[i];
+                }  
+                tempbuffer = buffer1;
+                buffer1 = buffer2;
+                buffer2 = tempbuffer;
+                context.putImageData(imageData, 0, 0); 
+            } 
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container"></div> 
+     
 </body>
+
+
 </html>
+[출처] HTML5 - CANVAS, Water Spread효과 분석|작성자 큰돌이
