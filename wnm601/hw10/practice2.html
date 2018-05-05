@@ -1,109 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+    <head>
+<title>Happy Trails in SVG</title>
+<style>
+  
+</style>
+        </head>
+    <body>
+   
+  <canvas id="canvas" width="200" height="200"></canvas>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            background-color: #000000;
-            margin: 0px;
-            overflow: hidden;
-        } 
-        #container{
-            position: fixed;
-            top:0;
-            left:0;
-            width:100vw;
-            height:100vh;
-            z-index:1;
-        }
-        canvas{
-            width:100vw;
-            height:100vh;
-        }
-        h1{
-            color:white;
-            position: fixed;
-            top:0;
-            left:100px; 
-            z-index: 2;
-        }
-    </style>
-    <script>
-        window.onload = () => {
-            var quality = 3;
+<script>
+  function drawDiagonal() {
+    var canvas = document.getElementById('diagonal');
+    var context = canvas.getContext('2d');
+  
+    // Save a copy of the current drawing state
+    context.save();
+  
+    // Move the drawing context to the right, and down
+    context.translate(70, 140);
+  
+    // Draw the same line as before, but using the origin as a start
+    context.beginPath();
+    context.moveTo(0, 0);
+    context.lineTo(70, -70);
+    context.stroke();
+  
+    // Restore the old drawing state
+    context.restore();
+  }
 
-            var container, canvas, context, imageData;
-            var buffer1, buffer2, tempbuffer;
-            var WIDTH, HEIGHT;
-
-            var isMouseDown, mouseX, mouseY;
-
-            init();
-            setInterval(loop, 1000 / 60);
-            emit(mouseX, mouseY); 
-            setInterval(()=>{
-                emit(mouseX, mouseY); 
-            }, 1000)
-
-            function init() {
-                container = document.getElementById('container'); 
-                WIDTH = Math.floor(window.innerWidth / quality);
-                HEIGHT = Math.floor(window.innerHeight / quality);
-
-                buffer1 = [];
-                buffer2 = [];
-
-                for (var i = 0; i < WIDTH * HEIGHT; i++) {
-                    buffer1[i] = 0; 
-                    buffer2[i] = 0;
-                }
-
-                canvas = document.createElement("canvas");
-                canvas.width = WIDTH;
-                canvas.height = HEIGHT;  
-                container.appendChild(canvas);
-
-                context = canvas.getContext("2d");
-                context.fillStyle = "rgb(0, 0, 0)";
-                context.fillRect(0, 0, WIDTH, HEIGHT);
-                imageData = context.getImageData(0, 0, WIDTH, HEIGHT);   
-            } 
-            function emit() { 
-                var x = ~~(window.innerWidth / (2 * quality)); 
-                var y = ~~(window.innerHeight / (2 * quality));   
-                buffer1[x + (y * WIDTH)] = 255;
-            }  
-            function loop() {    
-                for (var i = WIDTH; i < (WIDTH * HEIGHT) - WIDTH; i++) {
-                    var 수평성분 = buffer1[i - 1] + buffer1[i + 1];
-                    var 수직성분 = buffer1[i - WIDTH] + buffer1[i + WIDTH];
-                    buffer2[i] = ((수평성분 + 수직성분) >>1) - buffer2[i]; 
-                    //서서히 감소되는 부분을 담당 이부분이 크면 
-                    //spread효과가 없어짐. 
-                    buffer2[i] -= buffer2[i] >> 8;  
-                    //블루
-                    imageData.data[4 * i + 1] = buffer2[i]; 
-                    //그린
-                    imageData.data[4 * i + 2] = buffer2[i];
-                }  
-                tempbuffer = buffer1;
-                buffer1 = buffer2;
-                buffer2 = tempbuffer;
-                context.putImageData(imageData, 0, 0); 
-            } 
-        }
-    </script>
-</head>
-
-<body>
-    <div id="container"></div> 
-     
-</body>
-
-
-</html>
-[출처] HTML5 - CANVAS, Water Spread효과 분석|작성자 큰돌이
+  window.addEventListener("load", drawDiagonal, true);
+</script>
+         </body>
+    </html>
