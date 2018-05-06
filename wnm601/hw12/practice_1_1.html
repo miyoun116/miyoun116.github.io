@@ -14,6 +14,8 @@
             var centerY = c.height / 2;
             var radius = 100;
             var eyeRadius = 4;
+            var eyeXOffset = 10;
+            var eyeYOffset = 10;
             
             // fill the background
             ctx.fillStyle = "#353F46";
@@ -76,7 +78,7 @@
             ctx.arcTo(800, 300, 1000, 500, 20);  // Create an arc
             ctx.lineTo(1000, 500);             // Continue with descending line
             ctx.closePath();
-            ctx.fillStyle = "#465C6D";
+            ctx.fillStyle = "#384B59";
             ctx.fill();
             
             ctx.beginPath();     
@@ -85,7 +87,7 @@
             ctx.arcTo(210, 280, 420, 500, 20);  
             ctx.lineTo(420, 500);             
             ctx.closePath();
-            ctx.fillStyle = "#465C6D";
+            ctx.fillStyle = "#384B59";
             ctx.fill();
             
             ctx.beginPath();     
@@ -115,47 +117,47 @@
             ctx.lineTo(190, 410);
             ctx.lineTo(210, 410);
             ctx.closePath();
-            ctx.strokeStyle = "#ACACAC";
+            ctx.strokeStyle = "#D1D1D1";
             ctx.stroke();  
             
             ctx.beginPath();  
-            ctx.moveTo(680, 380);
-            ctx.lineTo(650, 410);  
-            ctx.lineTo(670, 410); 
-            ctx.lineTo(640,440); 
-            ctx.lineTo(660, 440); 
-            ctx.lineTo(630, 470); 
-            ctx.lineTo(670, 470); 
+            ctx.moveTo(680, 400);
+            ctx.lineTo(660, 430);  
+            ctx.lineTo(670, 430); 
+            ctx.lineTo(650, 455); 
+            ctx.lineTo(660, 455); 
+            ctx.lineTo(640, 480); 
+            ctx.lineTo(670, 480); 
             ctx.lineTo(670, 500);
             ctx.lineTo(690, 500);
-            ctx.lineTo(690, 470);
-            ctx.lineTo(730, 470);
-            ctx.lineTo(700, 440);
-            ctx.lineTo(720, 440);
-            ctx.lineTo(690, 410);
-            ctx.lineTo(710, 410);
+            ctx.lineTo(690, 480);
+            ctx.lineTo(720, 480);
+            ctx.lineTo(700, 455);
+            ctx.lineTo(710, 455);
+            ctx.lineTo(690, 430);
+            ctx.lineTo(700, 430);
             ctx.closePath();
-            ctx.strokeStyle = "#ACACAC";
+            ctx.strokeStyle = "#D1D1D1";
             ctx.stroke();  
             
             ctx.beginPath();  
-            ctx.moveTo(790, 390);
-            ctx.lineTo(760, 420);  
-            ctx.lineTo(780, 420); 
-            ctx.lineTo(750, 450); 
-            ctx.lineTo(770, 450); 
-            ctx.lineTo(740, 480); 
+            ctx.moveTo(790, 400);
+            ctx.lineTo(770, 430);  
+            ctx.lineTo(780, 430); 
+            ctx.lineTo(760, 455); 
+            ctx.lineTo(770, 455); 
+            ctx.lineTo(750, 480); 
             ctx.lineTo(780, 480); 
             ctx.lineTo(780, 500);
             ctx.lineTo(800, 500);
             ctx.lineTo(800, 480);
-            ctx.lineTo(840, 480);
-            ctx.lineTo(810, 450);
-            ctx.lineTo(830, 450);
-            ctx.lineTo(800, 420);
-            ctx.lineTo(820, 420);
+            ctx.lineTo(830, 480);
+            ctx.lineTo(810, 455);
+            ctx.lineTo(820, 455);
+            ctx.lineTo(800, 430);
+            ctx.lineTo(810, 430);
             ctx.closePath();
-            ctx.strokeStyle = "#ACACAC";
+            ctx.strokeStyle = "#D1D1D1";
             ctx.stroke();  
             
             
@@ -173,42 +175,37 @@
             ctx.lineTo(450, 470); 
             ctx.lineTo(550, 470); 
             ctx.closePath();
-            ctx.rect(485,470,30,30);
+            ctx.rect(490,470,20,30);
             ctx.fillStyle = "#D1D1D1";
-            ctx.fill();         
-        </script>
-        
-        
+            ctx.fill();   
+            
+            // draw the snowman
+            ctx.beginPath();
+            ctx.arc(centerX-90, centerY+225, radius/4, 0, 2 * Math.PI);
+            ctx.fillStyle = "#EFE7E5";
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(centerX-90, centerY+180, radius/5, 0, 2 * Math.PI);
+            ctx.fillStyle = "#EFE7E5";
+            ctx.fill();
+                 
+            // draw the eyes
+            ctx.beginPath();
+            var eyeX = centerX - 10*eyeXOffset;
+            var eyeY = centerY + 18*eyeYOffset;
+            ctx.arc(eyeX, eyeY, eyeRadius/2, 0, 2 * Math.PI);
+            var eyeX = centerX - 8*eyeXOffset;
+            ctx.arc(eyeX, eyeY, eyeRadius/2, 0, 2 * Math.PI);
+            ctx.fillStyle = "#757575";
+            ctx.fill();
 
-        <script>
-        var canvas = document.getElementById("canvas");
-    var context = canvas.getContext("2d");
-        
-          var canvasPattern = document.createElement("myCanvas");
-    canvasPattern.width = 100;
-    canvasPattern.height = 150;
-    var contextPattern = canvasPattern.getContext("2d");
-    contextPattern.beginPath();
-    contextPattern.moveTo(50, 0);
-    contextPattern.lineTo(0, 50); 
-    contextPattern.lineTo(100, 50); 
-    contextPattern.closePath();
-    
-    contextPattern.moveTo(50, 40);
-    contextPattern.lineTo(0, 80); 
-    contextPattern.lineTo(100, 80); 
-    contextPattern.closePath();
+            // draw the mouth
+            ctx.beginPath();
+            ctx.arc(centerX - 90, centerY + 185, 5, 0, Math.PI);
+            ctx.strokeStyle = "#757575";
+            ctx.stroke();
             
-    contextPattern.moveTo(50, 70);
-    contextPattern.lineTo(0, 120); 
-    contextPattern.lineTo(100, 120); 
-    contextPattern.closePath();
-            
-    var pattern = context.createPattern(canvasPattern,"repeat");
-    context.fillStyle = pattern;
-    context.fillRect(0, 0, 1000, 150);
-    context.fill();
-            
-            </script>
+        </script>
     </body>
 </html>
