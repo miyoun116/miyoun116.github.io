@@ -8,204 +8,156 @@
         <canvas id="myCanvas" width="1000" height="500"> </canvas>
 
         <script>
+            function drawTree(ctx, x, y, height, width, fill=true) {
+                ctx.beginPath();
+                ctx.moveTo(x,y);
+                ctx.lineTo(x - width * 0.3, y + height * 0.3); 
+                ctx.lineTo(x - width * 0.2, y + height * 0.3); 
+                ctx.lineTo(x - width * 0.4, y + height * 0.5);
+                ctx.lineTo(x - width * 0.3, y + height * 0.5); 
+                ctx.lineTo(x - width * 0.5, y + height * 0.7); 
+                ctx.lineTo(x - width * 0.1, y + height * 0.7); 
+                ctx.lineTo(x - width * 0.1, y + height);
+                ctx.lineTo(x + width * 0.1, y + height);
+                ctx.lineTo(x + width * 0.1, y + height * 0.7);
+                ctx.lineTo(x + width * 0.5, y + height * 0.7); 
+                ctx.lineTo(x + width * 0.3, y + height * 0.5); 
+                ctx.lineTo(x + width * 0.4, y + height * 0.5); 
+                ctx.lineTo(x + width * 0.2, y + height * 0.3); 
+                ctx.lineTo(x + width * 0.3, y + height * 0.3); 
+                ctx.closePath();
+
+                // fill the tree.
+                if (fill) {
+                    ctx.fillStyle = "#D1D1D1";
+                    ctx.fill();
+                } else { // draw the outline of the tree.
+                    ctx.strokeStyle = "#D1D1D1";
+                    ctx.stroke()
+                };      
+            }
+            
+            // draw the moon at given x, y with size radius.
+            function drawMoon(ctx, x, y, radius) {
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                ctx.fillStyle = "#E5E5E5";
+                ctx.fill();
+            
+                // relative coordinates and size for crators.
+                var cratorX = [20, 80, 20, -30, 40, -50];
+                var cratorY = [80, 0, 20, 40, 60, -20];
+                var cratorSize = [1, 1, 2, 5, 3, 2];
+                var cratorRadius = radius / 25;
+                // Draw Crators
+                for (var i = 0; i < 6; i++) {
+                    ctx.beginPath();
+                    ctx.arc(x + cratorX[i], y + cratorY[i], cratorRadius * cratorSize[i], 0, 2 * Math.PI);
+                    ctx.fillStyle = "#D1D1D1";
+                    ctx.fill();
+                }             
+            }
+            
+            // drawMountain at the location x, y as center, with the given color and height.
+            // width of mountain is height * 2.
+            function drawMountain(ctx, x, y, height, color) {
+                // draw the mountain
+                ctx.beginPath();     
+                ctx.moveTo(x - height, y);                           // Create a starting point.
+                ctx.lineTo(x - height * 0.1, y - height * 0.9);      // Create a ascending line.
+                ctx.arcTo(x, y - height, x + height * 0.1, y - height * 0.9, height * 0.1);  // Create an arc at the top.
+                ctx.lineTo(x + height, y);                           // Continue with descending line.
+                ctx.closePath();
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+            
+            function drawSnowman(ctx, x, y, height) {
+                var bodyRadius = height / 10 * 3;
+                var headRadius = height / 10 * 2;
+                var eyeRadius = height / 20;
+                var eyeXOffset = height / 15;
+                var eyeYOffset = height / 7;
+                var mouthOffset = height / 4;
+                var mouthRadius = height / 20;
+                // draw the snowman
+                ctx.beginPath();
+                ctx.arc(x, y + bodyRadius + 2 * headRadius, bodyRadius, 0, 2 * Math.PI);
+                ctx.fillStyle = "#EFE7E5";
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.arc(x, y + headRadius, headRadius, 0, 2 * Math.PI);
+                ctx.fillStyle = "#EFE7E5";
+                ctx.fill();
+
+                // draw the eyes
+                ctx.beginPath();
+                var eyeX = x - eyeXOffset;
+                var eyeY = y + eyeYOffset;
+                ctx.arc(eyeX, eyeY, eyeRadius/2, 0, 2 * Math.PI);
+                var eyeX = x + eyeXOffset;
+                ctx.arc(eyeX, eyeY, eyeRadius/2, 0, 2 * Math.PI);
+                ctx.fillStyle = "#757575";
+                ctx.fill();
+
+                // draw the mouth
+                ctx.beginPath();
+                ctx.arc(x, y + mouthOffset, mouthRadius, 0, Math.PI);
+                ctx.strokeStyle = "#757575";
+                ctx.stroke();
+            }
+
+
             var c = document.getElementById("myCanvas");
-            var ctx = c.getContext("2d");
             var centerX = c.width / 2;
             var centerY = c.height / 2;
-            var radius = 100;
-            var eyeRadius = 4;
-            var eyeXOffset = 10;
-            var eyeYOffset = 10;
-            
-            // fill the background
-            ctx.fillStyle = "#353F46";
-            ctx.fillRect (0, 0, 1000, 500);
-       
-            // draw the moon
-            ctx.beginPath();
-            ctx.arc(centerX+300, centerY-100, radius, 0, 2 * Math.PI);
-            ctx.fillStyle = "#E5E5E5";
-            ctx.fill();
-            
-            // draw circls on the moon
-            ctx.beginPath();
-            var eyeX = centerX + 320;
-            var eyeY = centerY - 20;
-            ctx.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI);
-            ctx.fillStyle = "#D1D1D1";
-            ctx.fill();
-            
-            ctx.beginPath();
-            var eyeX = centerX + 380;
-            var eyeY = centerY - 100;
-            ctx.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI);
-            ctx.fillStyle = "#D1D1D1";
-            ctx.fill();
-            
-            ctx.beginPath();
-            var eyeX = centerX + 320;
-            var eyeY = centerY - 80;
-            ctx.arc(eyeX, eyeY, 2*eyeRadius, 0, 2 * Math.PI);
-            ctx.fillStyle = "#D1D1D1";
-            ctx.fill();
-            
-            
-            ctx.beginPath();
-            var eyeX = centerX + 270;
-            var eyeY = centerY - 60;
-            ctx.arc(eyeX, eyeY, 5*eyeRadius, 0, 2 * Math.PI);
-            ctx.fillStyle = "#D1D1D1";
-            ctx.fill();
-            
-            ctx.beginPath();
-            var eyeX = centerX + 340;
-            var eyeY = centerY - 40;
-            ctx.arc(eyeX, eyeY, 3*eyeRadius, 0, 2 * Math.PI);
-            ctx.fillStyle = "#D1D1D1";
-            ctx.fill();
-            
-            ctx.beginPath();
-            var eyeX = centerX + 250;
-            var eyeY = centerY - 120;
-            ctx.arc(eyeX, eyeY, 2*eyeRadius, 0, 2 * Math.PI);
-            ctx.fillStyle = "#D1D1D1";
-            ctx.fill();
-            
-            // draw the hill
-            ctx.beginPath();     
-            ctx.moveTo(600, 500);               // Create a starting point
-            ctx.lineTo(780, 320);              // Create a ascending line
-            ctx.arcTo(800, 300, 1000, 500, 20);  // Create an arc
-            ctx.lineTo(1000, 500);             // Continue with descending line
-            ctx.closePath();
-            ctx.fillStyle = "#384B59";
-            ctx.fill();
-            
-            ctx.beginPath();     
-            ctx.moveTo(0, 500);              
-            ctx.lineTo(190, 300);             
-            ctx.arcTo(210, 280, 420, 500, 20);  
-            ctx.lineTo(420, 500);             
-            ctx.closePath();
-            ctx.fillStyle = "#384B59";
-            ctx.fill();
-            
-            ctx.beginPath();     
-            ctx.moveTo(300, 500);               
-            ctx.lineTo(580, 220);              
-            ctx.arcTo(600, 200, 900, 500, 20);  
-            ctx.lineTo(900, 500);             
-            ctx.closePath();
-            ctx.fillStyle = "#4A6375";
-            ctx.fill();
-            
-            // draw the lined tree
-            ctx.beginPath();  
-            ctx.moveTo(180, 380);
-            ctx.lineTo(150, 410);  
-            ctx.lineTo(170, 410); 
-            ctx.lineTo(140,440); 
-            ctx.lineTo(160, 440); 
-            ctx.lineTo(130, 470); 
-            ctx.lineTo(170, 470); 
-            ctx.lineTo(170, 500);
-            ctx.lineTo(190, 500);
-            ctx.lineTo(190, 470);
-            ctx.lineTo(230, 470);
-            ctx.lineTo(200, 440);
-            ctx.lineTo(220, 440);
-            ctx.lineTo(190, 410);
-            ctx.lineTo(210, 410);
-            ctx.closePath();
-            ctx.strokeStyle = "#D1D1D1";
-            ctx.stroke();  
-            
-            ctx.beginPath();  
-            ctx.moveTo(680, 400);
-            ctx.lineTo(660, 430);  
-            ctx.lineTo(670, 430); 
-            ctx.lineTo(650, 455); 
-            ctx.lineTo(660, 455); 
-            ctx.lineTo(640, 480); 
-            ctx.lineTo(670, 480); 
-            ctx.lineTo(670, 500);
-            ctx.lineTo(690, 500);
-            ctx.lineTo(690, 480);
-            ctx.lineTo(720, 480);
-            ctx.lineTo(700, 455);
-            ctx.lineTo(710, 455);
-            ctx.lineTo(690, 430);
-            ctx.lineTo(700, 430);
-            ctx.closePath();
-            ctx.strokeStyle = "#D1D1D1";
-            ctx.stroke();  
-            
-            ctx.beginPath();  
-            ctx.moveTo(790, 400);
-            ctx.lineTo(770, 430);  
-            ctx.lineTo(780, 430); 
-            ctx.lineTo(760, 455); 
-            ctx.lineTo(770, 455); 
-            ctx.lineTo(750, 480); 
-            ctx.lineTo(780, 480); 
-            ctx.lineTo(780, 500);
-            ctx.lineTo(800, 500);
-            ctx.lineTo(800, 480);
-            ctx.lineTo(830, 480);
-            ctx.lineTo(810, 455);
-            ctx.lineTo(820, 455);
-            ctx.lineTo(800, 430);
-            ctx.lineTo(810, 430);
-            ctx.closePath();
-            ctx.strokeStyle = "#D1D1D1";
-            ctx.stroke();  
-            
-            
-            // draw the filled tree
-            ctx.beginPath();
-            ctx.moveTo(500,320);
-            ctx.lineTo(470, 370); 
-            ctx.lineTo(530, 370); 
-            ctx.closePath();
-            ctx.moveTo(500,350);
-            ctx.lineTo(460, 420); 
-            ctx.lineTo(540, 420); 
-            ctx.closePath();
-            ctx.moveTo(500,380);
-            ctx.lineTo(450, 470); 
-            ctx.lineTo(550, 470); 
-            ctx.closePath();
-            ctx.rect(490,470,20,30);
-            ctx.fillStyle = "#D1D1D1";
-            ctx.fill();   
-            
-            // draw the snowman
-            ctx.beginPath();
-            ctx.arc(centerX-90, centerY+225, radius/4, 0, 2 * Math.PI);
-            ctx.fillStyle = "#EFE7E5";
-            ctx.fill();
-            
-            ctx.beginPath();
-            ctx.arc(centerX-90, centerY+180, radius/5, 0, 2 * Math.PI);
-            ctx.fillStyle = "#EFE7E5";
-            ctx.fill();
-                 
-            // draw the eyes
-            ctx.beginPath();
-            var eyeX = centerX - 10*eyeXOffset;
-            var eyeY = centerY + 18*eyeYOffset;
-            ctx.arc(eyeX, eyeY, eyeRadius/2, 0, 2 * Math.PI);
-            var eyeX = centerX - 8*eyeXOffset;
-            ctx.arc(eyeX, eyeY, eyeRadius/2, 0, 2 * Math.PI);
-            ctx.fillStyle = "#757575";
-            ctx.fill();
+            var moonRadius = 100;
+            var moonX = c.width + moonRadius;
+            var moonY = centerY;
 
-            // draw the mouth
-            ctx.beginPath();
-            ctx.arc(centerX - 90, centerY + 185, 5, 0, Math.PI);
-            ctx.strokeStyle = "#757575";
-            ctx.stroke();
+            function drawAll() {
+                var ctx = c.getContext("2d");
+                // fill the background
+                ctx.fillStyle = "#353F46";
+                ctx.fillRect (0, 0, c.width, c.height);
+                
+                // Calculate moon's height. It goes higher as it is closer to the center of the screen.
+                var moonY = centerY - moonRadius + 0.0005 * (centerX - moonX) * (centerX -  moonX);
+                // Draw moon first. It's the farthest object.
+                drawMoon(ctx, moonX, moonY, moonRadius);
+                
+                // Draw mountains. Two small mountains behind the one big mountain. 
+                drawMountain(ctx, 800, 500, 200, "#384B59");
+                drawMountain(ctx, 200, 500, 200, "#384B59");
+                drawMountain(ctx, 500, 500, 300, "#4A6375");
+
+                // Draw trees. 
+                drawTree(ctx, 180, 380, 120, 80, false);
+                drawTree(ctx, 500, 320, 200, 120, true);
+                drawTree(ctx, 600, 400, 100, 60, true);
+                drawTree(ctx, 670, 400, 100, 60, true);
+                drawTree(ctx, 740, 400, 100, 60, true);
+                drawTree(ctx, 90, 400, 100, 60, true);
+
+                // Draw snowmen.
+                drawSnowman(ctx, centerX-100, centerY + 170, 80);
+                drawSnowman(ctx, centerX-170, centerY + 170, 80);                
+            }
             
+            // set timer to move the moon
+            var myVar = setInterval(moveMoon, 25);
+            function moveMoon() {
+                // if moon disappears to the left, move it to the far right again.
+                if (moonX <= -moonRadius) {
+                    moonX = c.width + moonRadius;
+                } else {
+                    // move moon 1 pixel to the left.
+                    moonX = moonX - 1;
+                }
+                // draw everything after moving the moon.
+                drawAll();
+            }
         </script>
     </body>
 </html>
