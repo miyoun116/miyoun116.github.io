@@ -12,10 +12,10 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
         
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
         
         <style > 
             h1 {
@@ -221,11 +221,11 @@
                 <p>
                 Collectors will remember it from yesteryear and kids of today will love it. The classic Hot Wheels Sto & Go play set is back, complete with awesome retro-style packaging! Fill up the Sto & Go with your collection of Hot Wheels cars and carry this play set anywhere to unfold a world of fun! Each set sold separately, subject to availability. Colors and decorations may vary. <br><br>
                 <b>Age:</b> 3 and up. <br><br>
-                <b>Dimensions:</b> 10.0 inches (H) x 4.0 inches (W) x 22.0 inches (L)
-                </p>
-                
-                <label for="spinner">Select a value:</label>
+                <b>Dimensions:</b> 10.0 inches (H) x 4.0 inches (W) x 22.0 inches (L) <br><br>
+                    
+                <label for="spinner">Qty:</label>
                 <input id="spinner" name="value">
+                </p>
                 
                 <button class="button1">Add to Cart</button> 
                 <button class="button2">Add to Wishlist</button> 
@@ -256,11 +256,11 @@
             $( function() {
                 $( "#spinner" ).spinner({
                   spin: function( event, ui ) {
-                    if ( ui.value > 10 ) {
-                      $( this ).spinner( "value", -10 );
+                    if ( ui.value > 20 ) {
+                      $( this ).spinner( "value", 1 );
                       return false;
-                    } else if ( ui.value < -10 ) {
-                      $( this ).spinner( "value", 10 );
+                    } else if ( ui.value < 1 ) {
+                      $( this ).spinner( "value", 20 );
                       return false;
                     }
                   }
