@@ -181,7 +181,20 @@
                 text-align: center;
                 padding: 50px;
             }
-            
+            .recommend {
+                float: left;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            /* source area on the bottom */
+            .footer {                                                     
+                clear: both;
+                text-align: center;
+                padding-top: 5%;                                         
+                padding-bottom: 5%;
+                background-color: #1D1D1E;
+                color: #EBEBEB;
+            }   
         </style>
     </head>
     <body>
@@ -206,13 +219,13 @@
                 <!-- Change larger image to the thumbnail image when mouse hovers on the thumbnail -->
                 <div class = "thumbnail">
                     <div class = "box" onmouseover="showImage('1.jpg');">
-                        <img src= "https://miyoun116.github.io/wnm601/hw13/1.jpg" alt= "box" title = "box" />
+                        <img src= "https://miyoun116.github.io/wnm601/hw13/1.jpg" alt= "box">
                     </div>
                     <div class = "box" onmouseover="showImage('2.jpg');">
-                        <img src= "https://miyoun116.github.io/wnm601/hw13/2.jpg" alt= "whole" title = "whole" />
+                        <img src= "https://miyoun116.github.io/wnm601/hw13/2.jpg" alt= "whole">
                     </div>  
                     <div class = "box" onmouseover="showImage('3.jpg');">
-                        <img src= "https://miyoun116.github.io/wnm601/hw13/3.jpg" alt= "half" title = "half" />
+                        <img src= "https://miyoun116.github.io/wnm601/hw13/3.jpg" alt= "half">
                     </div>
                 </div>
             </div>
@@ -235,15 +248,22 @@
             <div class = "clear"></div>
             
             <div class = "playtime">
-                <h2>How to Play with Me?</h2>
+                <h2>How to play with me?</h2>
                 <div class = "playvideo">
                     <video src= "https://miyoun116.github.io/wnm601/hw13/playtime.m4v" width = "568" height = "320" controls></video>
                 </div>
             </div>
             
-            <div class = "relative">
-                <h2>You Might Also Like These...</h2>
-                
+            <div class = "recommend">
+                <h2>You might also like these...</h2>
+                <img id="reimage" src= "https://miyoun116.github.io/wnm601/hw13/4.jpg" alt= "4">
+                <img id="reimage" src= "https://miyoun116.github.io/wnm601/hw13/5.jpeg" alt= "5">
+                <img id="reimage" src= "https://miyoun116.github.io/wnm601/hw13/6.jpg" alt= "6">
+            </div>
+            
+            <div class= "footer">
+                <p>About Us</p>
+                <p>Contact Us</p>
             </div>
            
         </div>
