@@ -27,6 +27,7 @@
                 font-family: 'Roboto Slab', serif;            
                 color: #3A3A3A;
                 font-size: 26pt;
+                margin-bottom: 50px;
             }
             p {
                 font-family: 'Nunito', sans-serif;
@@ -119,10 +120,11 @@
             .button2 {
                 margin:30px;
                 border: 2px solid #0B45BA;
+                background: none;
                 font-family: 'Nunito', sans-serif;
                 font-weight: bold;
                 color: #0B45BA;
-                padding: 16px 32px;
+                padding: 14px 32px;
                 font-size: 16px;        
                 border-radius: 10px;
                 align-self: center;
@@ -177,11 +179,9 @@
             .playtime {
                 background-color: #F1F1F1;
                 text-align: center;
-                padding: 30px;
+                padding: 50px;
             }
-            #playvideo {
-                margin: 50px;
-            }
+            
         </style>
     </head>
     <body>
@@ -240,6 +240,11 @@
                     <video src= "https://miyoun116.github.io/wnm601/hw13/playtime.m4v" width = "568" height = "320" controls></video>
                 </div>
             </div>
+            
+            <div class = "relative">
+                <h2>You Might Also Like These...</h2>
+                
+            </div>
            
         </div>
         <script type="text/javascript"> 
@@ -254,12 +259,6 @@
 				curImage.title = imgName;
 			}
             
-            // Getter
-var min = $( ".selector" ).spinner( "option", "min" );
- 
-// Setter
-$( ".selector" ).spinner( "option", "min", 0 );
-
 		</script>    
     </body>
 </html>
