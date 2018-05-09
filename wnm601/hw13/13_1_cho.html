@@ -5,17 +5,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Toy Shop</title>
         <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
         
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<link rel="stylesheet" href="/resources/demos/style.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         
         <style > 
             h1 {
@@ -224,7 +222,7 @@
                 <b>Dimensions:</b> 10.0 inches (H) x 4.0 inches (W) x 22.0 inches (L) <br><br>
                     
                 <label for="spinner">Qty:</label>
-                <input id="spinner" name="value">
+                    <input id="spinner">
                 </p>
                 
                 <button class="button1">Add to Cart</button> 
@@ -253,19 +251,10 @@
 				curImage.title = imgName;
 			}
             
-            $( function() {
-                $( "#spinner" ).spinner({
-                  spin: function( event, ui ) {
-                    if ( ui.value > 20 ) {
-                      $( this ).spinner( "value", 1 );
-                      return false;
-                    } else if ( ui.value < 1 ) {
-                      $( this ).spinner( "value", 20 );
-                      return false;
-                    }
-                  }
-                });
-              } );
+            $( ".selector" ).spinner({
+  min: 0
+});
+
 		</script>    
     </body>
 </html>
