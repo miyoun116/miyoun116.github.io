@@ -5,30 +5,35 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Toy Shop</title>
-       <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
         
         <style > 
             h1 {
-                font-family: 'Nunito', sans-serif;
-                color: #212121;
+                font-family: 'Baloo', cursive;
+                color: #0B45BA;
                 font-size: 30pt;
                 font-weight: bold;
-                padding-bottom: 20px;
-                text-align: center;
             }
 
             h2 {
                 font-family: 'Roboto Slab', serif;            
                 color: #3A3A3A;
-                font-size: 24pt;
+                font-size: 26pt;
             }
             p {
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Nunito', sans-serif;
                 color: #5C5C5C;
-                font-size: 11pt;
+                font-size: 14pt;
             }
             
             hr { 
@@ -40,6 +45,40 @@
                 border-width: 5px;
                 border-color: #0B45BA;
             } 
+            
+            .logobox {
+                text-align:center;
+            }
+            #logo {
+                width: 80px;
+            }
+            .topnav {
+              overflow: hidden;
+              background-color: #4CAF50;
+              margin-bottom: 30px;
+            }
+            .topnav a {
+              float: left;
+              font-family: 'Nunito', sans-serif;
+              color: #f2f2f2;
+                font-weight: bold;
+              width: 25%;
+              text-align: center;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              text-decoration: none;
+              font-size: 18px;
+            }
+
+            .topnav a:hover {
+              background-color: #F1F1F1;
+              color: #252524;
+            }
+
+            .topnav a.active {
+              background-color: #FE8E0E;
+              color: #f2f2f2;
+            }
 
             /* set image to not overflow the box */
             img {
@@ -68,21 +107,31 @@
             .clear {clear: both;}
 
             /* button style */
-            .button {
-                margin:10px;
-                background-color: #AB7D77;
-                font-family: 'Open Sans', sans-serif;
-                text-decoration: none;
+            .button1 {
+                background-color: #0B45BA;
+                font-family: 'Nunito', sans-serif;
+                font-weight: bold;
                 border: none;
                 color: #F9FBFA;
                 padding: 16px 32px;
-                display: inline-block;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 12px;
+                font-size: 16px;  
+                border-radius: 10px;
                 align-self: center;
             }
-                       /* imagebox for image picker */
+            .button2 {
+                margin:30px;
+                background-color: #DEDEDE;
+                font-family: 'Nunito', sans-serif;
+                font-weight: bold;
+                border: none;
+                color: #3A3A3A;
+                padding: 16px 32px;
+                font-size: 16px;        
+                border-radius: 10px;
+                align-self: center;
+            }
+            
+            /* imagebox for image picker */
             .imagebox {
                 float: left;                                             
                 width: 50%; 
@@ -118,7 +167,7 @@
                 width: 50px;
                 height: 50px;
                 display: inline-block;
-                border-color: #AB7D77;
+                border-color: #D8D8D8;
                 border-width: 1px;
                 border-style: solid;
                 margin: 10px;
@@ -129,16 +178,26 @@
                 max-height: 48px;
                 max-width: 48px;
             } 
-
-
+            .playtime {
+                text-align: center;
+            }
         </style>
     </head>
     <body>
         <div class = "container">
             <hr>
-            <img id="logo" src= "https://miyoun116.github.io/wnm601/hw13/logo.PNG" alt= "logo" title = "logo" />
-            <h1>Toy Shop</h1>
+            <div class = "logobox">
+                <img id="logo" src= "https://miyoun116.github.io/wnm601/hw13/logo.png" alt= "logo" title = "logo" />
+                <h1>Toy Shop</h1>
+            </div>
             
+            <div class="topnav">
+                  <a class="active">New</a>
+                  <a href="#Categories">Categories</a>
+                  <a href="#Age">Age</a>
+                  <a href="#Themes">Themes</a>
+            </div>
+
             <div class = "imagebox"> 
                 <div class="mainbox" >
                     <img id="mainimage" src= "https://miyoun116.github.io/wnm601/hw13/1.jpg" alt= "box" title = "box" />
@@ -161,17 +220,24 @@
                 <h2>$29.99</h2> 
                 <p>
                 Collectors will remember it from yesteryear and kids of today will love it. The classic Hot Wheels Sto & Go play set is back, complete with awesome retro-style packaging! Fill up the Sto & Go with your collection of Hot Wheels cars and carry this play set anywhere to unfold a world of fun! Each set sold separately, subject to availability. Colors and decorations may vary. <br><br>
-                Age: 3 and up. <br><br>
-                Dimensions (Overall): 10.0 inches (H) x 4.0 inches (W) x 22.0 inches (L)
+                <b>Age:</b> 3 and up. <br><br>
+                <b>Dimensions:</b> 10.0 inches (H) x 4.0 inches (W) x 22.0 inches (L)
                 </p>
-             
-                <button class="button">Add to Wishlist</button> 
-                <button class="button">Add to Cart</button> 
+                
+                <label for="spinner">Select a value:</label>
+                <input id="spinner" name="value">
+                
+                <button class="button1">Add to Cart</button> 
+                <button class="button2">Add to Wishlist</button> 
+                
             </div>
             <div class = "clear"></div>
             
-            <div class = "playvideo">
-                <video src= "https://miyoun116.github.io/wnm601/hw13/playtime.m4v" width = "568" height = "320" controls></video>
+            <div class = "playtime">
+                <h2>How to Play with Me?</h2>
+                <div class = "playvideo">
+                    <video src= "https://miyoun116.github.io/wnm601/hw13/playtime.m4v" width = "568" height = "320" controls></video>
+                </div>
             </div>
            
         </div>
@@ -186,6 +252,20 @@
 				curImage.alt = imgName;
 				curImage.title = imgName;
 			}
+            
+            $( function() {
+                $( "#spinner" ).spinner({
+                  spin: function( event, ui ) {
+                    if ( ui.value > 10 ) {
+                      $( this ).spinner( "value", -10 );
+                      return false;
+                    } else if ( ui.value < -10 ) {
+                      $( this ).spinner( "value", 10 );
+                      return false;
+                    }
+                  }
+                });
+              } );
 		</script>    
     </body>
 </html>
