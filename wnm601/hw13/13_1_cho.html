@@ -60,7 +60,7 @@
               float: left;
               font-family: 'Nunito', sans-serif;
               color: #f2f2f2;
-                font-weight: bold;
+              font-weight: bold;
               width: 25%;
               text-align: center;
               padding-top: 20px;
@@ -182,16 +182,29 @@
                 padding: 50px;
             }
             .recommend {
-                float: left;
+                text-align: center;
                 width: 100%;
                 margin-bottom: 50px;
             }
-            #reimage {
-                width: 200px;
-                height: 200px;
-                display: inline-block;
+            /* 3-column grid with with the repeat() function. */
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);  
             }
-                
+            .reimagebox {
+                width: 400px;
+                height: 400px;
+            }
+            .reimage img {
+                width: 80%;
+                text-align: center;
+            }
+            .reimage p {
+                font-family: 'Nunito', sans-serif;
+                color: #D4D4D7; 
+                font-size: 20pt;
+                font-weight: bold;
+            }       
             /* source area on the bottom */
             .footer {                                                     
                 clear: both;
@@ -262,9 +275,20 @@
             
             <div class = "recommend">
                 <h2>You might also like these...</h2>
-                <img id="reimage" src= "https://miyoun116.github.io/wnm601/hw13/4.jpg" alt= "4">
-                <img id="reimage" src= "https://miyoun116.github.io/wnm601/hw13/5.jpg" alt= "5">
-                <img id="reimage" src= "https://miyoun116.github.io/wnm601/hw13/6.jpg" alt= "6">
+                <div class = "grid">
+                    <div class = "reimagebox">
+                        <img src= "https://miyoun116.github.io/wnm601/hw13/4.jpg" alt= "4">
+                        <p>Factory Raceway</p>
+                    </div>
+                    <div class = "reimagebox">
+                        <img src= "https://miyoun116.github.io/wnm601/hw13/5.jpg" alt= "5">
+                        <p>Garage Attack</p>
+                    </div>
+                    <div class = "reimagebox">
+                        <img src= "https://miyoun116.github.io/wnm601/hw13/6.jpg" alt= "6">
+                        <p>Tire Shop</p>
+                    </div>
+                </div>
             </div>
             
             <div class= "footer">
