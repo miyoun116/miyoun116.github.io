@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Assignment 8.1_2: Midterm Project -->
+<!-- Mimterm projct with HTML, CSS and Javasctipt.-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Moscato Wine2</title>
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw8/style.css">
+        <style type="text/css">   
+            *, *:before, *:after {
+                box-sizing:border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "container">
+            <h1>Moscato Wine</h1>
+            <div class = "navbutton">
+                <a href="http://miyoun116.github.io/wnm601/hw8/8_1_cho_p1.html">Back</a> 
+            </div>
+            <div class = "imagebox"> 
+                <div class="mainbox" >
+                    <img id="mainimage" src= "https://miyoun116.github.io/wnm601/hw8/1.png" alt= "bottle" title = "bottle" />
+                </div>
+                <!-- Change larger image to the thumbnail image when mouse hovers on the thumbnail -->
+                <div class = "thumbnail">
+                    <div class = "box" onmouseover="showImage('1.png');">
+                        <img src= "https://miyoun116.github.io/wnm601/hw8/1.png" alt= "bottle" title = "bottle" />
+                    </div>
+                    <div class = "box" onmouseover="showImage('2.png');">
+                        <img src= "https://miyoun116.github.io/wnm601/hw8/2.png" alt= "cup" title = "cup" />
+                    </div>  
+                    <div class = "box" onmouseover="showImage('3.png');">
+                        <img src= "https://miyoun116.github.io/wnm601/hw8/3.png" alt= "cup2" title = "cup2" />
+                    </div>
+                </div>
+            </div>
+            <div class = "detailbox">
+                <h2>Kim Crawford ROSÉ</h2>
+                <h2>$14.99</h2> 
+                <div class = "description"> 
+                <!-- The <ul> tag defines an unordered (bulleted) list -->
+                <ul>
+                    <!-- The list items are marked with bullets (small black circles) --> 
+                    <li>From Marlborough, New Zealand.</li>  
+                    <li>13% ABV</li>
+                    <li>A lively nose, brimming with bright berry and tropical fruit.</li>
+                    <li>Soft and luscious, this refreshing Rosé is richly fruited with hints of watermelon and strawberry.</li>
+                </ul>
+                </div>
+                <button class="button">Add to Cart</button> 
+            </div>
+            <div class = "clear"></div>
+            <div class= "footer">
+                <p>Images and contents Sources:</p>
+                <p>https://www.kimcrawfordwines.com/us/products/rose/</p>
+                <p>https://www.rd.com/health/wellness/limit-alcohol/</p>
+                <p>https://www.kimcrawfordwines.com/us/</p>
+                <p>https://www.marketviewliquor.com/blog/2016/11/what-is-moscato/</p>
+            </div>
+        </div>
+        <script type="text/javascript"> 
+            /* Changes the larger image to the given image name */
+			function showImage(imgName) {
+				var curImage = document.getElementById('mainimage');
+				var thePath = 'https://miyoun116.github.io/wnm601/hw8/';
+				var theSource = thePath + imgName;
+				
+				curImage.src = theSource;
+				curImage.alt = imgName;
+				curImage.title = imgName;
+			}
+		</script>    
+    </body>
+</html>
