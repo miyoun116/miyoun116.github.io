@@ -118,11 +118,10 @@
             }
             .button2 {
                 margin:30px;
-                background-color: #DEDEDE;
+                border: 2px solid #0B45BA;
                 font-family: 'Nunito', sans-serif;
                 font-weight: bold;
-                border: none;
-                color: #3A3A3A;
+                color: #0B45BA;
                 padding: 16px 32px;
                 font-size: 16px;        
                 border-radius: 10px;
@@ -134,7 +133,6 @@
                 float: left;                                             
                 width: 50%; 
                 min-width: 400px;
-                background-color: #F4F4F4;
                 text-align: center;
             }
 
@@ -143,8 +141,8 @@
                 width: 400px;
                 height: 400px;
                 margin: auto;          /* effect of placing image at the center */
-                margin-top: 100px;
-                margin-bottom: 100px;
+                margin-top: 50px;
+                margin-bottom: 50px;
             }
 
             /* main image size is limited by the either max height or max width */
@@ -157,7 +155,7 @@
             .thumbnail {
                 float: left;
                 width: 100%;
-                margin-bottom: 100px;
+                margin-bottom: 50px;
             }
 
             /* bounding box for the thumbnail image. it is square shaped regardless of actual image aspect ratio */
@@ -177,7 +175,12 @@
                 max-width: 48px;
             } 
             .playtime {
+                background-color: #F1F1F1;
                 text-align: center;
+                padding: 30px;
+            }
+            #playvideo {
+                margin: 50px;
             }
         </style>
     </head>
@@ -251,9 +254,11 @@
 				curImage.title = imgName;
 			}
             
-            $( ".selector" ).spinner({
-  min: 0
-});
+            // Getter
+var min = $( ".selector" ).spinner( "option", "min" );
+ 
+// Setter
+$( ".selector" ).spinner( "option", "min", 0 );
 
 		</script>    
     </body>
