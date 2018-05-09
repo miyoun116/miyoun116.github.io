@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Assignment 13.1: Web Video -->
+<!-- Create a product details page with video.-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>STO and GO</title>
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type='text/css'>
+        
+        <style > 
+            h1 {
+    font-family: 'Lora', serif;  
+    color: #303030;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Lora', serif;               
+    color: #82204D;
+}
+            p, .description {
+    font-family: 'Open Sans', sans-serif;
+    color: #5C5C5C;
+    font-size: 11pt;
+}
+
+/* set image to not overflow the box */
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.description {
+    text-align: left;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 80%; 
+}
+
+.container {                                                   
+    position: relative;
+    width: 70%;
+    min-width: 80em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+.clear {clear: both;}
+            
+            /* button style for both pages */
+.button {
+    margin:10px;
+    background-color: #AB7D77;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    border: none;
+    color: #F9FBFA;
+    padding: 16px 32px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    align-self: center;
+}
+           /* imagebox for image picker */
+.imagebox {
+    float: left;                                             
+    width: 50%; 
+    min-width: 400px;
+    background-color: #F4F4F4;
+    text-align: center;
+}
+
+/* mainbox of the impage picker, it sets the size of the box and margin */
+.imagebox .mainbox {
+    width: 400px;
+    height: 400px;
+    margin: auto;          /* effect of placing image at the center */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* main image size is limited by the either max height or max width */
+.imagebox #mainimage {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+/* thumbnails are small images at the bottom that users can pick by hovering the mouse cursor */
+.thumbnail {
+    float: left;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+/* bounding box for the thumbnail image. it is square shaped regardless of actual image aspect ratio */
+.thumbnail .box {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-color: #AB7D77;
+    border-width: 1px;
+    border-style: solid;
+    margin: 10px;
+}
+
+/* display thumbnail with maximum 48px height or width */
+.thumbnail .box img {
+    max-height: 48px;
+    max-width: 48px;
+} 
+
+/* detailbox is right column on the production description page describing the product */
+.detailbox {
+    width: 50%; 
+    float: right;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* give 30px margin for each description text */
+.detailbox .description li {
+    margin-bottom: 30px;
+    list-style-position: inside;
+}
+        </style>
+    </head>
+    <body>
+        <div class = "container">
+            <h1>STO and GO</h1>
+
+            <div class = "imagebox"> 
+                <div class="mainbox" >
+                    <img id="mainimage" src= "https://miyoun116.github.io/wnm601/hw13/1.JPG" alt= "box" title = "box" />
+                </div>
+                <!-- Change larger image to the thumbnail image when mouse hovers on the thumbnail -->
+                <div class = "thumbnail">
+                    <div class = "box" onmouseover="showImage('1.JPG');">
+                        <img src= "https://miyoun116.github.io/wnm601/hw13/1.JPG" alt= "box" title = "box" />
+                    </div>
+                    <div class = "box" onmouseover="showImage('2.JPG');">
+                        <img src= "https://miyoun116.github.io/wnm601/hw13/2.JPG" alt= "whole" title = "whole" />
+                    </div>  
+                    <div class = "box" onmouseover="showImage('3.JPG');">
+                        <img src= "https://miyoun116.github.io/wnm601/hw13/3.JPG" alt= "half" title = "half" />
+                    </div>
+                </div>
+            </div>
+            <div class = "detailbox">
+                <h2>Kim Crawford ROSÉ</h2>
+                <h2>$14.99</h2> 
+                <div class = "description"> 
+                
+                Collectors will remember it from yesteryear and kids of today will love it. The classic Hot Wheels Sto & Go play set is back, complete with awesome retro-style packaging! Fill up the Sto & Go with your collection of Hot Wheels cars and carry this play set anywhere to unfold a world of fun! Each set sold separately, subject to availability. Colors and decorations may vary. <br><br>
+                Age: 3 and up. <br><br>
+                Dimensions (Overall): 10.0 inches (H) x 4.0 inches (W) x 22.0 inches (L)
+                </div>
+                <button class="button">Add to Cart</button> 
+            </div>
+            <div class = "clear"></div>
+           
+        </div>
+        <script type="text/javascript"> 
+            /* Changes the larger image to the given image name */
+			function showImage(imgName) {
+				var curImage = document.getElementById('mainimage');
+				var thePath = 'https://miyoun116.github.io/wnm601/hw8/';
+				var theSource = thePath + imgName;
+				
+				curImage.src = theSource;
+				curImage.alt = imgName;
+				curImage.title = imgName;
+			}
+		</script>    
+    </body>
+</html>
