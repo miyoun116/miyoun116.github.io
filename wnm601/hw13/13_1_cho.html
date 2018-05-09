@@ -184,7 +184,7 @@
             .recommend {
                 text-align: center;
                 width: 100%;
-                margin-bottom: 50px;
+                padding: 50px;
             }
             /* 3-column grid with with the repeat() function. */
             .grid {
@@ -193,26 +193,37 @@
             }
             .reimagebox {
                 width: 400px;
-                height: 400px;
-            }
-            .reimage img {
-                width: 80%;
+                height: 350px;
                 text-align: center;
             }
-            .reimage p {
+            .reimagebox img {
+                width: 60%;
+            }
+            .reimagebox p {
                 font-family: 'Nunito', sans-serif;
-                color: #D4D4D7; 
-                font-size: 20pt;
+                color: #5C5C5C; 
+                font-size: 14pt;
                 font-weight: bold;
             }       
             /* source area on the bottom */
+            #topbutton {
+                width: 100%;
+                background-color: #0B45BA;
+                font-family: 'Nunito', sans-serif;
+                font-weight: bold;
+                border: none;
+                color: #F9FBFA;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                font-size: 16px; 
+            }
             .footer {                                                     
                 clear: both;
                 text-align: center;
                 padding-top: 5%;                                         
                 padding-bottom: 5%;
-                background-color: #1D1D1E;
-                color: #EBEBEB;
+                background-color: #ECECEC;
+                color: #5C5C5C;
             }   
         </style>
     </head>
@@ -252,7 +263,7 @@
                 <h2>STO and GO</h2>
                 <h2>$29.99</h2> 
                 <p>
-                Collectors will remember it from yesteryear and kids of today will love it. The classic Hot Wheels Sto & Go play set is back, complete with awesome retro-style packaging! Fill up the Sto & Go with your collection of Hot Wheels cars and carry this play set anywhere to unfold a world of fun! Each set sold separately, subject to availability. Colors and decorations may vary. <br><br>
+                Collectors will remember it from yesteryear and kids of today will love it. The classic Hot Wheels Sto and Go play set is back, complete with awesome retro-style packaging! Fill up the Sto and Go with your collection of Hot Wheels cars and carry this play set anywhere to unfold a world of fun! Each set sold separately, subject to availability. Colors and decorations may vary. <br><br>
                 <b>Age:</b> 3 and up. <br><br>
                 <b>Dimensions:</b> 10.0 inches (H) x 4.0 inches (W) x 22.0 inches (L) <br><br>
                     
@@ -291,9 +302,12 @@
                 </div>
             </div>
             
+            <button onclick="topbutton()" id="topbutton" title="TO P">Scroll to Top</button>
+            
             <div class= "footer">
                 <p>About Us</p>
-                <p>Contact Us</p>
+                <p>Shippin and Returns</p>
+                <p>Need Help?</p>
             </div>
            
         </div>
@@ -309,6 +323,10 @@
 				curImage.title = imgName;
 			}
             
+            function topbutton() {
+                window.scroll(window.scrollX,0);
+            }
+
 		</script>    
     </body>
 </html>
