@@ -10,17 +10,18 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
+    text-align: center;
 }
 
 .logobox {
+    margin: 30px;
         
 }
 
 .logo {
     font-family: 'Montserrat', sans-serif;            
     color: #3A3A3A;
-    font-size: 50pt;
-    text-align: center;
+    font-size: 40pt;
 }
 
 h1 {
@@ -46,6 +47,7 @@ p {
 .topnav {
     overflow: hidden;
     width: 90%;
+    text-align: center;
     background-color: #FBFBFB;
     margin-bottom: 30px;
 }
