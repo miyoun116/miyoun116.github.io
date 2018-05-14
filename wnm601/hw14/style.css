@@ -2,6 +2,15 @@
  Assignment 14.1: Final Project 
  CSS script. */
 
+.container {                                                   
+    position: relative;
+    width: 70%;
+    min-width: 80em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+            }
 .topnav {
     overflow: hidden;
     background-color: #333;
