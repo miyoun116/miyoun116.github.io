@@ -73,3 +73,32 @@ p {
     background-color: #C6A788;
     color: #FBFBFB;
 }
+
+.featuredbox {
+    text-align: center;
+    width: 100%;
+    padding: 50px;
+}
+
+/* 3-column grid with with the repeat() function. */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+}
+
+.imagebox {
+    width: 400px;
+    height: 350px;
+    text-align: center;
+}
+
+.imagebox img {
+    width: 60%;
+}
+
+.imagebox p {
+    font-family: 'Vollkorn', serif; 
+    color: #3A3A3A; 
+    font-size: 14pt;
+    font-weight: bold;
+}       
