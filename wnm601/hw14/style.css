@@ -12,17 +12,23 @@
     margin-bottom: auto;
 }
 
+.logo {
+    font-family: 'Montserrat', sans-serif;            
+    color: #3A3A3A;
+    font-size: 32pt;
+}
+
 h1 {
     font-family: 'Vollkorn', serif;
     color: #0B45BA;
-    font-size: 30pt;
+    font-size: 28pt;
     font-weight: bold;
 }
 
 h2 {
     font-family: 'Montserrat', sans-serif;            
     color: #3A3A3A;
-    font-size: 26pt;
+    font-size: 16pt;
     margin-bottom: 50px;
 }
 
