@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Assignment 14.1: Final Project -->
+<!-- Final projct with HTML, CSS and Javasctipt.-->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hanbok</title>
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      
+        <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw14/style.css">
+        <style type="text/css">   
+            *, *:before, *:after {
+                box-sizing:border-box;
+                margin: 0;
+            }
+        </style>
+        
+        <style>
+              /* Always set the map height explicitly to define the size of the div
+               * element that contains the map. */
+              #map {
+                height: 100%;
+                width: 50%
+              }
+              /* Optional: Makes the sample page fill the window. */
+              html, body {
+                height: 70%;
+                margin: 0;
+                padding: 0;
+              }
+        </style>
+    </head>
+    
+     <body>
+        <div id="map"></div>
+        
+        <script>
+              var map;
+              function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                  center: {lat: 37.393283, lng: -122.114626},  
+                  /* zoom level is 18 */
+                  zoom: 18,
+                  /* A Google map of type ROADMAP */
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                });
+              }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJesEjjP4b4P017-SH-xSDkGi8gz62pKo&callback=initMap"
+        async defer></script>
+    </body>
+
+    <body>
+        <div class= "container"> 
+            <div class= "logobox">
+                <div class= "logo">HANBOK</div>
+            </div>
+
+            <div class= "topnav">
+                <a href="#shop">Hanbok Shop</a>
+                <a href= "#story">Hanbok Story</a>
+                <a href= "#measure">How to Measure</a>
+            </div>
+            
+            <div class= "mainimage">
+                
+            </div>
+    
+            <div class ="contents">
+                <h2> Address </h2>
+                <p> 00000 N SAN ANTONIO Rd, MOUNTAINVIEW, CA, US</p> <br>
+                <h2> Tel. </h2> 
+                <p> 000-0000-0000 </p> <br>
+                <h2> E-mail </h2>
+                <p> miyoun116@gmail.com </p> 
+            </div>
+            
+            <button id="topbutton" title="TOP">Scroll to Top</button>
+            
+            <div class= "footer">
+                <p>About Us &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; Contact Us</p>
+            </div>     
+        </div>
+    </body>
+    
+</html>
