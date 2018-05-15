@@ -38,6 +38,14 @@ h2 {
     margin-bottom: 10px;
 }
 
+h3 {
+    font-family: 'Montserrat', sans-serif;        
+    color: #707070;
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+
+
 p {
     font-family: 'Montserrat', sans-serif;
     color: #3A3A3A;

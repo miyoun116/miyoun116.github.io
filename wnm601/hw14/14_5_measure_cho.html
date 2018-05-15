@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Assignment 14.1: Final Project -->
+<!-- Final projct with HTML, CSS and Javasctipt.-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hanbok</title>
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+        <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw14/style.css">
+        
+        <style type="text/css">   
+            *, *:before, *:after {
+                box-sizing:border-box;
+                margin: 0;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <div class= "container"> 
+            <div class= "logobox">
+                <div class= "logo">HANBOK</div>
+            </div>
+            
+
+            <div class= "topnav">
+                <a href="#shop">Hanbok Shop</a>
+                <a href= "#story">Hanbok Story</a>
+                <a class="active" href= "#measure">How to Measure</a>
+            </div>
+            
+            <h2> How to Measure </h2>
+            <div id="accordion">
+                  <h3>Height</h3>
+                  <div>
+                    <p>
+                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                    </p>
+                  </div>
+                  <h3>Arm and Sleeve Length</h3>
+                  <div>
+                    <p>
+                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                    suscipit faucibus urna.
+                    </p>
+                  </div>
+                  <h3>Neck Width</h3>
+                  <div>
+                    <p>
+                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                    </p>
+                    <ul>
+                      <li>List item one</li>
+                      <li>List item two</li>
+                      <li>List item three</li>
+                    </ul>
+                  </div>
+                  <h3>Upper Chest</h3>
+                  <div>
+                    <p>
+                    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                    mauris vel est.
+                    </p>
+                    <p>
+                    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                    inceptos himenaeos.
+                    </p>
+                  </div>
+                </div>
+            
+            <button id="topbutton" title="TOP">Scroll to Top</button>
+            
+            <div class= "footer">
+                <a href= "https://miyoun116.github.io/wnm601/hw14/14_6_aboutus.cho.html">About Us</a> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; <a href= "https://miyoun116.github.io/wnm601/hw14/14_7_contanctus.cho.html">Contact Us</a>
+            </div>      
+        </div>
+        
+        <script>
+              $( function() {
+                $( "#accordion" ).accordion({
+                  collapsible: true
+                });
+              } );
+        </script>
+        
+        
+    </body>
+</html>
