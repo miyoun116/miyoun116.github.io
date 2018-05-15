@@ -46,7 +46,6 @@ p {
             
 .topnav {
     overflow: hidden;
-    width: 90%;
     text-align: center;
     background-color: #FBFBFB;
     margin-bottom: 30px;
@@ -54,7 +53,7 @@ p {
 
 .topnav a {
     float: left;
-    width: 30%;
+    width: 33.33%;
     font-family: 'Libre Baskerville', serif;
     color: #5B5B5B;
     text-align: center;
