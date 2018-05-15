@@ -237,5 +237,13 @@ a:hover {
     text-align: left;
 }
 
+#accordion img {
+    height: 300px;
+}
+#accordion p {
+    text-align: left;
+}
+    
+
 
             
