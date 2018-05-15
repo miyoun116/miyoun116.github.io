@@ -131,6 +131,11 @@ p {
     text-align: center;
     padding-top: 5%;                                         
     padding-bottom: 5%;
-    background-color: #FBFBFB;
+    background-color: #E3AAA5;
     color: #5B5B5B;
-}   
+} 
+
+.footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
