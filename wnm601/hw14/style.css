@@ -35,7 +35,7 @@ h2 {
     font-family: 'Libre Baskerville', serif;        
     color: #707070;
     font-size: 18pt;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 p {
@@ -95,7 +95,8 @@ p {
 /* 3-column grid with with the repeat() function. */
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  
+    grid-template-columns: repeat(3, 1fr); 
+    margin: 20px;
 }
 
 .imagebox {
@@ -214,9 +215,5 @@ p {
     text-align: left;
 }
 
-/* contactus page */
 
-#map {
-
-}
             
