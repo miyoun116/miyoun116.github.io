@@ -73,14 +73,17 @@ p {
     color: #FBFBFB;
 }
 
-.mainimage {
+.mainimagebox {
     position: relative;
     text-align: center;
 }
 
-.mainimage img {
-    min-width: 100%;
-    height: auto;
+.mainimage {
+    border: 2px solid black;
+    padding: 25px;
+    background: url(https://miyoun116.github.io/wnm601/hw14/hanbok5.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
     
 /* Centered text */
