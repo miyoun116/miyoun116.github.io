@@ -209,7 +209,14 @@ p {
 }
 
 .contents {
+    position: relative;
     width: 60%;
     text-align: left;
+}
+
+/* contactus page */
+
+ #map {
+     height: 30%;
 }
             
