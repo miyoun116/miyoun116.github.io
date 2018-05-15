@@ -112,3 +112,25 @@ p {
     color: #3A3A3A; 
     font-size: 14pt;
 }       
+
+/* source area on the bottom */
+#topbutton {
+    width: 100%;
+    background-color: #0B45BA;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    border: none;
+    color: #F9FBFA;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 16px; 
+}
+
+.footer {                                                     
+    clear: both;
+    text-align: center;
+    padding-top: 5%;                                         
+    padding-bottom: 5%;
+    background-color: #FBFBFB;
+    color: #5B5B5B;
+}   
