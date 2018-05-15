@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Assignment 14.1: Final Project -->
+<!-- Final projct with HTML, CSS and Javasctipt.-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hanbok</title>
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw14/style.css">
+        
+        <style type="text/css">   
+            *, *:before, *:after {
+                box-sizing:border-box;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <div class= "container"> 
+            <div class= "logobox">
+                <div class= "logo">HANBOK</div>
+            </div>
+
+            <div class= "topnav">
+                <a class="active" href="#shop">Hanbok Shop</a>
+                <a href= "#story">Hanbok Story</a>
+                <a href= "#measure">How to Measure</a>
+            </div>
+            
+            <div class= "mainimage">
+                <img src= "https://miyoun116.github.io/wnm601/hw14/hanbok5.jpg" alt= "hanbok5">
+                <div class="centered">
+                    <h1> Handmade Hanbok </h1>
+                    <p> from KOREA </p>
+                </div>
+            </div>
+            
+            <div class= "featuredbox">
+                <h2>Featured Products</h2>
+                
+                <div class = "grid">
+                    <div class = "imagebox">
+                        <img src= "https://miyoun116.github.io/wnm601/hw14/hanbok1.jpg" alt= "hanbok1">
+                    </div>
+                    <div class = "imagebox">
+                        <img src= "https://miyoun116.github.io/wnm601/hw14/hanbok2.jpg" alt= "hanbok2">
+                    </div>
+                    <div class = "imagebox">
+                        <img src= "https://miyoun116.github.io/wnm601/hw14/hanbok3.jpg" alt= "hanbok3">
+                    </div>
+                </div>
+            </div>
+            
+            <button id="topbutton" title="TOP">Scroll to Top</button>
+            
+            <div class= "footer">
+                <p>About Us &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; Contact Us</p>
+            </div>     
+        </div>
+        
+        <script type="text/javascript"> 
+            $(document).ready(function() {
+                /* scroll to top button */
+                $("#topbutton").on("click", function() {
+                    window.scroll(window.scrollX,0);
+                })
+            
+                /* Changes the larger image to the given image name */
+                $(".thumbnail .box img").on("mouseover", function(e) {
+                    var src = e.currentTarget.getAttribute('src');
+                    var alt = e.currentTarget.getAttribute('alt');
+                    $("#mainimage").attr('src', src);
+                    $("#mainimage").attr('alt', alt);
+                })
+            })
+		</script>    
+    </body>
+</html>
