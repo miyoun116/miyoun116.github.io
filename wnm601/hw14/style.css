@@ -144,9 +144,9 @@ p {
 /* hanbokstory */
 .slideimage {
 position: relative;
-margin: 0;
 width: 1000px;
 height: 500px;
+margin: 50px;
 }
 
 .button {
