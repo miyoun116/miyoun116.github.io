@@ -148,9 +148,10 @@ margin: 0;
 width: 800px;
 height: 500px;
 }
+
 .button {
 position: relative;
-margin-top:300px;
+margin-top:150px;
 width:40px;
 transition: 0.1s ease;
 }
