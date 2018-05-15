@@ -116,11 +116,11 @@ p {
 /* source area on the bottom */
 #topbutton {
     width: 100%;
-    background-color: #0B45BA;
+    background-color: #727272;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     border: none;
-    color: #E3AAA5;
+    color: #E7E7E7;
     padding-top: 16px;
     padding-bottom: 16px;
     font-size: 16px; 
