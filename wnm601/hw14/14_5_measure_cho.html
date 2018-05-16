@@ -14,9 +14,9 @@
         
         
        	<link href="https://miyoun116.github.io/wnm601/hw14/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     
         <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw14/style.css">
         
@@ -26,8 +26,8 @@
                 margin: 0;
             }
             
-            .ui-tabs-vertical { width: 55em; }
-            .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+            .ui-tabs-vertical { width: 1280px; }
+            .ui-tabs-vertical .ui-tabs-nav { padding: 20px; float: left; width: 300px; }
             .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
             .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
             .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
@@ -51,15 +51,10 @@
             
             <h2> How to Measure </h2>
             <p> Please carefully follow our "How to Measure" guide. (UNIT: INCH) </p>
-            <div id="tabs">
-                  <ul>
-                    <li><a href="#tabs-1">Height</a></li>
-                    <li><a href="#tabs-2">Arm and Sleeve Length</a></li>
-                    <li><a href="#tabs-3">Neck Width</a></li>
-                    <li><a href="#tabs-4">Upper Chest</a></li>
-                  </ul>
+            
                   <div id="tabs-1">
                     <h2>Height</h2>
+                    <img src = "https://miyoun116.github.io/wnm601/hw14/height.png" alt= "height"> 
                     <p>
                         1. Stand at attention. <br>
                         2. Start from Bulging bone dehind neck. <br>
@@ -69,7 +64,8 @@
                   </div>
                   <div id="tabs-2">
                     <h2>Arm and Sleeve Length</h2>
-                     <p>
+                    <img src = "https://miyoun116.github.io/wnm601/hw14/arm.png" alt= "arm"> 
+                    <p>
                         1. Start from Bulging bone behind neck. <br>
                         2. Pass by shoulders Point. <br>
                         3. To back of hand. Keep measure until it reaches to 1 inch below wristbone. <br>
@@ -78,13 +74,15 @@
                   </div>
                   <div id="tabs-3">
                     <h2>Neck Width</h2>
+                    <img src = "https://miyoun116.github.io/wnm601/hw14/neck.png" alt= "neck"> 
                     <p>
                         1. Point where neck and shoulder line meets. <br>
                         2. Go around neck. 
                     </p>
                   </div>
-                  <div id="tabs-3">
-                    <h2>Upper Chest</h2>
+                  <div id="tabs-4">
+                    <h2>Upperchest</h2>
+                    <img src = "https://miyoun116.github.io/wnm601/hw14/upperchest.png" alt= "upperchest"> 
                     <p>
                         1. Raise both Arm. <br>
                         2. Go around Chest right below armpit.Don't tighten tapeline too hard.
@@ -97,13 +95,10 @@
             <div class= "footer">
                 <a href= "https://miyoun116.github.io/wnm601/hw14/14_6_aboutus.cho.html">About Us</a> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; <a href= "https://miyoun116.github.io/wnm601/hw14/14_7_contanctus.cho.html">Contact Us</a>
             </div>      
-        </div>
+   
         
         <script>
-              $( function() {
-                $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
-                $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
-              } );
+             
         </script>
         
         
