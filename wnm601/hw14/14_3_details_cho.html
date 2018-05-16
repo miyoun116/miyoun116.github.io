@@ -3,6 +3,7 @@
 <!-- Assignment 14.1: Final Project -->
 <!-- Final projct with HTML, CSS and Javasctipt.-->
 
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -11,6 +12,8 @@
         <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        
+        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.min.js'></script>
       
         <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw14/style.css">
         <style type="text/css">   
@@ -18,6 +21,112 @@
                 box-sizing:border-box;
                 margin: 0;
             }
+             /* set image to not overflow the box */
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            .container {                                                   
+                position: relative;
+                width: 70%;
+                min-width: 80em;
+                margin-top: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: auto;
+            }
+            
+             /* detailbox is right column on the production description page describing the product */
+            .detailbox {
+                width: 40%; 
+                float: right;
+                margin-top: 20px;
+                padding: 20px;
+            }
+
+            .clear {clear: both;}
+
+            /* button style */
+            .button {
+                background-color: #C6A788;
+                font-family: 'Montserrat', sans-serif; 
+                font-weight: bold;
+                border: none;
+                color: #FBFBFB;
+                padding: 16px 32px;
+                font-size: 16px;  
+                border-radius: 10px;
+                align-self: center;
+            }
+            
+            /* imagebox for image picker */
+            .imagebox {
+                float: left;                                             
+                width: 50%; 
+                min-width: 400px;
+                text-align: center;
+            }
+
+            /* mainbox of the impage picker, it sets the size of the box and margin */
+            .imagebox .mainbox {
+                width: 600px;
+                height: 600px;
+                margin: auto;          /* effect of placing image at the center */
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            /* main image size is limited by the either max height or max width */
+            .imagebox #mainimage {
+                max-width: 600px;
+                max-height: 600px;
+            }
+            
+            input[type=text] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 3px solid #ccc;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+            }
+
+            input[type=text]:focus {
+                border: 3px solid #555;
+            }
+            
+            .qty-box {
+  border: 1px solid #94c4ec;
+  border-radius: 3px;
+  display: block;
+  height: 60px;
+  margin: calc(50vh - 30px) auto 0 auto;
+  width: 200px;
+}
+
+span {;
+  color: #62a8e2;
+  font-family: sans-serif;
+  float: left;
+  line-height: 60px;
+  text-align: center;
+  width: calc(200px/3);
+  -webkit-font-smoothing: antialiased;
+}
+
+.dec,
+.inc {
+  height: 100%;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+        
         </style>
     </head>
     <body>
@@ -32,13 +141,84 @@
                 <a href= "#measure">How to Measure</a>
             </div>
             
-
+            <div class = "imagebox"> 
+                <div class="mainbox" >
+                    <img id="mainimage" src="https://miyoun116.github.io/wnm601/hw14/hanbok1.jpg" alt="pink">
+                </div>
+                
+            </div>
+            <div class = "detailbox">
+                <h2>Rose Pink Hanbok</h2>
+                <h2>$200.00</h2> 
+                <p>
+                레드퍼플을 파스텔톤의 저채도로 염색하여 모던한 톤다운 컬러를 주조색으로 활용하였습니다. 분위기있고 격식있는 자리에 어울리는 고상한 느낌의 작품으로 베스트셀러중 하나 입니다.
+                <p>
+                <b>Color:</b> Pink <br><br>
+                <b>Fabric:</b> Silk <br><br>
+                </p>
+             
+                                
+            <div class="qty">
+	<label for="qty"><?php echo $this->__('Qty:') ?></label>
+	<a class="decrement_qty" href="javascript:void(0)" >
+		<div class="middle_icon_color pull-left">
+			<i class="icon-minus"></i>
+		</div>
+	</a>
+    <input id="qty" class="input-text qty" type="text" title="Qty" value="<?php echo $this->getProductDefaultQty() * 1 ?>" maxlength="12" name="qty" />
+	<a class="increment_qty" href="javascript:void(0)">
+		<div class="middle_icon_color pull-left">
+			<i class="icon-plus"></i>
+		</div>
+	</a>
+</div>
+                
+                <form>
+                      <label for="fname">Height</label>
+                      <input type="text" id="height" value="inch">
+                      <label for="lname">Arm and Sleeve length</label>
+                      <input type="text" id="arm" value="inch">
+                      <label for="fname">Neck Width</label>
+                      <input type="text" id="neck" value="inch">
+                      <label for="lname">Upper Chest</label>
+                      <input type="text" id="chest" value="inch">
+                    
+                </form>
+                
+                <button class="button">Add to Cart</button> 
+            </div>
     
             <button id="topbutton" title="TOP">Scroll to Top</button>
             
             <div class= "footer">
                 <a href= "https://miyoun116.github.io/wnm601/hw14/14_6_aboutus.cho.html">About Us</a> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; <a href= "https://miyoun116.github.io/wnm601/hw14/14_7_contanctus.cho.html">Contact Us</a>
-            </div>         
+            </div>  
+            
+            <script>
+                var QuantityBox = React.createClass({
+  getInitialState: function() {
+    return { value: 1 };
+  },
+  onDecrement: function(e) {
+    if (this.state.value <= 0) return;
+    this.setState({value: --this.state.value});
+  },
+  onIncrement: function(e) {
+    this.setState({value: ++this.state.value});
+  },    
+  render: function() {
+    return (
+      <div className="qty-box">
+        <span className="dec" onClick={this.onDecrement} onTouchStart={this.onDecrement}>–</span>
+        <span className="qty">{this.state.value}</span>
+        <span className="inc" onClick={this.onIncrement} onTouchStart={this.onIncrement}>+</span>
+      </div>
+    );
+  }
+});
+
+React.render(<QuantityBox />, document.body);
+            </script>
         </div>
     </body>
     
