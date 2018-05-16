@@ -56,7 +56,6 @@ a {
     font-family: 'Montserrat', sans-serif;
     color: #3A3A3A;
     font-size: 12pt;
-    font-weight: bold;
     text-decoration: none;
 }
     
@@ -98,6 +97,13 @@ a:hover {
 .mainimage {
     position: relative;
     text-align: center;
+    width: 1280px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.mainimage img {
+    width: 1280px;
 }
 
 /* Centered text */
@@ -166,28 +172,6 @@ a:hover {
 
 /* hanbokstory page */
 
-.button {
-    position: relative;
-    margin-top: 200px;
-    width: 40px;
-    transition: 0.1s ease;
-}
-
-.button:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-            
-.lbutton {
-    float: left;
-    left: 20%;
-}
-            
-.rbutton {
-    float: right;
-    right: 20%;
-}
             
 .pages {
     position: relative;
@@ -238,7 +222,7 @@ a:hover {
 }
 
 #accordion img {
-    height: 300px;
+    height: 200px;
 }
 #accordion p {
     text-align: left;

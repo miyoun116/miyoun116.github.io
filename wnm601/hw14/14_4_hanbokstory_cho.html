@@ -12,11 +12,55 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     
         <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw14/style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         
         <style type="text/css">   
             *, *:before, *:after {
                 box-sizing:border-box;
                 margin: 0;
+            }
+            #img-slider {
+                margin: auto;
+                position: relative;
+                width: 700px;
+                height: 500px;
+            }
+            #slides {
+                position: absolute;
+                left:100px;
+                width: 500px;
+                height: 350px;
+                overflow: hidden;
+            }
+            #slides img {
+                position: absolute;
+                width: 500px;
+                left: 0;
+            }
+            
+            .button {
+                position: relative;
+                margin-top: 170px;
+                width: 40px;
+                transition: 0.1s ease;
+            }
+
+            .button:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+                transition: 0.2s ease;
+            }
+
+            #lbutton {
+                float: left;
+                left: 5%;
+            }
+            #rbutton {
+                float: right;
+                right: 5%;
             }
         </style>
         
@@ -34,26 +78,15 @@
                 <a href= "#measure">How to Measure</a>
             </div>
             
-            <div class= "mainimage">
-                <img class="button lbutton" src="https://miyoun116.github.io/wnm601/hw14/left_arrow.png">
-                <img class="button rbutton" src="https://miyoun116.github.io/wnm601/hw14/right_arrow.png">
-            
-                <div class="pages">
-                    <div id="page-1" class="page show">
-                        <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok6.jpg" alt= "hanbok6">  
-                    </div>
-                    <div id="page-2" class="page hide-right">
-                        <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok7.jpg" alt= "hanbok7">  
-                    </div>
-                    <div id="page-3" class="page hide-right">
-                        <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok8.jpg" alt= "hanbok8">  
-                    </div>
-                    <div id="page-4" class="page hide-right">
-                        <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok9.jpg" alt= "hanbok9">  
-                    </div>
-                    <div id="page-5" class="page hide-right">
-                        <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok10.jpg" alt= "hanbok10">  
-                    </div>
+            <div id="img-slider">
+                <img class="button" id="lbutton" src="https://miyoun116.github.io/wnm601/hw14/left_arrow.png">
+                <img class="button" id="rbutton" src="https://miyoun116.github.io/wnm601/hw14/right_arrow.png">            
+                <div id="slides">
+                    <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok6.jpg" alt= "hanbok6">  
+                    <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok7.jpg" alt= "hanbok7">  
+                    <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok8.jpg" alt= "hanbok8">  
+                    <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok9.jpg" alt= "hanbok9">  
+                    <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok10.jpg" alt= "hanbok10">
                 </div>
             </div>
             
@@ -75,63 +108,43 @@
         <script>
         // photo slide using jQuery UI Effects //
         $(document).ready(function() {
-            var curPage = 1;
-            var numPages = $(".page").length;
-            var pagePrefix = "#page-"
-            var buttonFadeDuration = 500;
-            var sliding = false;
-            
-            <!-- slide to new picture. -->
-            function slide() {
-                <!-- prevent another effect from starting before the prior one finishes. -->
-                sliding = true;
-                <!-- slide in the new photo using the jquery UI effect.-->
-                $(pagePrefix + curPage).removeClass("hide-left").removeClass("hide-right").addClass("show");
-                if (curPage > 1) {
-                    <!-- slide out the existing photo using the jquery UI effect. -->
-                    $(pagePrefix + (curPage - 1)).removeClass("show").addClass("hide-left");
-                    <!-- reshow right button if there are more pictures on the left. -->
-                    if (!$(".lbutton").is(":visible"))
-                        $(".lbutton").fadeIn(buttonFadeDuration);
-                } else {
-                    <!-- hide left button if it reaches the left end.-->
-                    $(".lbutton").fadeOut(buttonFadeDuration);
+            var slide_imgs = $("#slides img");
+            var slide_selected = 0;
+            var dir = 'right';
+            console.warn(slide_imgs.length);
+            function reverse(dir) {
+                if (dir == 'left') 
+                    return 'right';
+                else if (dir == 'right')
+                    return 'left';
+                return null;
+            }
+
+            function show_slide() {
+                while (slide_selected < 0 ) 
+                    slide_selected += slide_imgs.length;
+                while (slide_selected >= slide_imgs.length)
+                    slide_selected -= slide_imgs.length;
+                for (var i = 0; i < slide_imgs.length; i++) {
+                    if (i == slide_selected) {
+                        $(slide_imgs.get(i)).show("slide", {direction:dir});
+                    } else {
+                        $(slide_imgs.get(i)).hide("slide", {direction:reverse(dir)});
+                    }
                 }
-                if (curPage < numPages) {
-                    <!-- slide out the existing photo using the jquery UI effect. -->
-                    $(pagePrefix + (curPage + 1)).removeClass("show").addClass("hide-right");
-                    <!-- reshow right button if there are more pictures on the right. -->
-                    if (!$(".rbutton").is(":visible"))
-                        $(".rbutton").fadeIn(buttonFadeDuration);
-                } else {
-                    <!-- hide right button if it reaches the left end. -->
-                    $(".rbutton").fadeOut(buttonFadeDuration);
-                }
-                
-                <!-- reset the sliding flag when the effect finishes. -->
-                setTimeout(function() {
-                    sliding = false;
-                }, 1000)
-            };
-            
-            <!-- left button handler -->
-            function left() {
-                if (sliding) return;
-                if (curPage == 1) return;
-                curPage--;
-                slide();
             }
             
-            <!-- right button handler -->
-            function right() {
-                if (sliding) return;
-                if (curPage == numPages) return;
-                curPage++;
-                slide();
-            }
-            
-            $(".lbutton").on("click", function() {left();});
-            $(".rbutton").on("click", function() {right();});
+            $("#lbutton").on("click", function() {
+                slide_selected = (slide_selected - 1) % slide_imgs.length;
+                dir = 'left';
+                show_slide();
+            });
+            $("#rbutton").on("click", function() {
+                slide_selected = (slide_selected + 1) % slide_imgs.length;
+                dir = 'right';
+                show_slide();
+            })
+            show_slide();
         });
     </script>
     </body>
