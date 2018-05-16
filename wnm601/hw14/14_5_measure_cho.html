@@ -25,6 +25,13 @@
                 box-sizing:border-box;
                 margin: 0;
             }
+            
+            .ui-tabs-vertical { width: 55em; }
+            .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+            .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+            .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+            .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+            .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
         </style>
         
     </head>
@@ -44,10 +51,15 @@
             
             <h2> How to Measure </h2>
             <p> Please carefully follow our "How to Measure" guide. (UNIT: INCH) </p>
-            <div id="accordion">
-                  <h3>Height</h3>
-                  <div>
-                    <img src = "https://miyoun116.github.io/wnm601/hw14/height.png" alt= "height">  
+            <div id="tabs">
+                  <ul>
+                    <li><a href="#tabs-1">Height</a></li>
+                    <li><a href="#tabs-2">Arm and Sleeve Length</a></li>
+                    <li><a href="#tabs-3">Neck Width</a></li>
+                    <li><a href="#tabs-4">Upper Chest</a></li>
+                  </ul>
+                  <div id="tabs-1">
+                    <h2>Height</h2>
                     <p>
                         1. Stand at attention. <br>
                         2. Start from Bulging bone dehind neck. <br>
@@ -55,37 +67,31 @@
                         4. Measuring Height is finished. 
                     </p>  
                   </div>
-                
-                  <h3>Arm and Sleeve Length</h3>
-                  <div>
-                    <img src = "https://miyoun116.github.io/wnm601/hw14/arm.png" alt= "arm">
-                    <p>
+                  <div id="tabs-2">
+                    <h2>Arm and Sleeve Length</h2>
+                     <p>
                         1. Start from Bulging bone behind neck. <br>
                         2. Pass by shoulders Point. <br>
                         3. To back of hand. Keep measure until it reaches to 1 inch below wristbone. <br>
                         4. Measuring Arm and Sleeve Length is finished. 
                     </p>   
                   </div>
-                
-                  <h3>Neck Width</h3>
-                  <div>
-                    <img src = "https://miyoun116.github.io/wnm601/hw14/neck.png" alt= "neck">  
+                  <div id="tabs-3">
+                    <h2>Neck Width</h2>
                     <p>
                         1. Point where neck and shoulder line meets. <br>
                         2. Go around neck. 
                     </p>
                   </div>
-                
-                  <h3>Upper Chest</h3>
-                  <div>
-                    <img src = "https://miyoun116.github.io/wnm601/hw14/upperchest.png" alt= "upperchest">
+                  <div id="tabs-3">
+                    <h2>Upper Chest</h2>
                     <p>
                         1. Raise both Arm. <br>
                         2. Go around Chest right below armpit.Don't tighten tapeline too hard.
                     </p>
                   </div>
                 </div>
-            
+              
             <button id="topbutton" title="TOP">Scroll to Top</button>
             
             <div class= "footer">
@@ -95,9 +101,8 @@
         
         <script>
               $( function() {
-                $( "#accordion" ).accordion({
-                  collapsible: true
-                });
+                $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+                $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
               } );
         </script>
         
