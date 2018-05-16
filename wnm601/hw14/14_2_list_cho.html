@@ -12,8 +12,6 @@
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       
@@ -24,16 +22,47 @@
                 margin: 0;
             }
             
-            fieldset {
-                border: 0;
+          .dropbtn {
+                background-color: #FFFFFF;
+                color: #C6A788;
+                font-weight: bold;
+                padding: 16px;
+                font-size: 16px;
+                border: 2px solid #C6A788;
+                border-radius: 5px;
+                cursor: pointer;
             }
-            label {
-                  display: block;
-                  margin: 30px 0 0 0;
+
+            .dropbtn:hover, .dropbtn:focus {
+                background-color: #C6A788;
+                color: #FBFBFB;
             }
-            .overflow {
-                height: 200px;
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
             }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown a:hover {background-color: #ddd}
+
+            .show {display:block;}
         </style>
     </head>
     <body>
@@ -49,18 +78,14 @@
             </div>
             
             
-            <div class="filter">
-                <form action="#">
-                    <fieldset>
-                        <label for="color">Color Filter</label>
-                        <select name="color" id="color">
-                          <option selected="selected">All Color</option>
-                          <option>Pink</option>
-                          <option>Green</option>
-                          <option>Purple</option>
-                        </select>
-                    </fieldset>
-                </form>
+            <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">Color Filter</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">All Color</a>
+                    <a href="#home">Pink</a>
+                    <a href="#about">Green</a>
+                    <a href="#contact">Purple</a>
+                  </div>
             </div>
             
             <!-- product list -->
@@ -100,18 +125,26 @@
             </div>
                     
             <script>
-                 $( function() {
-                    $( "#speed" ).selectmenu();
+                 /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
 
-                    $( "#files" ).selectmenu();
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtn')) {
 
-                    $( "#number" )
-                      .selectmenu()
-                      .selectmenu( "menuWidget" )
-                        .addClass( "overflow" );
-
-                    $( "#salutation" ).selectmenu();
-                  } );
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                }
          </script>
         </div>
     </body>
