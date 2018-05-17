@@ -13,11 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
-        
-        <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
       
         <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw14/style.css">
         <style type="text/css">   
@@ -102,21 +98,32 @@
                 border: 3px solid #555;
             }
             
-            #myform {
-    text-align: center;
-    padding: 5px;
-    border: 1px dotted #ccc;
-    margin: 2%;
-}
-.qty {
-    width: 40px;
-    height: 25px;
-    text-align: center;
-}
-input.qtyplus { width:25px; height:25px;}
-input.qtyminus { width:25px; height:25px;}
-
+           #itemqty {  
+                padding: 5px;
+                margin: 10px;
+            }
+            .qty {
+                width: 40px;
+                height: 25px;
+                text-align: center;
+            }
+            input.qtyplus { width:25px; height:25px;}
+            input.qtyminus { width:25px; height:25px;}
+            
         
+                .img-magnifier-container {
+                  position:relative;
+                }
+                .img-magnifier-glass {
+                  position: absolute;
+                  border: 2px solid #9D846B;
+                  border-radius: 50%;
+                  margin-left: 120px;
+                  cursor: none;
+                  /*Set the size of the magnifier glass:*/
+                  width: 150px;
+                  height: 150px;
+                }
         </style>
     </head>
     <body>
@@ -133,8 +140,11 @@ input.qtyminus { width:25px; height:25px;}
             
             <div class = "imagebox"> 
                 <div class="mainbox" >
-                    <img id="mainimage" src="https://miyoun116.github.io/wnm601/hw14/hanbok1.jpg" alt="pink">
+                   <div class="img-magnifier-container">
+                        <img id="myimage" src="https://miyoun116.github.io/wnm601/hw14/hanbok1.jpg" width="600" height="500">
+                   </div>
                 </div>
+                
                 
             </div>
             <div class = "detailbox">
@@ -147,18 +157,12 @@ input.qtyminus { width:25px; height:25px;}
                 <b>Fabric:</b> Silk <br><br>
                 </p>
              
-                
-    
-                
-                
-                 <form id='myform' method='POST' action='#'>
-    <input type='button' value='-' class='qtyminus' field='quantity' />
-    <input type='text' name='quantity' value='0' class='qty' />
-    <input type='button' value='+' class='qtyplus' field='quantity' />
-</form>
+                <div id="itemqty">
+                    <button type="button" id="sub" class="sub">-</button>
+                    <input type="number" id="1" value="1" min="1" max="10" />
+                    <button type="button" id="add" class="add">+</button>
+                </div>
 
-                         
-                
                 <form>
                       <label for="fname">Height</label>
                       <input type="text" id="height" value="inch">
@@ -179,59 +183,81 @@ input.qtyminus { width:25px; height:25px;}
             <div class= "footer">
                 <a href= "https://miyoun116.github.io/wnm601/hw14/14_6_aboutus.cho.html">About Us</a> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; <a href= "https://miyoun116.github.io/wnm601/hw14/14_7_contanctus.cho.html">Contact Us</a>
             </div>  
+   
+            <script >
+                // quantity button //
+                $('.add').click(function () {
+                        if ($(this).prev().val() < 10) {
+                        $(this).prev().val(+$(this).prev().val() + 1);
+                        }
+                });
+                $('.sub').click(function () {
+                        if ($(this).next().val() > 1) {
+                        if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+                        }
+                });
+                
+                // magnifier //
+                function magnify(imgID, zoom) {
+                      var img, glass, w, h, bw;
+                      img = document.getElementById(imgID);
+                      /*create magnifier glass:*/
+                      glass = document.createElement("DIV");
+                      glass.setAttribute("class", "img-magnifier-glass");
+                      /*insert magnifier glass:*/
+                      img.parentElement.insertBefore(glass, img);
+                      /*set background properties for the magnifier glass:*/
+                      glass.style.backgroundImage = "url('" + img.src + "')";
+                      glass.style.backgroundRepeat = "no-repeat";
+                      glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+                      bw = 3;
+                      w = glass.offsetWidth / 2;
+                      h = glass.offsetHeight / 2;
+                      /*execute a function when someone moves the magnifier glass over the image:*/
+                      glass.addEventListener("mousemove", moveMagnifier);
+                      img.addEventListener("mousemove", moveMagnifier);
+                      /*and also for touch screens:*/
+                      glass.addEventListener("touchmove", moveMagnifier);
+                      img.addEventListener("touchmove", moveMagnifier);
+                      function moveMagnifier(e) {
+                        var pos, x, y;
+                        /*prevent any other actions that may occur when moving over the image*/
+                        e.preventDefault();
+                        /*get the cursor's x and y positions:*/
+                        pos = getCursorPos(e);
+                        x = pos.x;
+                        y = pos.y;
+                        /*prevent the magnifier glass from being positioned outside the image:*/
+                        if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+                        if (x < w / zoom) {x = w / zoom;}
+                        if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+                        if (y < h / zoom) {y = h / zoom;}
+                        /*set the position of the magnifier glass:*/
+                        glass.style.left = (x - w) + "px";
+                        glass.style.top = (y - h) + "px";
+                        /*display what the magnifier glass "sees":*/
+                        glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+                      }
+                      function getCursorPos(e) {
+                        var a, x = 0, y = 0;
+                        e = e || window.event;
+                          
+                        /*get the x and y positions of the image:*/
+                        a = img.getBoundingClientRect();
+                        /*calculate the cursor's x and y coordinates, relative to the image:*/
+                        x = e.pageX - a.left;
+                        y = e.pageY - a.top;
+                        /*consider any page scrolling:*/
+                        x = x - window.pageXOffset;
+                        y = y - window.pageYOffset;
+                        return {x : x, y : y};
+                      }
+                    }
+
+                    /* Initiate Magnify Function
+                    with the id of the image, and the strength of the magnifier glass:*/
+                    magnify("myimage", 3);
             
-            <script>
-               <script type="text/javascript">
-$(window).load(function(){
-
-jQuery(document).ready(function(){
-    // This button will increment the value
-    $('.qtyplus').click(function(e){
-        // Stop acting like a button
-        e.preventDefault();
-        // Get the field name
-        fieldName = $(this).attr('field');
-        // Get its current value
-        var currentVal = parseInt($('input[name='+fieldName+']').val());
-        // If is not undefined
-        if (!isNaN(currentVal)) {
-            // Increment
-            $('input[name='+fieldName+']').val(currentVal + 1);
-        } else {
-            // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(0);
-        }
-    });
-    // This button will decrement the value till 0
-    $(".qtyminus").click(function(e) {
-        // Stop acting like a button
-        e.preventDefault();
-        // Get the field name
-        fieldName = $(this).attr('field');
-        // Get its current value
-        var currentVal = parseInt($('input[name='+fieldName+']').val());
-        // If it isn't undefined or its greater than 0
-        if (!isNaN(currentVal) && currentVal > 0) {
-            // Decrement one
-            $('input[name='+fieldName+']').val(currentVal - 1);
-        } else {
-            // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(0);
-        }
-    });
-});
-
-
-});
-
-
-// tell the embed parent frame the height of the content
-  if (window.parent && window.parent.parent){
-    window.parent.parent.postMessage(["resultsFrame", {
-      height: document.body.getBoundingClientRect().height,
-      slug: "puJ6G"
-    }], "*")
-  }
             </script>
         </div>
     </body>
