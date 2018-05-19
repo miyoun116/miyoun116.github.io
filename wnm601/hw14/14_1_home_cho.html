@@ -13,6 +13,10 @@
     
         <link rel="stylesheet" href="style.css">
         
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <style type="text/css">   
             *, *:before, *:after {
                 box-sizing:border-box;
@@ -23,14 +27,12 @@
     
     <body>
         <div class= "container"> 
-            <div class= "logobox">
-                <div class= "logo">HANBOK</div>
-            </div>
+            <div id = "logo-placeholder"></div>
 
             <div class= "topnav">
-                <a class="active" href="#shop">Hanbok Shop</a>
-                <a href= "#story">Hanbok Story</a>
-                <a href= "#measure">How to Measure</a>
+                <a href= "14_2_list_cho.html">Hanbok Shop</a>
+                <a href= "14_4_hanbokstory_cho.html">Hanbok Story</a>
+                <a href= "14_5_measure_cho.html">How to Measure</a>
             </div>
             
             <div class= "mainimage">
@@ -79,6 +81,9 @@
                     $("#mainimage").attr('alt', alt);
                 })
             })
+            $(function(){
+                $("#logo-placeholder").load("logo.html");
+            });
 		</script>    
     </body>
 </html>
