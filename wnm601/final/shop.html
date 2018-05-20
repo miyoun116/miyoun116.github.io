@@ -32,6 +32,23 @@
                 border-radius: 5px;
                 cursor: pointer;
             }
+            .listgrid {
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: 300px 300px 300px;
+                background-color: #fff;
+                color: #444;
+            }
+
+            .box {
+                background-color: #444;
+                color: #fff;
+                border-radius: 5px;
+                padding: 20px;
+                font-size: 150%;
+
+            }
+
 
             .dropbtn:hover, .dropbtn:focus {
                 background-color: #C6A788;
@@ -78,6 +95,7 @@
             </div>
             
             <!-- product list -->
+            <div class = "listgrid">
             <ul class="hanbok_list">
                 <li data-product-name="rosepink" data-product-price="200" data-product-id="0" data-product-category="pink" class="product">
                     <a href="?page=detail&product-id=0" class="img_link">
@@ -132,7 +150,8 @@
                         <p class="product_price">$300.00</p>
                     </div>
                 </li>
-            </ul>    
+            </ul>
+            </div>
     
                     
             <script>
