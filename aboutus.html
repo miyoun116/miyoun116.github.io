@@ -10,43 +10,56 @@
         box-sizing:border-box;
         margin: 0;
     }
-    #videobox {
-        background-color: #F3EBE4;
+    .contentsbox {
+        position: relative;
+        margin: 100px;
     }
-    #videobox h2 {
-        font-size:24pt;
-        color: #2D2217;
+    .contentsbox img {
+        position: relative;
+        float: left;
+        width: 500px;
+        height: 400px;
+    } 
+    .contentsbox p{
+        margin-top: 80px;
+        text-align: left;
     }
-    #playvideo {
+    #contentstext {
+        width: 40%; 
+        float: right;
+        margin: 50px;
+    }
+    #videotext {
+        position: relative;
+        float: left;
+        width: 40%;
+        margin: 50px;
         padding-top: 50px;
-        margin-top: 50px;
     }
-    .textbox {
-        text-align: center;
+    #videobox {
+        width: 40%; 
+        float: right;
+        padding: 100px;
     }
-    .textbox p{
-        text-align: left;  
-        padding: 50px 300px;
-    }   
+    #clear {clear: both;}
 </style>
 
 <div class = "container">
-    <div class = "mainimage">
+    <div class = "contentsbox">
         <img src = "https://miyoun116.github.io/wnm601/hw14/shop.jpg" alt= "shop"> 
-        <div class ="centered">
+        <div id ="contentstext">
             <h1> About Us </h1>
-            <br><br><br><br>
             <p>Our Hanbok shop specializes in creating high quality, handmade modern hanbok garments. The combination of experienced designers with a wide range of experiences beyond fashion design make our dresses unique.</p>
         </div>
     </div>
-    
-    <div id = "videobox">
-        <div id = "playvideo">
-            <h2> Click Me! </h2>
-            <video src= "https://miyoun116.github.io/wnm601/hw14/hanbokvideo.m4v" width = "700" height = "550" controls></video>
+    <div id = "clear"></div>
+    <div class = "contentsbox">
+        <div id ="videotext">
+            <h1> Click Me! </h1>
+            <p>You can meet not only woman hanbok, but also man amd kids hanbok at our off-ling shop. Visit us and try it on!</p>
         </div>
-        <div class = "textbox">
-            <p>You can meet not only woman hanbok, but also man and kids hanbok at our off-line shop. Visit us and try on it!</p>
+        <div class = "videobox">
+            <video src= "https://miyoun116.github.io/wnm601/hw14/hanbokvideo.m4v" width = "500" height = "400" controls></video>
         </div>
     </div>
 </div>
