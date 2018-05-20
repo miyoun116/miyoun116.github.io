@@ -14,8 +14,7 @@
         <link rel="stylesheet" href="style.css">
         
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-        
-        <script src="https://code.jquery.com/jquery-1.12.4.js"> </script>
+        <script src="https://code.jquery.com/jquery-1.12.1.js"> </script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <style type="text/css">   
             *, *:before, *:after {
@@ -68,12 +67,9 @@
             
             var product_list = null;
             function load_product_list() {
-                $.getJSON("https://miyoun116.github.io/wnm601/final/product_list.json")
+                $.getJSON("product_list.json")
                 .done(function(data) {
-                    console.warn("done");
-                    $.each(data.items, function(i, item) {
-                        console.warn(item);
-                    })
+                    product_list = data.hanbok;
                 })
                 .fail(function() {
                     console.error("getJSON failed, status: " + textStatus + ", error: "+error)
@@ -83,8 +79,8 @@
             $(function(){
                 $("#nav-placeholder").load("nav.html");
                 $("#footer-placeholder").load("footer.html");
-                load_main();
                 load_product_list();
+                load_main();
             });
 		</script>    
     </body>
