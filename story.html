@@ -18,7 +18,7 @@
         margin: auto;
         position: relative;
         width: 700px;
-        height: 500px;
+        height: 400px;
     }
     #slides {
         position: absolute;
@@ -54,6 +54,13 @@
         float: right;
         right: 5%;
     }
+    .textbox {
+        text-align: center;
+    }
+    .textcontents p{
+        text-align: left;  
+        padding: 50px 200px;
+    }   
 </style>
 
 <script>
@@ -99,24 +106,31 @@
     });
 </script>
 
-<div id="img-slider">
-    <img class="button" id="lbutton" src="https://miyoun116.github.io/wnm601/hw14/left_arrow.png">
-    <img class="button" id="rbutton" src="https://miyoun116.github.io/wnm601/hw14/right_arrow.png">            
-    <div id="slides">
-        <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok7.jpg" alt= "hanbok6">  
-        <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok8.jpg" alt= "hanbok7">  
-        <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok9.jpg" alt= "hanbok8">  
-        <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok10.jpg" alt= "hanbok9">  
-        <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok11.jpg" alt= "hanbok10">
+<div class = "container">
+    <div id="img-slider">
+        <img class="button" id="lbutton" src="https://miyoun116.github.io/wnm601/hw14/left_arrow.png">
+        <img class="button" id="rbutton" src="https://miyoun116.github.io/wnm601/hw14/right_arrow.png">            
+        <div id="slides">
+            <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok7.jpg" alt= "hanbok6">  
+            <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok8.jpg" alt= "hanbok7">  
+            <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok9.jpg" alt= "hanbok8">  
+            <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok10.jpg" alt= "hanbok9">  
+            <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok11.jpg" alt= "hanbok10">
+        </div>
     </div>
-</div>
 
-<h2> Hanbok Story </h2>
-<div class= "contents">
-    <p> 
-    Traditional Korean clothing has its roots extending back at least as far as the Three Kingdoms Period (57 B.C. - 668 A.D.), as evidenced by wall paintings in tombs dating from this period. The Korean hanbok represents one of the most visable aspects of Korean culture. <br>
-    hanbokThe top part called a jeogori is blouse-like with long sleeves with the men's version being longer, stretching down to the waist. Women wear skirts (chima) while men wear baggy pants (paji). Commoners wore white, except during festivals and special occassions such as weddings. Clothes for the upper classes were made of bright colors and indicated the wearer's social status. Various accessories such as foot gear, jewelry, and headdresses or hair pins completed the outfit. 
-    </p>
+    <div class = "textbox">
+        <h1> Hanbok Story </h1>
+        <div class= "textcontents">
+            <p> 
+            Traditional Korean clothing has its roots extending back at least as far as the Three Kingdoms Period (57 B.C. - 668 A.D.), as evidenced by wall paintings in tombs dating from this period. The Korean hanbok represents one of the most visable aspects of Korean culture. <br>
+            hanbokThe top part called a jeogori is blouse-like with long sleeves with the men's version being longer, stretching down to the waist. Women wear skirts (chima) while men wear baggy pants (paji). Commoners wore white, except during festivals and special occassions such as weddings. Clothes for the upper classes were made of bright colors and indicated the wearer's social status. Various accessories such as foot gear, jewelry, and headdresses or hair pins completed the outfit. 
+            </p>
+        </div>
+    </div>
+    <div class = "source">
+            Source: http://www.lifeinkorea.com/culture/clothes/clothes.cfm
+    </div>
 </div>
 
 
