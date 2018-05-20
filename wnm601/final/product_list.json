@@ -5,20 +5,23 @@
         "color": "Pink",
         "fabric": "Silk",
         "price": "200.00",
-        "image": ["hanbok1.jpg"]
+        "image": ["hanbok1.jpg"],
+        "description": "Description 0"
     }, {
         "id": "1",
         "name": "Deep Green Hanbok",
-        "color": ["Green"],
+        "color": "Green",
         "fabric": "Silk",
         "image": ["hanbok2.jpg"],
-        "price": "250.00"
+        "price": "250.00",
+        "description": "Description 1"
     }, {
         "id": "2",
         "name": "Light Purple",
-        "color": ["Purple"],
+        "color": "Purple",
         "fabric": "Silk",
         "image": ["hanbok3.jpg"],
-        "price": "300.00"
+        "price": "300.00",
+        "description": "2레드퍼플을 파스텔톤의 저채도로 염색하여 모던한 톤다운 컬러를 주조색으로 활용하였습니다. 분위기있고 격식있는 자리에 어울리는 고상한 느낌의 작품으로 베스트셀러중 하나 입니다"
     } ]
 }
