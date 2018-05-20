@@ -23,5 +23,30 @@
         "image": ["hanbok3.jpg"],
         "price": "300.00",
         "description": "2레드퍼플을 파스텔톤의 저채도로 염색하여 모던한 톤다운 컬러를 주조색으로 활용하였습니다. 분위기있고 격식있는 자리에 어울리는 고상한 느낌의 작품으로 베스트셀러중 하나 입니다"
+    }, {
+        "id": "3",
+        "name": "Pink Grey",
+        "color": "Pink",
+        "fabric": "Silk",
+        "image": ["hanbok4.jpg"],
+        "price": "200.00",
+        "description": "Description 3"
+   }, {
+        "id": "4",
+        "name": "Light Purple",
+        "color": "Purple",
+        "fabric": "Silk",
+        "image": ["hanbok5.jpg"],
+        "price": "250.00",
+        "description": "Description 4"
+    }, {
+        "id": "5",
+        "name": "Light Purple",
+        "color": "Purple",
+        "fabric": "Silk",
+        "image": ["hanbok6.jpg"],
+        "price": "300.00",
+        "description": "Description 5"
+        
     } ]
 }
