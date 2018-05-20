@@ -75,7 +75,7 @@ a:hover {
 .topnav a {
     float: left;
     width: 33.33%;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Lato', sans-serif; 
     color: #5B5B5B;
     text-align: center;
     padding-top: 16px;
