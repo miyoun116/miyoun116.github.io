@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Miyoun Cho -->
+<!-- Assignment 14.1: Final Project -->
+<!-- Final projct with HTML, CSS and Javasctipt.-->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hanbok</title>
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      
+        <link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw14/style.css">
+        <style type="text/css">   
+            *, *:before, *:after {
+                box-sizing:border-box;
+                margin: 0;
+            }
+            
+          .dropbtn {
+                background-color: #FFFFFF;
+                color: #C6A788;
+                font-weight: bold;
+                padding: 16px;
+                font-size: 16px;
+                border: 2px solid #C6A788;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .dropbtn:hover, .dropbtn:focus {
+                background-color: #C6A788;
+                color: #FBFBFB;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown a:hover {background-color: #ddd}
+
+            .show {display:block;}
+        </style>
+    </head>
+    <body>
+        <div class= "container"> 
+            <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">Color Filter</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">All Color</a>
+                    <a href="#home">Pink</a>
+                    <a href="#about">Green</a>
+                    <a href="#contact">Purple</a>
+                  </div>
+            </div>
+            
+            <!-- product list -->
+            <ul class="hanbok_list">
+                <li data-product-name="rosepink" data-product-price="200" data-product-id="1" data-product-category="pink" class="product">
+                    <a href="?page=detail&product-id=1" class="img_link">
+                    <img itemprop="image" class=" product_image" id="" src="https://miyoun116.github.io/wnm601/hw14/hanbok1.jpg" alt="rosepink"  width="300px" height="400px" /></a>
+                    <div class="product_info">
+                        <a href="https://miyoun116.github.io/wnm601/hw14/14_3_1_details_cho.html" class="product_title"> Rose Pink Hanbok </a>
+                        <p class="product_price">$200.00</p>
+                    </div>
+                </li>
+                
+                <li data-product-name="deepgreen" data-product-price="250" data-product-id="2" data-product-category="green" class="product">
+                    <a href="?page=detail&product-id=2" class="img_link">
+                    <img itemprop="image" class=" product_image" id="" src="https://miyoun116.github.io/wnm601/hw14/hanbok2.jpg" alt="rosepink"  width="300px" height="400px" /></a>
+                    <div class="product_info">
+                        <a href="https://miyoun116.github.io/wnm601/hw14/14_3_2_details_cho.html" class="product_title"> Deep Green Hanbok </a>
+                        <p class="product_price">$250.00</p>
+                    </div>
+                </li>
+                
+                <li data-product-name="lightpurple" data-product-price="300" data-product-id="3" data-product-category="purple" class="product">
+                    <a href="https://miyoun116.github.io/wnm601/hw14/14_3_3_details_cho.html" class="img_link">
+                    <img itemprop="image" class=" product_image" id="" src="https://miyoun116.github.io/wnm601/hw14/hanbok3.jpg" alt="rosepink"  width="300px" height="400px" /></a>
+                    <div class="product_info">
+                        <a href="?page=detail&product-id=3" class="product_title"> Light Purple Hanbok </a>
+                        <p class="product_price">$300.00</p>
+                    </div>
+                </li>
+            </ul>    
+    
+                    
+            <script>
+                 /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtn')) {
+
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                }
+         </script>
+        </div>
+    </body>
+    
+</html>
