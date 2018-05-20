@@ -78,9 +78,9 @@
                 slide_selected -= slide_imgs.length;
             for (var i = 0; i < slide_imgs.length; i++) {
                 if (i == slide_selected) {
-                    $(slide_imgs.get(i)).show("slide", {direction:dir});
+                    $(slide_imgs.get(i)).show("slide", {direction:dir}).fadeTo(0.5, 1);
                 } else {
-                    $(slide_imgs.get(i)).hide("slide", {direction:reverse(dir)});
+                    $(slide_imgs.get(i)).fadeTo(0, 0.8).hide("slide", {direction:reverse(dir)});
                 }
             }
         }
