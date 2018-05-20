@@ -22,6 +22,16 @@
                 margin: 0;
             }
             
+             .wrapper {
+        width: 90%;
+        display: grid;
+    grid-gap: 2%;
+        grid-template-columns: repeat(6, 10%);
+    border:1px solid #000;
+    margin-bottom: 2em;
+    }
+
+            
           .dropbtn {
                 background-color: #FFFFFF;
                 color: #C6A788;
@@ -32,18 +42,7 @@
                 border-radius: 5px;
                 cursor: pointer;
             }
-            .grid-container {
-              display: grid;
-              grid-template-columns: auto auto auto;
-              padding: 10px;
-            }
-            .hanbok_list {
-              border: 1px solid rgba(0, 0, 0, 0.8);
-              padding: 20px;
-              text-align: center;
-                background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-            }
+
             .dropbtn:hover, .dropbtn:focus {
                 background-color: #C6A788;
                 color: #FBFBFB;
@@ -89,7 +88,7 @@
             </div>
             
             <!-- product list -->
-            <div class = "grid-container">
+            <div class = "wrapper">
             <ul class="hanbok_list">
                 <li data-product-name="rosepink" data-product-price="200" data-product-id="0" data-product-category="pink" class="product">
                     <a href="?page=detail&product-id=0" class="img_link">
@@ -144,8 +143,8 @@
                         <p class="product_price">$300.00</p>
                     </div>
                 </li>
-            </ul>
-            </div>
+            </ul> 
+                </div>
     
                     
             <script>
