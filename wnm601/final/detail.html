@@ -1,5 +1,7 @@
-<link rel="stylesheet" href="https://miyoun116.github.io/wnm601/hw14/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"> </script>
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="script.js"></script>
 
 <style type="text/css">   
 *, *:before, *:after {
@@ -42,6 +44,10 @@
     margin: auto;          /* effect of placing image at the center */
     margin-top: 50px;
     margin-bottom: 50px;
+}
+    
+.imagebox img {
+    width: 60%;
 }
 
 /* main image size is limited by the either max height or max width */
@@ -146,19 +152,21 @@ input.qtyminus {
     });
     
     $(document).ready(function() {
-        id = $.urlParam('product-id');
-        if (product_list != null && id >= 0 && id < product_list.length) {
-            var product = product_list[id];
-            $("#detailbox #name").html(product.name);
-            $("#detailbox #price").html("$" + product.price);
-            $("#detailbox #color").html(product.color);
-            $("#detailbox #description").html(product.description);
-            $("#myimage").attr("src", product.image[0]);
-            magnify("myimage", 3);
-        } else {
-            $("#detailbox").html("<h1> Invalid product id:"+id+"</h1");
-            $(".imagebox").html("");
-        }
+        load_product_list(function() {
+            id = urlParam('product-id') || 0;
+            if (product_list != null && id >= 0 && id < product_list.length) {
+                var product = product_list[id];
+                $("#detailbox #name").html(product.name);
+                $("#detailbox #price").html("$" + product.price);
+                $("#detailbox #color").html(product.color);
+                $("#detailbox #description").html(product.description);
+                $("#myimage").attr("src", product.image[0]);
+                magnify("myimage", 3);
+            } else {
+                $("#detailbox").html("<h1> Invalid product id:"+id+"</h1");
+                $(".imagebox").html("");
+            }
+        });
     })
 
     // magnifier //
@@ -166,7 +174,6 @@ input.qtyminus {
         var img, glass, w, h, bw;
         img = document.getElementById(imgID);
         if (img == null) {
-            console.warn("wwwe");
             return;
         }
         /*create magnifier glass:*/

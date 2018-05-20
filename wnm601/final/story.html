@@ -90,46 +90,46 @@
         </div>
         
         <script>
-        // photo slide using jQuery UI Effects //
-        $(document).ready(function() {
-            var slide_imgs = $("#slides img");
-            var slide_selected = 0;
-            var dir = 'right';
-            console.warn(slide_imgs.length);
-            function reverse(dir) {
-                if (dir == 'left') 
-                    return 'right';
-                else if (dir == 'right')
-                    return 'left';
-                return null;
-            }
+            // photo slide using jQuery UI Effects //
+            $(document).ready(function() {
+                var slide_imgs = $("#slides img");
+                var slide_selected = 0;
+                var dir = 'right';
+                console.warn(slide_imgs.length);
+                function reverse(dir) {
+                    if (dir == 'left') 
+                        return 'right';
+                    else if (dir == 'right')
+                        return 'left';
+                    return null;
+                }
 
-            function show_slide() {
-                while (slide_selected < 0 ) 
-                    slide_selected += slide_imgs.length;
-                while (slide_selected >= slide_imgs.length)
-                    slide_selected -= slide_imgs.length;
-                for (var i = 0; i < slide_imgs.length; i++) {
-                    if (i == slide_selected) {
-                        $(slide_imgs.get(i)).show("slide", {direction:dir});
-                    } else {
-                        $(slide_imgs.get(i)).hide("slide", {direction:reverse(dir)});
+                function show_slide() {
+                    while (slide_selected < 0 ) 
+                        slide_selected += slide_imgs.length;
+                    while (slide_selected >= slide_imgs.length)
+                        slide_selected -= slide_imgs.length;
+                    for (var i = 0; i < slide_imgs.length; i++) {
+                        if (i == slide_selected) {
+                            $(slide_imgs.get(i)).show("slide", {direction:dir});
+                        } else {
+                            $(slide_imgs.get(i)).hide("slide", {direction:reverse(dir)});
+                        }
                     }
                 }
-            }
-            
-            $("#lbutton").on("click", function() {
-                slide_selected = (slide_selected - 1) % slide_imgs.length;
-                dir = 'left';
+
+                $("#lbutton").on("click", function() {
+                    slide_selected = (slide_selected - 1) % slide_imgs.length;
+                    dir = 'left';
+                    show_slide();
+                });
+                $("#rbutton").on("click", function() {
+                    slide_selected = (slide_selected + 1) % slide_imgs.length;
+                    dir = 'right';
+                    show_slide();
+                })
                 show_slide();
             });
-            $("#rbutton").on("click", function() {
-                slide_selected = (slide_selected + 1) % slide_imgs.length;
-                dir = 'right';
-                show_slide();
-            })
-            show_slide();
-        });
-    </script>
+        </script>
     </body>
 </html>

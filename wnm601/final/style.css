@@ -127,21 +127,6 @@ a:hover {
     margin-top: 40px;
 }
 
-.imagebox {
-    width: 400px;
-    text-align: center;
-}
-
-.imagebox img {
-    width: 60%;
-}
-
-.imagebox p {
-    font-family: 'Libre Baskerville', serif; 
-    color: #3A3A3A; 
-    font-size: 14pt;
-}       
-
 /* source area on the bottom */
 #topbutton {
     width: 100%;

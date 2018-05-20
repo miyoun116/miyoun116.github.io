@@ -14,8 +14,9 @@
         <link rel="stylesheet" href="style.css">
         
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-        <script src="https://code.jquery.com/jquery-1.12.1.js"> </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="script.js"></script>
         <style type="text/css">   
             *, *:before, *:after {
                 box-sizing:border-box;
@@ -27,13 +28,12 @@
     <body>
         <div class = "container"> 
             <div id = "nav-placeholder"></div>
-            <div id = "content-placeholder"></div>
+            <div id = "mainpage-placeholder"></div>
             <button id="topbutton" title="TOP">Scroll to Top</button>
             <div id = "footer-placeholder"></div>     
         </div>
         <script type="text/javascript"> 
             var page = "home";
-
             $(document).ready(function() {
                 /* scroll to top button */
                 $("#topbutton").on("click", function() {
@@ -47,41 +47,21 @@
                     $("#mainimage").attr('src', src);
                     $("#mainimage").attr('alt', alt);
                 })
-            })
-
-            $.urlParam = function(name) {
-                var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-                if (results != null && results.length > 0 ) {
-                    return results[1];
-                }
-                return "";
-            }
-
-            function load_main() {
-                page = $.urlParam('page');
-                if (page.length == 0) {
-                    page = "home"
-                }
-                $("#content-placeholder").load(page + ".html");
-            }
-            
-            var product_list = null;
-            function load_product_list() {
-                $.getJSON("product_list.json")
-                .done(function(data) {
-                    product_list = data.hanbok;
-                })
-                .fail(function() {
-                    console.error("getJSON failed, status: " + textStatus + ", error: "+error)
-                });
-            }
-
-            $(function(){
+                
                 $("#nav-placeholder").load("nav.html");
                 $("#footer-placeholder").load("footer.html");
-                load_product_list();
                 load_main();
-            });
+            })
+
+        
+            function load_main() {
+                page = urlParam('page');
+                if (page == null) {
+                    page = "home"
+                }
+                $("#mainpage-placeholder").load(page + ".html");
+            }
+
 		</script>    
     </body>
 </html>
