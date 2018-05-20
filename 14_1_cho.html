@@ -58,18 +58,30 @@
                 return "";
             }
 
-            function load_content() {
+            function load_main() {
                 page = $.urlParam('page');
                 if (page.length == 0) {
                     page = "home"
                 }
                 $("#content-placeholder").load(page + ".html");
             }
+            
+            var product_list = null;
+            function load_product_list() {
+                $.getJSON("product_list.json")
+                    .done(function(data) {
+                    console.warn("done");
+                    $.each(data.items, function(i, item) {
+                        console.warn(item);
+                    })
+                }).fail(console.warn("fail"));
+            }
 
             $(function(){
                 $("#nav-placeholder").load("nav.html");
                 $("#footer-placeholder").load("footer.html");
-                load_content();
+                load_main();
+                load_product_list();
             });
 		</script>    
     </body>
