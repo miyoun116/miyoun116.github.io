@@ -1,3 +1,7 @@
+/* Miyoun Cho
+   Assignment 14.1: Final Project 
+   Java Scripts */
+
 /* Manage Product List for Shop and Detail Page*/
 var productList = null;
 function loadProductList(cb) {
