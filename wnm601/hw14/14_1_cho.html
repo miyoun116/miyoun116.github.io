@@ -19,7 +19,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="script.js"></script>
-        <style type="text/css">   
+        <style>   
             *, *:before, *:after {
                 box-sizing:border-box;
             }
@@ -93,10 +93,10 @@
                     </div>
                 </div>
                 <div id = "detailbox">
-                    <h2 id = "name" ></h2>
-                    <h2 id = "price" ></h2> 
-                    <p id = "description"></p>
-                    <div id = "color-tag"><b>Color:</b></div> <div id = "color"></div>
+                    <h2 id = "name" >Name</h2>
+                    <h2 id = "price" >$0</h2> 
+                    <p id = "description">None</p>
+                    <div id = "color-tag"><b>Color:</b></div> <div id = "color">Black</div>
                     <button class="button">Add to Cart</button> 
                 </div>
                 <div class = "clear"></div>
@@ -201,7 +201,7 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJesEjjP4b4P017-SH-xSDkGi8gz62pKo&callback=initMap">
         </script>   
 
-        <script type="text/javascript"> 
+        <script> 
             var page = "home";
             
             $(document).ready(function() {

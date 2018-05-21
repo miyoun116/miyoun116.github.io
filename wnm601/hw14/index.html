@@ -19,7 +19,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="script.js"></script>
-        <style type="text/css">   
+        <style>   
             *, *:before, *:after {
                 box-sizing:border-box;
             }
@@ -88,18 +88,18 @@
                 <div class = "imagebox"> 
                     <div class="mainbox" >
                        <div class="img-magnifier-container">
-                            <img id="detailimage" src="images/hanbok1.jpg">
+                            <img id="detailimage" src="images/hanbok1.jpg" alt = "hanbok1">
                        </div>
                     </div>
                 </div>
                 <div id = "detailbox">
-                    <h2 id = "name" ></h2>
-                    <h2 id = "price" ></h2> 
-                    <p id = "description"></p>
-                    <div id = "color-tag"><b>Color:</b></div> <div id = "color"></div>
+                    <h2 id = "name" >Name</h2>
+                    <h2 id = "price" >$0</h2> 
+                    <p id = "description">None</p>
+                    <div id = "color-tag"><b>Color:</b></div> <div id = "color">Black</div>
                     <button class="button">Add to Cart</button> 
                 </div>
-                <div id="clear"></div>
+                <div class = "clear"></div>
                 <div class = "source">
                     Image Source: https://hanboksarang.com/
                 </div>
@@ -107,8 +107,8 @@
             <div id = "story" class = "main-content"> 
                 <h1> Hanbok Story </h1>
                 <div id = "slider">
-                    <img class = "button" id = "lbutton" src = "icons/left_arrow.png">
-                    <img class = "button" id = "rbutton" src = "icons/right_arrow.png">
+                    <img class = "button" id = "lbutton" src = "icons/left_arrow.png" alt = "leftarrow">
+                    <img class = "button" id = "rbutton" src = "icons/right_arrow.png" alt = "rightarrow">
                     <div id = "slides">
                         <img src = "images/story1.jpg" alt = "story1">  
                         <img src = "images/story2.jpg" alt = "story2">  
@@ -154,7 +154,7 @@
                         </p>     
                     </div>
                 </div>
-                <div id = "clear"></div>
+                <div class = "clear"></div>
                 <div class = "source">
                     Image and Text source: https://saudi.desertcart.com/ 
                 </div>
@@ -167,7 +167,7 @@
                         <p>Our Hanbok shop specializes in creating high quality, handmade modern hanbok garments. The combination of experienced designers with a wide range of experiences beyond fashion design make our dresses unique.</p>
                     </div>
                 </div>
-                <div id = "clear"></div>
+                <div class = "clear"></div>
                 <div class = "contentsbox">
                     <div id ="videotext">
                         <h1> Watch Video! </h1>
@@ -201,7 +201,7 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJesEjjP4b4P017-SH-xSDkGi8gz62pKo&callback=initMap">
         </script>   
 
-        <script type="text/javascript"> 
+        <script> 
             var page = "home";
             
             $(document).ready(function() {
