@@ -15,7 +15,6 @@
 
 .logobox {
     margin: 50px;
-        
 }
 
 .logo {
@@ -32,14 +31,14 @@ h1 {
 }
 
 h2 {
-    font-family: 'Libre Baskerville', serif;        
+    font-family: 'Lato', sans-serif;        
     color: #707070;
     font-size: 18pt;
     margin-bottom: 10px;
 }
 
 h3 {
-    font-family: 'Montserrat', sans-serif;        
+    font-family: 'Lato', sans-serif;        
     color: #707070;
     font-size: 14pt;
     margin-bottom: 10px;
@@ -47,13 +46,13 @@ h3 {
 
 
 p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #3A3A3A;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #3A3A3A;
     font-size: 12pt;
     font-weight: bold;
@@ -76,7 +75,7 @@ a:hover {
 .topnav a {
     float: left;
     width: 33.33%;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Lato', sans-serif; 
     color: #5B5B5B;
     text-align: center;
     padding-top: 16px;
@@ -128,26 +127,11 @@ a:hover {
     margin-top: 40px;
 }
 
-.imagebox {
-    width: 400px;
-    text-align: center;
-}
-
-.imagebox img {
-    width: 60%;
-}
-
-.imagebox p {
-    font-family: 'Libre Baskerville', serif; 
-    color: #3A3A3A; 
-    font-size: 14pt;
-}       
-
 /* source area on the bottom */
 #topbutton {
     width: 100%;
     background-color: #727272;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     border: none;
     color: #E7E7E7;
@@ -167,7 +151,7 @@ a:hover {
 } 
 
 .footer p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
 }
 
@@ -228,7 +212,12 @@ a:hover {
 .measure p {
     text-align: left;
 }
-    
+.source {
+    position: relative
+    font-size: 11px;
+    font-family: 'Lato', sans-serif;
+    color: #B2B2B2;
+}
 
 
             
