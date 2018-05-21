@@ -2,6 +2,7 @@
 <!-- Miyoun Cho -->
 <!-- Assignment 14.1: Final Project -->
 <!-- Final projct with HTML, CSS and Javasctipt.-->
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -26,30 +27,26 @@
     </head>
     
     <body>
-        <div class = "container"> 
-            <div id = "nav-placeholder"></div>
+        <div class = "container">
+            <div class = "logobox">
+                <a class = "logo" href = "?page=home">HANBOK</a>
+            </div>
+
+            <div class = "topnav">
+                <a href = "?page=shop">Hanbok Shop</a>
+                <a href = "?page=story"> Hanbok Story</a>
+                <a href = "?page=measure" >How to Measure</a>
+            </div>
+            
             <div id = "mainpage-placeholder"></div>
-            <button id="topbutton" title="TOP">Scroll to Top</button>
-            <div id = "footer-placeholder"></div>     
+            
+            <div class = "footer">
+                <a href= "?page=aboutus">About Us</a> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; <a href= "?page=contact">Contact Us</a>
+            </div>
         </div>
         <script type="text/javascript"> 
             var page = "home";
             $(document).ready(function() {
-                /* scroll to top button */
-                $("#topbutton").on("click", function() {
-                    window.scroll(window.scrollX,0);
-                })
-            
-                /* Changes the larger image to the given image name */
-                $(".thumbnail .box img").on("mouseover", function(e) {
-                    var src = e.currentTarget.getAttribute('src');
-                    var alt = e.currentTarget.getAttribute('alt');
-                    $("#mainimage").attr('src', src);
-                    $("#mainimage").attr('alt', alt);
-                })
-                
-                $("#nav-placeholder").load("nav.html");
-                $("#footer-placeholder").load("footer.html");
                 load_main();
             })
 
