@@ -8,11 +8,11 @@
         <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        
+        <link rel="stylesheet" href="style.css">
+
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      
-        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
         <style type="text/css">   
             *, *:before, *:after {
                 box-sizing:border-box;
@@ -164,6 +164,38 @@
     
                     
             <script>
+                $(document).ready(function() {
+                    load_product_list(display_product());  
+                })
+                function display_product() {
+                    var list_html = "";
+                    if (product_list == null)
+                        return;
+                    for (var i = 0; i < product_list.length; i++) {
+                        if (i < 3)
+                            continue;
+                        list_html += makeProductHTML(i);
+                    }
+                        
+                    $(".hanbok_list").html(list_html);
+                }
+                function makeProductHTML(id) {
+                    var name = product_list[id].name;
+                    var img_file = product_list[id].images[0];
+                    var price = product_list[id].price;
+                    return `<li> 
+                        <a href="?page=detail&product-id=`+id+`" class="img_link"> 
+                            <img itemprop="image" class=" product_image" 
+                            src="`+img_file+`" alt="`+name+`"  
+                            width="300px" height="400px" /> 
+                        </a> 
+                        <div class="product_info"> 
+                            <a href="?page=detail&product-id="`+id+`" class="product_title">`+name+`</a><br><br> 
+                            <p class="product_price">$`+price+`</p> 
+                        </div> 
+                    </li>`;
+                }
+                
                  /* When the user clicks on the button, 
                 toggle between hiding and showing the dropdown content */
                 function myFunction() {
