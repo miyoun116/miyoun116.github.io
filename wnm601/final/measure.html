@@ -15,22 +15,25 @@
                 box-sizing:border-box;
                 margin: 0;
             }
-            .measure {
+            #measure {
                 text-align: left;
                 padding: 50px;
                 margin: 50px;
-                text-align: center;
             }
-            .measure img {
-                height: 200px;
-                margin: 50px;
+            #measurebox {
+                position: relative;
+            }  
+            #measureimagebox {
+                position: relative;
+                float: left;
+                width: 60%;
+            } 
+            #measureimagebox img{
+                position: relative;
+                width: 90%;
             }    
-            .measure p {
-                font-family: 'Lato', sans-serif;
-                color: #505050;
-                font-size: 14pt;
-                margin-top: 30px;
-                margin-bottom: 50px;
+            #measuretext {
+                float: right;
             }  
         </style>
 
@@ -40,32 +43,29 @@
                 <h1> How to Measure </h1> 
                 <br><br>
                 <p> Please carefully follow our "How to Measure" guide. (UNIT: INCH) </p>
-                <img src = "measurement.jpg" alt= "measurement">
-                <div class="measure">
+                <div id="measure">
+                    <div id = "measureimagebox">
+                        <img src = "measurement.jpg" alt= "measurement">
+                    </div>    
+                    <div id = "measuretext"></div>
+                    <h2>Chest</h2>
+                        <p>
+                            1. Raise both Arm. <br>
+                            2. Go around Chest right below armpit. Don't tighten tapeline too hard.
+                        </p> <br>   
                     <h2>Height</h2>
-                    <p>
-                        1. Start from Bulging bone behind neck.<br> 
-                        2. Keep measure until it reaches to the floor and add height of your shoes. 
-                    </p>  
+                        <p>
+                            1. Start from Bulging bone behind neck.<br> 
+                            2. Keep measure until it reaches to the floor and add height of your shoes. 
+                        </p> <br>
 
-                    <h2>Arm and Sleeve Length / Hwajang</h2>
-                    <p>
-                        1. Start from Bulging bone behind neck.<br>
-                        2. Pass by shoulders Point.<br>
-                        3. To back of hand. Keep measure until it reaches to 1 inch below wristbone.  
-                    </p>    
+                        <h2>Arm and Sleeve Length / Hwajang</h2>
+                        <p>
+                            1. Start from Bulging bone behind neck.<br>
+                            2. Pass by shoulders Point.<br>
+                            3. To back of hand. Keep measure until it reaches to 1 inch below wristbone.  
+                        </p>    
 
-                    <h2>Neck Width</h2>
-                    <p>
-                        1. Point where neck and shoulder line meets.<br>
-                        2. Go around neck.
-                    </p>
-
-                    <h2>Upperchest</h2>
-                    <p>
-                        1. Raise both Arm. <br>
-                        2. Go around Chest right below armpit. Don't tighten tapeline too hard.
-                    </p>
                 </div>
                 <div class = "source">
                     Source: https://hanboksarang.com/, https://saudi.desertcart.com/ 
