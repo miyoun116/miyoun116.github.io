@@ -66,12 +66,11 @@
 </style>
 
 <script>
-    // photo slide using jQuery UI Effects //
+    /* photo slide using jQuery UI Effects */
     $(document).ready(function() {
         var slide_imgs = $("#slides img");
         var slide_selected = 0;
         var dir = 'right';
-        console.warn(slide_imgs.length);
         function reverse(dir) {
             if (dir == 'left') 
                 return 'right';
