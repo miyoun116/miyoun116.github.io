@@ -311,7 +311,7 @@ a:hover {
     width: 40%; 
     float: right;
     margin-top: 20px;
-    padding: 20px;
+    padding: 50px;
     text-align: left;
 }
 
@@ -320,7 +320,6 @@ a:hover {
     display: block;
     position: relative;
     top: 50px;
-    margin: auto;
     background-color: #C6A788;
     font-family: 'Lato', sans-serif;   
     font-weight: bold;
