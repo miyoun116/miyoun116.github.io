@@ -33,9 +33,9 @@
             </div>
 
             <div class = "topnav">
-                <a href = "?page=shop">Hanbok Shop</a>
-                <a href = "?page=story"> Hanbok Story</a>
-                <a href = "?page=measure" >How to Measure</a>
+                <a id = "nav-shop" href = "?page=shop" >Hanbok Shop</a>
+                <a id = "nav-story" href = "?page=story" > Hanbok Story</a>
+                <a id = "nav-measure" href = "?page=measure" >How to Measure</a>
             </div>
             
             <div id = "home" class = "main-content">
@@ -198,7 +198,6 @@
                 loadProductList(loadProductFinished);
                 loadMain();
                 loadSlider();
-                
             })
             
             function loadProductFinished() {
@@ -213,6 +212,15 @@
                 }
                 $(".main-content").hide();
                 $("#"+page).show();
+                
+                // show active page in the top nav.
+                if (page == "measure") {
+                    $("#nav-measure").addClass("active");
+                } else if (page == "shop") {
+                    $("#nav-shop").addClass("active");
+                } else if (page == "story") {
+                    $("#nav-story").addClass("active");
+                }
             }
 
             function initMap() {
