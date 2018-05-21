@@ -4,6 +4,8 @@
 <!-- Final projct with HTML, CSS and Javasctipt.-->
 
 <html>
+    <base href="http://miyoun116.github.io/wnm601/final/">
+
     <head>
         <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
@@ -165,15 +167,19 @@
                     
             <script>
                 $(document).ready(function() {
-                    load_product_list(display_product());  
+                    load_product_list(display_product);  
                 })
                 function display_product() {
                     var list_html = "";
                     if (product_list == null)
                         return;
+                    var filter = urlParam('filter');
                     for (var i = 0; i < product_list.length; i++) {
-                        if (i < 3)
+                        var color = product_list[i].color;
+                        console.warn(color.lowercase());
+                        if (filter != null && filter != color {
                             continue;
+                        }
                         list_html += makeProductHTML(i);
                     }
                         
@@ -181,9 +187,9 @@
                 }
                 function makeProductHTML(id) {
                     var name = product_list[id].name;
-                    var img_file = product_list[id].images[0];
+                    var img_file = product_list[id].image[0];
                     var price = product_list[id].price;
-                    return `<li> 
+                    return `<li class = "product"> 
                         <a href="?page=detail&product-id=`+id+`" class="img_link"> 
                             <img itemprop="image" class=" product_image" 
                             src="`+img_file+`" alt="`+name+`"  
