@@ -66,12 +66,11 @@
 </style>
 
 <script>
-    // photo slide using jQuery UI Effects //
+    /* photo slide using jQuery UI Effects */
     $(document).ready(function() {
         var slide_imgs = $("#slides img");
         var slide_selected = 0;
         var dir = 'right';
-        console.warn(slide_imgs.length);
         function reverse(dir) {
             if (dir == 'left') 
                 return 'right';
@@ -110,15 +109,15 @@
 
 <div class = "container">
     <h1> Hanbok Story </h1>
-    <div id="img-slider">
-        <img class="button" id="lbutton" src="https://miyoun116.github.io/wnm601/hw14/left_arrow.png">
-        <img class="button" id="rbutton" src="https://miyoun116.github.io/wnm601/hw14/right_arrow.png">            
+    <div id = "img-slider">
+        <img class = "button" id = "lbutton" src = "left_arrow.png">
+        <img class = "button" id = "rbutton" src = "right_arrow.png">            
         <div id="slides">
-            <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok7.jpg" alt= "hanbok6">  
-            <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok8.jpg" alt= "hanbok7">  
-            <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok9.jpg" alt= "hanbok8">  
-            <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok10.jpg" alt= "hanbok9">  
-            <img src = "https://miyoun116.github.io/wnm601/hw14/hanbok11.jpg" alt= "hanbok10">
+            <img src = "story1.jpg" alt = "story1">  
+            <img src = "story2.jpg" alt = "story2">  
+            <img src = "story3.jpg" alt = "story3">  
+            <img src = "story4.jpg" alt = "story4">  
+            <img src = "story5.jpg" alt = "story5">
         </div>
     </div>
 
