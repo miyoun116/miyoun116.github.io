@@ -8,78 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> I LOVE HAWAII </title>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <style>
-            body {
-                background-color: #F9F9F9;
-                font-family: 'Roboto', sans-serif;
-            }
-            h1 {
-                color: #1C1B1B;
-                text-align: center; 
-                font-family: sans-serif;
-                padding-top: 40px;
-            }
-            h2 {
-                color: #4F4F4F;
-                text-align: center; 
-                font-family: sans-serif;
-                padding-top: 40px;
-            }
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);   /* 3-column grid with with the repeat() function. */
-            }
-            .container {
-                padding: 4em;
-                margin-right: 6em;
-                margin-left: 6em;
-            }
-            .container p {
-                font-family: sans-serif;
-                color: dimgrey;
-            }
-            .imagebox {
-                position: relative;
-                width: 100%;
-                text-align: center;
-            }
-            .imagebox img {                          
-                width: 100%;
-                transition: .5s ease;          /* Transition effect last for o.5 seconds with a slow start, then fast, then end slowly. */
-                backface-visibility: hidden;   /* The back face of the image is invisable. */
-                border-radius: 10px;
-            }
-            .imagebox img:hover {                      
-                opacity: 0.2;                  /* The image is 20% see-through when mouse over.*/
-            }
-            .imagebox:hover .title {           /* The title is visible when mouse over.*/
-                opacity: 1;
-            }
-            .title {
-                /* Display the text at the center of the imagebox. */
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                transition: .5s ease;
-                opacity: 0;
-                font-family: sans-serif;
-                font-size: 24pt;
-                font-weight: bold;
-                color: #05256E;
-            }
-            .footer {                                                     
-                clear: both;
-                text-align: center;
-                padding-top: 5%;                                         
-                padding-bottom: 5%;
-                background-color: #E7E7E7;
-                color: #5B5B5B;
-            } 
-            .footer a{
-                font-size: 16pt;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
     </head>
     <body>
         <h1> My Family Photo </h1>
