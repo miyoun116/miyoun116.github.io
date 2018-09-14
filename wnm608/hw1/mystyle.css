@@ -6,7 +6,6 @@
 #secondpage {
     background-color: #B3C5CE;
     font-family: sans-serif;
-    color: #FAFAFA;
 }
 #firstpage h1 {
     font-family: 'Fredoka One', cursive;
@@ -23,7 +22,7 @@
     padding-top: 40px;
 }
 h2 {
-    color: #808080;
+    color: #656565;
     text-align: center; 
     padding-top: 20px;
 }
@@ -71,11 +70,8 @@ h2 {
 }
 .footer {                                                     
     clear: both;
-    text-align: center;
-    padding-top: 5%;                                         
+    text-align: center;                                        
     padding-bottom: 5%;
-    background-color: #E7E7E7;
-    color: #5B5B5B;
 } 
 .footer a{
     font-size: 16pt;
