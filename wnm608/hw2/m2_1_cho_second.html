@@ -8,47 +8,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
         <script src="dist/html5shiv.js"> </script>
         <title> The Baby Dress </title>
         
         <style > 
             #logo {
                 font-family: 'Baloo', cursive;
-                color: #8DA8C6;
+                color: #8999BD;
                 font-size: 30pt;
                 text-align: center;
             }
             
             h1 {
                 font-family: 'Montserrat', sans-serif;
-                color: #7289A3;
-                font-size: 20pt;
+                color: #81848A;
+                font-size: 18pt;
+                margin-top: 50px;
             }
 
-            h2 {
-                font-family: 'Montserrat', sans-serif;            
-                color: #3A3A3A;
-                font-size: 14pt;
+            h2 {  
+                font-family: 'Rubik', sans-serif;
+                color: #41547F;
+                font-size: 22pt;
                 margin-bottom: 50px;
             }
             
             h3 {
-               font-family: 'Montserrat', sans-serif;
-                color: #3A3A3A;
-                font-size: 18pt;
-                margin-bottom: 20px;
+                font-family: 'Montserrat', sans-serif;
+                color: #7289A3;
+                font-size: 16pt;
             }
             
             h4 {
-               font-family: 'Montserrat', sans-serif;
-                color: #3A3A3A;
+                font-family: 'Rubik', sans-serif;
+                color: #232426;
                 font-size: 14pt;
+                font-weight: bold;
             }
             
             p {
                 font-family: 'Montserrat', sans-serif;
                 color: #5C5C5C;
-                font-size: 14pt;
+                font-size: 12pt;
             }
 
             #container {                                                   
@@ -61,21 +63,48 @@
                 margin-bottom: auto;
             }
             
+            nav {
+              overflow: hidden;
+              background-color: #F8F8F8;
+              margin-bottom: 30px;
+            }
+            nav a {
+              float: left;
+              font-family: 'Montserrat', sans-serif;
+              color: #5B5B5B;
+              font-weight: bold;
+              width: 25%;
+              text-align: center;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              text-decoration: none;
+              font-size: 18px;
+            }
+
+            nav a:hover {
+              background-color: #CED8E4;
+            }
+
+            nav a.active {
+              background-color: #586279;
+              color: #f2f2f2;
+            }
+            
              /* product image box is on the left column */
             #imgbox {
                 float: left;                                             
-                width: 50%; 
+                width: 40%; 
                 min-width: 400px;
                 text-align: center;
             }
     
             #frontdress {
                 float: left;
-                max-width: 50%;
-                max-height: 50%;
+                max-width: 60%;
+                max-height: 60%;
                 text-align: center;
-                margin-right: 150px;
-                margin-left: 150px;
+                margin-top: 5em;
+                margin-left: 15em;
             }
             
              /* description and details are on the right column */
@@ -88,7 +117,7 @@
 
             /* button style */
             #button1 {
-                background-color: #8DA8C6;
+                background-color: #8999BD;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: bold;
                 border: none;
@@ -101,11 +130,11 @@
             
             #button2 {
                 margin:30px;
-                border: 2px solid #8DA8C6;
+                border: 2px solid #8999BD;
                 background: none;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: bold;
-                color: #8DA8C6;
+                color: #8999BD;
                 padding: 14px 32px;
                 font-size: 16px;        
                 border-radius: 10px;
@@ -132,9 +161,14 @@
         <div id ="container">
             <header>
                  <p id="logo"> The Baby's Closet </p> 
-                 <hgroup>                                                  <!-- present a multi-level heading for a section of a document. -->
-                    <h1> Pretty Collar Smock Dress </h1>                   <!-- product name -->
-                    <h2> MINI BODEN </h2>                                  <!-- manufacturer -->
+                 <nav>
+                    <a class="active">Babys</a>
+                    <a>Girls</a>
+                    <a>Boys</a>
+                    <a>Sale</a>
+                 </nav>
+                 <hgroup>                                     <!-- present a multi-level heading for a section of a document. --> 
+                    <h1>Baby Clothes</h1> 
                  </hgroup>
             </header>
             
@@ -144,16 +178,23 @@
                 </section>
                 
                 <section id="textbox">
+                     <h2>Pretty Collar Smock Dress</h2>                   
+                                                 
                      <h3>Dscription</h3>
                         <p>An embroidered collar and sweetly puffed cap sleeves start this soft cotton dress off with undeniable charm that continues with the apple-smocked yoke.</p>
-                     <h3> Details </h3>
+                    
+                     <h3>Details</h3>
                         <section>
                              <h4>Price</h4>
-                             <p> $42.00</p>
-                             <h4> Size </h4>
-                             <p> 18-24 Month</p>
-                             <h4> Color </h4>
-                             <p> Sky Blue</p>
+                             <p>$42.00</p>
+                             <h4>Size</h4>
+                             <p>18-24 Month</p>
+                             <h4>Color</h4>
+                             <p>Sky Blue</p>
+                             <h4>Care</h4>
+                             <p>100%cotton, Machine wash</p>
+                             <h4>Manufacturer</h4>
+                             <p>Mini Boden</p>
                             <button id="button1">Add to Cart</button> 
                             <button id="button2">Add to Wishlist</button> 
                         </section>
