@@ -9,153 +9,9 @@
         <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="M2_1_cho_mystyle.css">
         <script src="dist/html5shiv.js"> </script>
         <title> The Baby's Dress </title>
-        
-        <style > 
-            #logo {
-                font-family: 'Baloo', cursive;
-                color: #8999BD;
-                font-size: 40pt;
-                text-align: center;
-            }
-            
-            h1 {
-                font-family: 'Montserrat', sans-serif;
-                color: #999EA9;
-                font-size: 14pt;
-                text-align: center;
-                margin-bottom: 100px;
-            }
-
-            h2 {  
-                font-family: 'Rubik', sans-serif;
-                color: #41547F;
-                font-size: 22pt;
-                margin-bottom: 50px;
-            }
-            
-            h3 {
-                font-family: 'Montserrat', sans-serif;
-                color: #7289A3;
-                font-size: 16pt;
-            }
-            
-            h4 {
-                font-family: 'Rubik', sans-serif;
-                color: #232426;
-                font-size: 14pt;
-                font-weight: bold;
-            }
-            
-            p {
-                font-family: 'Montserrat', sans-serif;
-                color: #5C5C5C;
-                font-size: 12pt;
-            }
-
-            #container {                                                   
-                position: relative;
-                width: 80%;
-                min-width: 80em;
-                margin-top: 50px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: auto;
-            }
-            
-            nav {
-              overflow: hidden;
-              background-color: #F8F8F8;
-              margin-bottom: 30px;
-            }
-            nav a {
-              float: left;
-              font-family: 'Montserrat', sans-serif;
-              color: #5B5B5B;
-              font-weight: bold;
-              width: 25%;
-              text-align: center;
-              padding-top: 20px;
-              padding-bottom: 20px;
-              text-decoration: none;
-              font-size: 18px;
-            }
-
-            nav a:hover {
-              background-color: #CED8E4;
-            }
-
-            nav a.active {
-              background-color: #586279;
-              color: #f2f2f2;
-            }
-            
-             /* product image box is on the left column */
-            #imgbox {
-                float: left;                                             
-                width: 40%; 
-                min-width: 400px;
-                text-align: center;
-            }
-    
-            #frontdress {
-                float: left;
-                max-width: 60%;
-                max-height: 60%;
-                text-align: center;
-                margin-top: 5em;
-                margin-left: 15em;
-            }
-            
-             /* description and details are on the right column */
-            #textbox {
-                width: 40%; 
-                float: right; 
-            }
-
-            .clear {clear: both;}
-
-            /* button style */
-            #button1 {
-                background-color: #8999BD;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: bold;
-                border: none;
-                color: #F9FBFA;
-                padding: 16px 32px;
-                font-size: 16px;  
-                border-radius: 10px;
-                align-self: center;
-            }
-            
-            #button2 {
-                margin:30px;
-                border: 2px solid #8999BD;
-                background: none;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: bold;
-                color: #8999BD;
-                padding: 14px 32px;
-                font-size: 16px;        
-                border-radius: 10px;
-                align-self: center;
-            }
-
-            footer {                                                     
-                clear: both;
-                text-align: center;
-                padding-top: 5%;                                         
-                padding-bottom: 5%;
-                background-color: #ECECEC;
-                color: #5C5C5C;
-            }  
-            
-            #source {
-                color: #A6A6A6;
-                font-size: 10pt;
-            }
-        </style>
     </head>
     
     <body>
@@ -171,10 +27,14 @@
                  <a>Sale</a>
             </nav>
             
+            <div id = "breadcrumb">
+                <p> Home > Baby Clothes </p>
+            </div>
+            
             <div id = "content">
-                <section id = "imgbox">
+                <div id = "imgbox">
                     <img id = "frontdress" src = "1.png" alt = "frontdress">
-                </section>
+                </div>
                 
                 <section id = "textbox">
                      <h2>Pretty Collar Smock Dress</h2>                   
@@ -194,10 +54,11 @@
                              <p>100%cotton, Machine wash</p>
                              <h4>Manufacturer</h4>
                              <p>Mini Boden</p>
-                        </section>                 
+                        </section>   
+                    
+                     <button id = "button1">Add to Cart</button> 
+                     <button id = "button2">Add to Wishlist</button> 
                 </section>
-                <button id = "button1">Add to Cart</button> 
-                <button id = "button2">Add to Wishlist</button> 
             </div>
             
             <div class = "clear"></div>
