@@ -10,25 +10,24 @@
 h1 {
     font-family: 'Montserrat', sans-serif;
     color: #999EA9;
-    font-size: 14pt;
-    text-align: center;
+    font-size: 18pt;
     margin-bottom: 100px;
 }
 
-h2 {  
+#productname {  
     font-family: 'Rubik', sans-serif;
     color: #262626;
     font-size: 26pt;
     margin-bottom: 50px;
 }
             
-h3 {
+h2 {
     font-family: 'Montserrat', sans-serif;
     color: #7289A3;
     font-size: 16pt;
 }
             
-h4 {
+h3 {
     font-family: 'Rubik', sans-serif;
     color: #373737;
     font-size: 14pt;
@@ -80,21 +79,11 @@ nav a.active {
     color: #f2f2f2;
 }
             
-#breadcrumb p{
-    font-size: 16pt;
-    margin-top: 50px;
-}
-            
-/* product image box is on the left column */
-#imgbox {
-    float: left;                                             
-    width: 40%; 
-    min-width: 400px;
-    text-align: center;
-}
-    
+/* product image is on the left column */
 #frontdress {
     float: left;
+    width: 20%; 
+    min-width: 400px;
     max-width: 60%;
     max-height: 60%;
     text-align: center;
@@ -140,6 +129,7 @@ nav a.active {
 footer {                                                     
     clear: both;
     text-align: center;
+    margin-top: 5%;
     padding-top: 5%;                                         
     padding-bottom: 5%;
     background-color: #ECECEC;
