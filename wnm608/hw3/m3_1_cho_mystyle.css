@@ -1,5 +1,11 @@
 /* Assignment 2.1: an external style sheet for product page */ 
  
+.hide {
+	position: absolute !important;
+    height: 0px; width: 0px; 
+    overflow: hidden;
+}
+
 #logo {
     font-family: 'Baloo', cursive;
     color: #8999BD;
@@ -56,6 +62,10 @@ nav {
     overflow: hidden;
     background-color: #F8F8F8;
     margin-bottom: 30px;
+}
+
+nav ul{
+    list-style: none;
 }
 
 nav a {
