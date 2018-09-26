@@ -102,6 +102,7 @@ table {
 th, td {
     text-align: left;
     padding: 8px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 tr:nth-child(even) {background-color: #F8F8F8;}
