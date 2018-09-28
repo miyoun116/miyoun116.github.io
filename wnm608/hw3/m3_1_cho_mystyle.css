@@ -1,4 +1,4 @@
-/* Assignment 2.1: an external style sheet for product page */ 
+/* Assignment 3.1: Create a simple responsive layout */ 
  
 .hide {
 	position: absolute !important;
@@ -36,7 +36,7 @@ p {
 
 #container {                                                   
     position: relative;
-    width: 80%;
+    width: 100%;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -45,6 +45,7 @@ p {
 
 header {
     overflow: auto;
+    padding: 10px 50px;
 }
 
 #logo {
@@ -60,7 +61,7 @@ header {
 nav {
     overflow: hidden;
     position: relative;
-    width: 40%;
+    width: 30%;
     float: right;
 }
 
@@ -99,9 +100,8 @@ nav a.currentpage {
 
 #index {
     position: relative;
-    background-color: #F1F8FF;
+    background-color: #FFF3EC;
     height: 10em;
-    margin: 2em 0em;
 }
 
 #index h2 {
@@ -110,12 +110,14 @@ nav a.currentpage {
     top: 30%;
     width: 100%;
     text-align: center;
+    color: #5C677F;
 }
 
 table {
     float: left;
     border-collapse: collapse;
-    width: 80%;
+    width: 60%;
+    margin: 40px 0px 20px 80px;
     text-align: left;
 }
 
@@ -140,8 +142,8 @@ td:nth-child(1){
     width:15%;
 }
 
-td:nth-child(2) {
-    font-weight: bold;
+td:nth-child(2)  {
+    width:20%;
 }
 
 td:nth-child(2) a:hover {
@@ -154,7 +156,7 @@ td:nth-child(3) {
 }
 
 td:nth-child(4) {
-    width:10%;
+    width:15%;
 }
 
 thead tr:nth-child(2n+1){
@@ -170,7 +172,15 @@ thead tr:nth-child(2n+1){
 }
 
 td img {
-    width: 80%; 
+    width: 100%;
+    min-width: 50px;
+}
+
+/* style the first letter of every description contenct */
+.description::first-letter {
+    color: #8999BD;
+    font-size: 14pt;
+    font-weight: bold;
 }
 
 /* 10% width second column */ 
@@ -178,7 +188,7 @@ aside {
     width: 13%; 
     float: right;
     text-align: center;
-    margin-left: 4%;
+    margin: 40px 80px 20px 0px;
 }
 
 aside img{
@@ -211,6 +221,12 @@ footer a {
 
 /* On screens that are 960px wide or less, go from four columns to two columns */
 @media screen and (max-width: 960px) {
+table {
+    margin: 0;
+    }
+    aside {
+    margin: 0;
+    }
 }
 
 
@@ -226,13 +242,25 @@ nav {
     width: 100%;
 }
     
-.description {
+.descriptiontitle, .description {
     display: none;
 }
     
 table, aside{ 
     float: none;
     width: 100%;
+}
+    
+td:nth-child(1){
+    width: 33.33%;
+}
+
+td:nth-child(2){
+    width: 33.33%;
+}
+
+td:nth-child(3){
+    width: 33.33%;
 }
     
     /* 2-column grid with with the repeat() function. */
@@ -248,9 +276,4 @@ table, aside{
     display: block;
 }
 }
-
-
-
-        
-
 
