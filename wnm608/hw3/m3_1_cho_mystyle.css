@@ -53,7 +53,7 @@ header {
     float: left;
     font-family: 'Baloo', cursive;
     color: #8999BD;
-    font-size: 40pt;
+    font-size: 20pt;
     margin: inherit;
 }
     
@@ -263,7 +263,7 @@ td:nth-child(3){
     width: 33.33%;
 }
     
-    /* 2-column grid with with the repeat() function. */
+/* 2-column grid with with the repeat() function. */
 #sidebox {
     display: grid;
     grid-template-columns: repeat(2, 1fr);   
