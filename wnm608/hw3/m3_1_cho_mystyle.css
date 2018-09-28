@@ -53,7 +53,7 @@ header {
     float: left;
     font-family: 'Baloo', cursive;
     color: #8999BD;
-    font-size: 20pt;
+    font-size: 30pt;
     margin: inherit;
 }
     
@@ -74,8 +74,7 @@ nav a {
     font-weight: bold;
     width: 33.33%;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px; 
+    padding-top: 10px 0px;
     font-size: 18px;
 }
 
@@ -251,7 +250,7 @@ table, aside{
     width: 100%;
 }
     
-td:nth-child(1){
+    td:nth-child(1){
     width: 33.33%;
 }
 
@@ -263,7 +262,7 @@ td:nth-child(3){
     width: 33.33%;
 }
     
-/* 2-column grid with with the repeat() function. */
+    /* 2-column grid with with the repeat() function. */
 #sidebox {
     display: grid;
     grid-template-columns: repeat(2, 1fr);   
