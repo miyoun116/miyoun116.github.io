@@ -1,0 +1,350 @@
+/* Miyoun Cho */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    color: #3c3c50;
+}
+
+@media only screen and (min-width : 1200px) {
+    .container-lg { max-width: 1140px; }
+    .container-xl {max-width: 1140px; }
+    .container { max-width: 1140px; } 
+}
+
+body {
+    height: 100%;
+}
+
+body h1 {
+    font-size: 40px; 
+}
+
+body h3 {
+    font-size: 16px; 
+    font-weight: 300;
+}
+
+body p {
+    font-size: 16px; 
+    font-weight: 300;
+    opacity: 80%
+}
+
+body h4 {
+    font-size: 18px; 
+    font-weight: 400;
+}
+
+.topheader {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.subheader {
+    font-size: 18px; 
+    font-weight: 300; 
+    margin-top: 20px;
+}
+
+.source {
+    font-size: 12px; 
+    font-weight: 300;
+    opacity: 60%;
+    text-align-last: right;
+    margin-top: 20px;
+}
+
+.navbar-brand img {
+    transition: transform .7s ease-in-out;
+}
+
+.navbar-brand img:hover {
+      transform: rotate(360deg);
+    }
+
+footer img {
+    transition: transform .7s ease-in-out;
+}
+
+footer img:hover {
+      transform: rotate(360deg);
+}
+
+
+.benefits {
+    margin-top: 30px;
+    font-size: 16px; 
+    font-weight: 300;
+    opacity: 80%
+}
+
+.subtitlebox1 {
+    display: table; /* keep the background color wrapped tight */
+    padding:5px;font-size:16px;font-weight:400;background-color:#E2E5F3;color:#4D5EB7;border-radius:5px;
+}
+
+.subtitlebox2 {
+    display: table; /* keep the background color wrapped tight */
+    padding:5px;font-size:16px;font-weight:400;background-color:#E4EDD5;color:#2A9D8E;border-radius:5px;
+}
+
+.subtitlebox3 {
+    display: table; /* keep the background color wrapped tight */
+    padding:5px;font-size:16px;font-weight:400;background-color:#F8F9FA;color:#4D5EB7;border-radius:5px;
+}
+
+.subtitlebox4 {
+    display: table; /* keep the background color wrapped tight */
+    padding:5px;font-size:16px;font-weight:400;background-color:#FFF6DC;color:#F19300;border-radius:5px;
+}
+
+.subtitlebox5 {
+    display: table; /* keep the background color wrapped tight */
+    padding:5px;font-size:16px;font-weight:400;background-color:#D7E5FD;color:#377CF6;border-radius:5px;
+}
+
+
+.main-content img {
+    min-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.page-header img {
+    width: 100%;
+}
+
+.work-content img {
+    width: 100%;
+}
+
+/*.col-sm-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center 
+}*/
+
+div#bottom.col-md-4 {
+     font-size: 16px; 
+    font-weight: 300;
+}
+
+.title-box {
+    max-width: 80%;
+}
+
+.container-fluid {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar-brand {
+    height: 60px;
+}
+
+.navbar-brand img{
+    height: 100%;  
+}
+
+.nav a {
+    color: #5161F3;
+    font-size: 16px;
+}
+
+.page-header {
+    margin-bottom: 100px;
+    margin-top: 100px;
+    border-bottom: none;
+}
+
+.main-content {
+    margin-top:20px;
+    padding-top: 20px;
+}
+
+.main-content img {
+    width: 100%;
+}
+
+.main-content h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.main-content button {
+    font-size: 14pt;
+    font-weight: 300;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-left: 0;
+}
+
+.work-link:hover {
+    color: #4D61FC;
+    transform: scale(1.01);
+    cursor: pointer;  
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.work-link {
+    text-decoration: none;
+    color: #3c3c50;
+}
+
+/* work page */
+
+.header-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+}
+
+.header-text h1 {
+    font-size: 40pt;
+}
+
+.work-content {
+    margin-bottom: 30px;
+}
+
+.work-content h2{
+    font-size: 18pt;
+    font-weight: 400;
+}
+
+.work-content h2{
+    font-size: 18pt;
+    font-weight: 400;
+}
+
+.work-content p{
+    font-size: 13pt;
+    line-height: 1.6;
+}
+
+.doodlelingo-img {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.concept-link {
+    color: #5161F3;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.img-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box li {
+    font-size: 12pt;
+    color: #414652;
+    font-weight: 300;
+}
+
+.result-title {
+    font-size: 14pt;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.col-8 img {
+    width: 100%;
+}
+
+.flow {
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: 300;
+    margin-top: 50pt;
+    margin-bottom: 50pt;
+}
+
+.box {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.box-m {
+    display: flex;
+    align-items: center;
+    justify-content: center 
+}
+
+.box-a {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.box-d {
+    margin-top: 50px;
+}
+
+.box-d2 img{
+    margin-bottom: 50px;
+}
+
+.box-a img{
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.flower-ani {
+    text-align: center;
+}
+
+.text-center {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.child-row img{
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.048);
+}
+
+.book {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.048);
+}
+
+.saarland-logo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* about page */
+
+.about-content .row {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.about-content img {
+    width: 100%;
+}
