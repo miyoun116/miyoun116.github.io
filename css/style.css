@@ -86,14 +86,12 @@ body h4 {
 
 .work-link {
     text-decoration: none;
-    color: #3c3c50;
+    color: #4D61FC;
 }
 
 .work-link:hover {
-    color: #4D61FC;
-    transform: scale(1.01);
     cursor: pointer;  
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: 400;
 }
 
@@ -223,18 +221,6 @@ div#bottom.col-md-4 {
     outline: none;
     background-color: transparent;
     padding-left: 0;
-}
-
-.work-link {
-    text-decoration: none;
-    color: #4D61FC;
-}
-
-.work-link:hover {
-    transform: scale(1.01);
-    cursor: pointer;  
-    text-decoration: underline;
-    font-weight: 400;
 }
 
 /* work page */
@@ -375,6 +361,9 @@ div#bottom.col-md-4 {
     margin-top: 50px;
 }
 
+div#interview.row img{
+    margin-bottom: 30px;
+}
 
 /* about page */
 
