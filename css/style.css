@@ -61,6 +61,34 @@ body h4 {
     transition: transform .7s ease-in-out;
 }
 
+.nav a {
+    color: #5161F3;
+    font-size: 16px;
+}
+
+.main-content button {
+    font-size: 14pt;
+    font-weight: 300;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-left: 0;
+}
+
+.work-link:hover {
+    color: #4D61FC;
+    transform: scale(1.01);
+    cursor: pointer;  
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.work-link {
+    text-decoration: none;
+    color: #3c3c50;
+}
+
+
 .navbar-brand img:hover {
       transform: rotate(360deg);
     }
