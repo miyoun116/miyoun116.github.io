@@ -75,16 +75,21 @@ body h4 {
     padding-left: 0;
 }
 
-.work-link {
-    outline: none;
+.work-content button {
+    font-size: 14pt;
+    font-weight: 300;
     border: none;
+    outline: none;
+    background-color: transparent;
+    padding-left: 0;
+}
+
+.work-link {
     text-decoration: none;
     color: #3c3c50;
 }
 
 .work-link:hover {
-    outline: none;
-    border: none;
     color: #4D61FC;
     transform: scale(1.01);
     cursor: pointer;  
