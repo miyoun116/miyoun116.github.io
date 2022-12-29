@@ -37,14 +37,16 @@ body h4 {
 }
 
 .topheader {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
 }
 
 .subheader {
     font-size: 18px; 
-    font-weight: 300; 
+    font-weight: 400; 
     margin-top: 20px;
+    color: #5161F3;
+
 }
 
 .source {
@@ -62,6 +64,12 @@ body h4 {
 .navbar-brand img:hover {
       transform: rotate(360deg);
     }
+
+.header-text2 {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+} 
 
 footer img {
     transition: transform .7s ease-in-out;
@@ -147,11 +155,6 @@ div#bottom.col-md-4 {
     height: 100%;  
 }
 
-.nav a {
-    color: #5161F3;
-    font-size: 16px;
-}
-
 .page-header {
     margin-bottom: 100px;
     margin-top: 100px;
@@ -176,7 +179,6 @@ div#bottom.col-md-4 {
     margin-top: 20px;
     margin-bottom: 30px;
 }
-
 .main-content button {
     font-size: 14pt;
     font-weight: 300;
@@ -186,23 +188,70 @@ div#bottom.col-md-4 {
     padding-left: 0;
 }
 
-.work-link:hover {
-    color: #4D61FC;
-    transform: scale(1.01);
-    cursor: pointer;  
-    text-decoration: none;
-    font-weight: 400;
-}
 
 .work-link {
+    font-size: 13pt;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-left: 0;
+    font-weight: 400;
+    color: #4D61FC;
     text-decoration: none;
-    color: #3c3c50;
 }
+
+.work-link:hover {
+    color: #0B26F4;
+    cursor: pointer;  
+    text-decoration: none;
+    font-weight: 500;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4D61FC;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.btn-link:hover {
+    color: #0B26F4;
+    cursor: pointer;  
+    text-decoration: none;
+    font-weight: 500;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.workbtn-link {
+    font-size: 16pt;
+    font-weight: 300;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: #4D61FC;
+    background-color: transparent;
+    padding-left: 0;
+}
+
+.workbtn-link:hover {
+    color: #0B26F4;
+    cursor: pointer;  
+    text-decoration: none;
+    font-weight: 500;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
 
 /* work page */
 
 .header-text {
-    text-align: left;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 80px;
