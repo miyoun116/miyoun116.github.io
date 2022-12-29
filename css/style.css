@@ -207,6 +207,7 @@ div#bottom.col-md-4 {
     margin-top: 20px;
     margin-bottom: 30px;
 }
+
 .main-content button {
     font-size: 14pt;
     font-weight: 300;
@@ -215,7 +216,6 @@ div#bottom.col-md-4 {
     background-color: transparent;
     padding-left: 0;
 }
-
 
 .work-link {
     font-size: 13pt;
@@ -236,45 +236,6 @@ div#bottom.col-md-4 {
     background-color: transparent;
     border-color: transparent;
 }
-
-.btn-link {
-    font-size: 16px;
-    font-weight: 400;
-    color: #4D61FC;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-.btn-link:hover {
-    color: #0B26F4;
-    cursor: pointer;  
-    text-decoration: none;
-    font-weight: 500;
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.workbtn-link {
-    font-size: 16pt;
-    font-weight: 300;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    color: #4D61FC;
-    background-color: transparent;
-    padding-left: 0;
-}
-
-.workbtn-link:hover {
-    color: #0B26F4;
-    cursor: pointer;  
-    text-decoration: none;
-    font-weight: 500;
-    background-color: transparent;
-    border-color: transparent;
-}
-
-
 
 /* work page */
 
