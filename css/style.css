@@ -209,8 +209,8 @@ div#bottom.col-md-4 {
 }
 
 .main-content button {
-    font-size: 14pt;
-    font-weight: 300;
+    font-size: 12pt;
+    font-weight: 400;
     border: none;
     outline: none;
     background-color: transparent;
@@ -218,23 +218,15 @@ div#bottom.col-md-4 {
 }
 
 .work-link {
-    font-size: 13pt;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    padding-left: 0;
-    font-weight: 400;
-    color: #4D61FC;
     text-decoration: none;
+    color: #4D61FC;
 }
 
 .work-link:hover {
-    color: #0B26F4;
+    transform: scale(1.01);
     cursor: pointer;  
-    text-decoration: none;
-    font-weight: 500;
-    background-color: transparent;
-    border-color: transparent;
+    text-decoration: underline;
+    font-weight: 400;
 }
 
 /* work page */
