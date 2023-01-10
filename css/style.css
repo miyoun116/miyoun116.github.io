@@ -167,6 +167,10 @@ footer img:hover {
     justify-content: center 
 }*/
 
+.col-md-10 .col-sm {
+    margin-bottom: 30px;
+}
+
 div#bottom.col-md-4 {
      font-size: 16px; 
     font-weight: 300;
