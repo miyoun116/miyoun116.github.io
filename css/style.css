@@ -375,6 +375,12 @@ div#interview.row img{
     margin-bottom: 30px;
 }
 
+.technical-content li {
+    font-size: 16px; 
+    font-weight: 300;
+    opacity: 80%
+}
+
 /* about page */
 
 .about-content .row {
