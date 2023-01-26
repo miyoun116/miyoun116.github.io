@@ -393,3 +393,7 @@ div#interview.row img{
     width: 100%;
 }
 
+.article-link {
+    color: #5161F3;
+    text-decoration: none;
+}
