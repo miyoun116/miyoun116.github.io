@@ -412,6 +412,10 @@ div#interview.row img{
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+        .box {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        } 
       }
 
       .b-example-divider {
