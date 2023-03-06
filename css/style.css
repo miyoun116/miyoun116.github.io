@@ -63,8 +63,16 @@ body h4 {
 }
 
 .nav a {
-    color: #5161F3;
+    color: #3c3c50;
+    opacity: 80%;
     font-size: 16px;
+    font-weight: 300;
+}
+
+.nav a:hover {
+    cursor: pointer;  
+    text-decoration: none;
+    color: #5161F3;
 }
 
 .main-content button {
@@ -87,13 +95,17 @@ body h4 {
 
 .work-link {
     text-decoration: none;
-    color: #4D61FC;
+    color: #3c3c50;
+    opacity: 80%;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .work-link:hover {
     cursor: pointer;  
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: 400;
+    color: #5161F3;
 }
 
 .navbar-brand img:hover {
@@ -414,7 +426,7 @@ div#interview.row img{
         }
         .box {
             margin-top: 16px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         } 
       }
 
