@@ -45,8 +45,9 @@ body h4 {
 .subheader {
     font-size: 18px; 
     font-weight: 300; 
-    margin-top: 24px;
-    color: #5161F3;
+    margin-top: 20px;
+    color: #3c3c50;
+    opacity: 70%;
 
 }
 
@@ -95,16 +96,17 @@ body h4 {
 
 .work-link {
     text-decoration: none;
-    color: #3c3c50;
+    color: #5161F3;
     opacity: 80%;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .work-link:hover {
     cursor: pointer;  
     text-decoration: none;
     font-weight: 400;
+    opacity: 100%;
     color: #5161F3;
 }
 
