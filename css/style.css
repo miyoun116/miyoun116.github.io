@@ -99,7 +99,8 @@ body h4 {
     color: #5161F3;
     opacity: 80%;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
 }
 
 .work-link:hover {
