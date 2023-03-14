@@ -28,7 +28,11 @@ body h3 {
 body p {
     font-size: 16px; 
     font-weight: 300;
-    opacity: 80%
+    opacity: 80%;
+    color: #555555;
+    letter-spacing: 0em;
+    line-height: 1.8em;
+    text-transform: none;
 }
 
 body h4 {
@@ -261,13 +265,10 @@ div#bottom.col-md-4 {
 }
 
 .work-content h2{
-    font-size: 18pt;
-    font-weight: 400;
-}
-
-.work-content h2{
-    font-size: 18pt;
-    font-weight: 400;
+    font-size: 20pt;
+    margin-bottom: 25px;
+    Letter-spacing: 1px;
+    color: #333333; 
 }
 
 .work-content p{
