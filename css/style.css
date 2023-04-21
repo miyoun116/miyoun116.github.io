@@ -86,10 +86,10 @@ body p {
 }
 
 .subheader {
-    font-size: 24px; 
+    font-size: 20px; 
     font-weight: 300; 
     margin-top: 20px;
-    color: #3c3c50;
+    color: #5161F3;
     opacity: 70%;
 }
 
@@ -162,8 +162,8 @@ body p {
 
 .work-link {
     text-decoration: none;
-    color: #5161F3;
-    opacity: 80%;
+    color: #555555;
+    opacity: 100%;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.1rem;
