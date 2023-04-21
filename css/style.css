@@ -106,10 +106,10 @@ body p {
 }
 
 .nav a {
-    color: #3c3c50;
-    opacity: 80%;
+    color: #555555;
+    opacity: 100%;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .nav a:hover {
