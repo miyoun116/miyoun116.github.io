@@ -45,10 +45,10 @@ h3 {
 }
 
 h4 {
-    font-weight: 700;
+    font-weight: 400;
     font-style: normal;
     font-size: 14px;
-    letter-spacing: .16em;
+    letter-spacing: .40em;
     line-height: 1em;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -78,6 +78,11 @@ body p {
     letter-spacing: 0em;
     line-height: 1.8em;
     text-transform: none;
+}
+
+.two-line-title {
+    font-size: 40px;
+    font-weight: 600;
 }
 
 .topheader {
