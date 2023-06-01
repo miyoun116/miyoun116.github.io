@@ -709,6 +709,10 @@ div#interview.row img{
         padding: 16px;
     }
 
+    #instagram-box video{
+        width: 70%;
+    }
+
 
     @media (min-width: 768px) {
         .bd-placeholder-img-lg {
@@ -870,5 +874,9 @@ div#interview.row img{
 
           .link-box {
             display: none;
+        }
+
+        #instagram-box video{
+            width: 50%;
         }
       }
