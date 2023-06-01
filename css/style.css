@@ -376,14 +376,8 @@ header .work-header {
     width: 100%;
 }
 
-/*.col-sm-4 {
-    display: flex;
-    align-items: center;
-    justify-content: center 
-}*/
-
-.col-md-10 .col-sm {
-    margin-bottom: 30px;
+.col-md-10 .col-sm-5 col-md-5 col-lg-5 {
+    margin: 0;
 }
 
 div#bottom.col-md-4 {
