@@ -87,6 +87,14 @@ b {
     font-weight: 600;
 }
 
+.page-title {
+    text-align: center;
+    letter-spacing: -.25px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 40px;
+    font-weight: 700;
+}
+
 header img {
     width: 100%;
 }
@@ -700,6 +708,7 @@ div#interview.row img{
     .card {
         border-color: transparent;
     }
+    
 
     @media (min-width: 768px) {
         .bd-placeholder-img-lg {
