@@ -87,6 +87,10 @@ b {
     font-weight: 600;
 }
 
+header img {
+    width: 100%;
+}
+
 .header-text2 {
     text-align: left;
     width: 100%;
