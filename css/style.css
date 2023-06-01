@@ -850,6 +850,7 @@ div#interview.row img{
         }
 
         .prototype-box {
+            display: inline;
             position: relative;
             width: 100%;
             overflow: hidden;
