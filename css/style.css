@@ -260,7 +260,7 @@ header img {
 }
 
 .row {
-    border-radius: 8px;
+    /*border-radius:8px;*/
 }
 
 .col-md-8 img{
@@ -316,16 +316,31 @@ header img {
 }
 
 .main-content {
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 }
 
 .main-content img {
     width: 100%;
     object-fit: cover;
-    border-radius:8px;
+    /*border-radius:8px;*/
 }
 
 .main-content p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.project-content {
+    margin-bottom: 0px;
+}
+
+.project-content img {
+    width: 100%;
+    object-fit: cover;
+    /*border-radius:8px;*/
+}
+
+.project-content p {
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -638,6 +653,10 @@ div#interview.row img{
         -webkit-overflow-scrolling: touch;
       }
 
+    .card {
+        border-color: transparent;
+    }
+
     .card-body {
         position: relative;
         text-align: left;
@@ -686,10 +705,6 @@ div#interview.row img{
         background-image: linear-gradient(180deg,transparent 40%,rgba(0,0,0,.6));
     }
 
-    .card {
-        border-color: transparent;
-    }
-
     .prototype-box {
         position: relative;
         width: 100%;
@@ -727,6 +742,10 @@ div#interview.row img{
         width: 80%;
     }
 
+    .card {
+        --bs-card-spacer-y: 6px !important;
+        --bs-card-spacer-x: 6px !important;
+    }
 
     @media (min-width: 768px) {
         .bd-placeholder-img-lg {
