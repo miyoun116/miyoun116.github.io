@@ -748,6 +748,16 @@ div#interview.row img{
         --bs-card-spacer-x: 6px !important;
     }
 
+    .home-img {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    #doodlelingo-box {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
     @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -813,7 +823,7 @@ div#interview.row img{
             opacity: 100%;
             letter-spacing: -.25px;
             font-family: 'Comfortaa', cursive;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         
         #left-box .home-subtitle {
@@ -869,8 +879,13 @@ div#interview.row img{
         }
 
         .home-img {
-            margin-top: 50px;
-            margin-bottom: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #doodlelingo-box {
+            margin-bottom: 0px !important;
+            margin-top: 40px !important;
         }
 
         .inner-box {
