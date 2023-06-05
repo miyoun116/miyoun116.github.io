@@ -148,7 +148,7 @@ header img {
 }
 
 #left-box .home-subtitle {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 16px;
     margin: 0;
@@ -301,7 +301,7 @@ header img {
 
 .project-content .project-subitem {
     font-size: 28px; 
-    font-weight: 500;
+    font-weight: 700;
     color: #3c3c50; 
     margin-top: 100px;
     margin-bottom: 40px;
@@ -900,8 +900,8 @@ div#interview.row img{
         }
 
         .project-content .project-subitem {
-            font-size: 30px; 
-            font-weight: 500;
+            font-size: 28px; 
+            font-weight: 700;
             color: #3c3c50; 
             margin-top: 160px;
             margin-bottom: 40px;
