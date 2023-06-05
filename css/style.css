@@ -299,6 +299,16 @@ header img {
     margin-bottom: 30px;
 }
 
+.project-content .project-subitem {
+    font-size: 28px; 
+    font-weight: 500;
+    color: #3c3c50; 
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    font-family: 'Comfortaa', cursive;
+}
+
 .role-box {
     margin-top: 30px;
 }
@@ -887,6 +897,16 @@ div#interview.row img{
 
         #instagram-box video{
             width: 50%;
+        }
+
+        .project-content .project-subitem {
+            font-size: 30px; 
+            font-weight: 500;
+            color: #3c3c50; 
+            margin-top: 160px;
+            margin-bottom: 40px;
+            margin-left: 10px;
+            font-family: 'Comfortaa', cursive;
         }
 
         .bottom-box {
