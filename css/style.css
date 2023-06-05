@@ -591,13 +591,13 @@ div#interview.row img{
     .card-body .title-box {
         position: absolute;
         max-width: 80%;
-        top: 40px;
-        left: 40px;
+        top: 24px;
+        left: 24px;
         z-index: +1;
     }
 
     .card-body .home-title {
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 700;
         color: #3c3c50;
         opacity: 100%;
@@ -607,7 +607,7 @@ div#interview.row img{
     }
 
     .card-body .home-subtitle {
-        font-size: 16px;
+        font-size: 15px;
         -moz-osx-font-smoothing: initial;
         -webkit-font-smoothing: initial;
         font-weight: 400;
@@ -615,7 +615,7 @@ div#interview.row img{
         margin: 0;
         padding: 0;
         text-rendering: auto;
-        margin-bottom: 20px;
+        margin-top: 10px;
         letter-spacing: -.25px;
         opacity: 60%;
 
