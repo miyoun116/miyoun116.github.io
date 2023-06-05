@@ -698,11 +698,11 @@ div#interview.row img{
     }
 
     .bottom-box {
-        margin: 30px;
+        margin: 0px;
     }
 
     .bottom1 p{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
         line-height: 0px;
         margin-bottom: 40px;
@@ -889,7 +889,7 @@ div#interview.row img{
         }
 
         .bottom-box {
-            margin: 40px;
+            margin: 40px !important;
         }
       }
 
