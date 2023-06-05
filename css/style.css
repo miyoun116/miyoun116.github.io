@@ -800,6 +800,7 @@ div#interview.row img{
             opacity: 100%;
             letter-spacing: -.25px;
             font-family: 'Comfortaa', cursive;
+            margin-top: 0px !important;
         }
         
         #left-box .home-subtitle {
