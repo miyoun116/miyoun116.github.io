@@ -462,7 +462,7 @@ div#threebox.box{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     width: 100%;
     padding-right: 20px !important;
     padding-left: 20px !important;
@@ -482,7 +482,7 @@ div#threebox.box{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     width: 100%;
     background-color: none;
 }
@@ -755,7 +755,7 @@ div#interview.row img{
             margin-left: auto;
             margin-right: auto;
             width: 80%;
-            margin-bottom: 80px !important;
+            margin-bottom: 40px !important;
         }
 
         .topheader {
@@ -885,9 +885,9 @@ div#interview.row img{
             display: block;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 80px;
+            margin-bottom: 40px;
             width: 100%;
-            padding: 80px !important;
+            padding: 60px !important;
             background-color: #FAFAFA;
         }
 
