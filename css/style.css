@@ -138,13 +138,13 @@ header img {
 }
 
 #left-box .home-title {
-    font-size: 30px;
+    margin-top: 24px;
+    font-size: 28px;
     font-weight: 700;
     color: #3c3c50;
     opacity: 100%;
     letter-spacing: -.25px;
     font-family: 'Comfortaa', cursive;
-    margin-bottom: 40px;
 }
 
 #left-box .home-subtitle {
@@ -155,8 +155,9 @@ header img {
     padding: 0;
     text-rendering: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     letter-spacing: -.25px;
+    opacity: 60%;
 }
 
 #left-box .summary {
@@ -560,34 +561,6 @@ div#interview.row img{
 }
 
 
-/* projects page */
-      /*.bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }*/
-
       .nav-scroller {
         position: relative;
         z-index: 2;
@@ -637,13 +610,14 @@ div#interview.row img{
         font-size: 16px;
         -moz-osx-font-smoothing: initial;
         -webkit-font-smoothing: initial;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 16px;
         margin: 0;
         padding: 0;
         text-rendering: auto;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         letter-spacing: -.25px;
+        opacity: 60%;
 
     }
 
@@ -826,18 +800,19 @@ div#interview.row img{
             opacity: 100%;
             letter-spacing: -.25px;
             font-family: 'Comfortaa', cursive;
-            margin-bottom: 40px;
         }
         
         #left-box .home-subtitle {
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 16px;
             margin: 0;
             padding: 0;
             text-rendering: auto;
-            margin-bottom: 30px;
+            margin-top: 20px;
+            margin-bottom: 40px;
             letter-spacing: -.25px;
+            opacity: 60%;
         }
         
         #left-box .summary {
