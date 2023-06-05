@@ -1,7 +1,6 @@
 /* Miyoun Cho */
 /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
 *{
@@ -171,53 +170,6 @@ header img {
     text-transform: none;
     font-family: 'Open Sans', sans-serif;
 }
-/*#left-box {
-    position: relative;
-    text-align: left;
-}
-
-#left-box .title-box {
-    max-width: 80%;
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    z-index: +1;
-}
-
-#left-box .home-title {
-    font-size: 30px;
-    font-weight: 700;
-    color: #3c3c50;
-    opacity: 100%;
-    letter-spacing: -.25px;
-    font-family: 'Comfortaa', cursive;
-    margin-bottom: 20px;
-}
-
-#left-box .home-subtitle {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 16px;
-    margin: 0;
-    padding: 0;
-    text-rendering: auto;
-    margin-bottom: 10px;
-    letter-spacing: -.25px;
-}
-
-#left-box .summary {
-    font-family: 'Open Sans', sans-serif;
-    width: 60%;
-    margin: 0;
-    padding: 0;
-    font-size: 16px; 
-    font-weight: 400;
-    letter-spacing: 0em;
-    line-height: 1.7em;
-    text-transform: none;
-    font-family: 'Open Sans', sans-serif;
-    opacity: 70%;
-}*/
 
 .item {
     font-size: 28px;
@@ -758,6 +710,57 @@ div#interview.row img{
         margin-top: 0px;
     }
 
+    .bottom-nav {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position:absolute;
+        right: 0;
+        left: 0;
+        width: 100%;
+        background-color: #242424;
+        padding-top: 40px;
+        padding-bottom:20px;
+    }
+
+    .bottom-box {
+        margin: 30px;
+    }
+
+    .bottom1 p{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 0px;
+        margin-bottom: 40px;
+        letter-spacing: -.25px;
+        font-family: 'Comfortaa', cursive;
+        color: #fafafa;
+    }
+
+    .bottom1 a{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 0px;
+        letter-spacing: -.25px;
+        font-family: 'Comfortaa', cursive;
+        color: #5161F3;
+        text-decoration: none;
+    }
+
+    .bottom2 {
+        margin-top: 60px;
+    }
+
+    .bottom2 p{
+        font-size: 16px; 
+        font-weight: 300;
+        letter-spacing: 0em;
+        line-height: 1.8em;
+        text-transform: none;
+        font-family: 'Open Sans', sans-serif;
+        color: #fafafa;
+    }
+
     @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -908,6 +911,10 @@ div#interview.row img{
 
         #instagram-box video{
             width: 50%;
+        }
+
+        .bottom-box {
+            margin: 40px;
         }
       }
 
