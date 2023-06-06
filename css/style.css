@@ -213,9 +213,13 @@ header img {
     opacity: 100%;
 }
 
-.row {
-    /*border-radius:8px;*/
+.nav a:active {
+    cursor: pointer;  
+    text-decoration: none;
+    color: #3c3c50;
+    opacity: 100%;
 }
+
 
 .col-md-8 img{
    width: 100%;
@@ -571,14 +575,14 @@ div#interview.row img{
 }
 
 
-      .nav-scroller {
+    .nav-scroller {
         position: relative;
         z-index: 2;
         height: 2.75rem;
         overflow-y: hidden;
       }
 
-      .nav-scroller .nav {
+    .nav-scroller .nav {
         display: flex;
         flex-wrap: nowrap;
         padding-bottom: 1rem;
