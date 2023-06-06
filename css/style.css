@@ -15,6 +15,12 @@
     .container { max-width: 1470px; } 
 }
 
+@media (max-width: 320px) { 
+    .container-lg { max-width: 320px; }
+    .container-xl {max-width: 320px; }
+    .container { max-width: 320px; } 
+}
+
 /*@media only screen and (min-width : 1200px) {
     .container-lg { max-width: 1140px; }
     .container-xl {max-width: 1140px; }
