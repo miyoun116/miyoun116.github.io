@@ -750,6 +750,16 @@ div#interview.row img{
         color: #fafafa;
     }
 
+    .point-sentence {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 40px;
+        font-family: 'Open Sans', sans-serif;
+        font-style: oblique;
+        margin: auto;
+        width: 100%;
+    }
+
     @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -916,6 +926,10 @@ div#interview.row img{
 
         .bottom-box {
             margin: 40px !important;
+        }
+
+        .point-sentence {
+            width: 70% !important;
         }
       }
 
