@@ -595,6 +595,8 @@ div#interview.row img{
       }
 
     .card {
+        --bs-card-spacer-y: 6px !important;
+        --bs-card-spacer-x: 6px !important;
         border-color: transparent;
     }
 
@@ -684,11 +686,6 @@ div#interview.row img{
         width: 80%;
     }
 
-    .card {
-        --bs-card-spacer-y: 6px !important;
-        --bs-card-spacer-x: 6px !important;
-    }
-
     .home-img {
         margin-top: 0px;
         margin-bottom: 0px;
@@ -753,7 +750,7 @@ div#interview.row img{
     .point-sentence {
         font-size: 26px;
         font-weight: 400;
-        line-height: 40px;
+        line-height: 50px;
         font-family: 'Open Sans', sans-serif;
         font-style: oblique;
         margin: auto;
