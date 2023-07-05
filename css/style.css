@@ -763,6 +763,13 @@ div#interview.row img{
           font-size: 3.5rem;
         }
 
+        .nav a {
+            color: #3c3c50;
+            opacity: 70%;
+            font-size: 16px !important;
+            font-weight: 400;
+        }
+
         .work-content {
             display: block;
             margin-left: auto;
