@@ -2,11 +2,11 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     /*font-family: 'Poppins', sans-serif;*/
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #3c3c50;
 }
 
@@ -43,7 +43,7 @@ h2{
 
 h3 {
     font-size: 20px; 
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: 0.5px;
     color: #3c3c50; 
     margin-top: 20px;
@@ -78,11 +78,11 @@ h6 {
 
 body p {
     font-size: 18px; 
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 0em;
     line-height: 1.8em;
     text-transform: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 b {
@@ -124,7 +124,7 @@ header img {
     font-size: 26px;
     font-weight: 300;
     line-height: 40px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: oblique;
 }
 
@@ -141,30 +141,26 @@ header img {
 }
 
 #left-box .home-title {
-    margin-top: 24px;
     font-size: 28px;
     font-weight: 700;
     color: #3c3c50;
     opacity: 100%;
     letter-spacing: -.25px;
     font-family: 'Comfortaa', cursive;
+    margin-bottom: 24px;
 }
 
 #left-box .home-subtitle {
     font-size: 16px;
     font-weight: 400;
-    line-height: 16px;
-    margin: 0;
-    padding: 0;
+    letter-spacing: 0em;
     text-rendering: auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    letter-spacing: -.25px;
-    opacity: 60%;
+    opacity: 100%;
+    margin-bottom: 12px;
 }
 
 #left-box .summary {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     font-size: 16px; 
@@ -172,7 +168,7 @@ header img {
     letter-spacing: 0em;
     line-height: 1.7em;
     text-transform: none;
-    font-family: 'Open Sans', sans-serif;
+    opacity: 80%;
 }
 
 .item {
@@ -615,7 +611,7 @@ div#interview.row img{
     }
 
     .card-body .home-title {
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 700;
         color: #3c3c50;
         opacity: 100%;
@@ -635,8 +631,8 @@ div#interview.row img{
         text-rendering: auto;
         margin-top: 10px;
         letter-spacing: -.25px;
-        opacity: 60%;
-
+        opacity: 100%;
+        margin-bottom: 12px;
     }
 
     .overlay {
@@ -744,7 +740,7 @@ div#interview.row img{
         letter-spacing: 0em;
         line-height: 1.8em;
         text-transform: none;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Poppins', sans-serif;
         color: #fafafa;
     }
 
@@ -752,10 +748,22 @@ div#interview.row img{
         font-size: 26px;
         font-weight: 400;
         line-height: 50px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-style: oblique;
         margin: auto;
         width: 100%;
+    }
+
+    @media (min-width : 1024px) {
+        #left-box .home-title {
+            font-size: 46px !important;
+            font-weight: 700;
+            color: #3c3c50;
+            opacity: 100%;
+            letter-spacing: -.25px;
+            font-family: 'Comfortaa', cursive;
+            margin-bottom: 40px;
+        }
     }
 
     @media (min-width: 768px) {
@@ -823,39 +831,24 @@ div#interview.row img{
             z-index: +1;
         }
         
-        #left-box .home-title {
-            font-size: 46px !important;
-            font-weight: 700;
-            color: #3c3c50;
-            opacity: 100%;
-            letter-spacing: -.25px;
-            font-family: 'Comfortaa', cursive;
-            margin-top: 0px !important;
-        }
-        
         #left-box .home-subtitle {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 400;
             line-height: 16px;
-            margin: 0;
-            padding: 0;
             text-rendering: auto;
-            margin-top: 20px;
-            margin-bottom: 40px;
             letter-spacing: -.25px;
-            opacity: 60%;
+            opacity: 100%;
+            margin-bottom: 20px;
         }
         
         #left-box .summary {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            font-size: 18px; 
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px; 
             font-weight: 400;
             letter-spacing: 0em;
             line-height: 1.8em;
             text-transform: none;
-            font-family: 'Open Sans', sans-serif;
+            opacity: 80%;
         }
 
         .card-body .title-box {
