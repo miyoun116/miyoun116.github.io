@@ -335,6 +335,15 @@ footer img:hover {
       transform: rotate(360deg);
 }
 
+.bullet-list .individuall-bullet {
+    font-size: 18px; 
+    font-weight: 300;
+    letter-spacing: 0em;
+    line-height: 1.8em;
+    text-transform: none;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 .benefits {
     margin-top: 30px;
