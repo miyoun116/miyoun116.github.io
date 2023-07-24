@@ -290,7 +290,7 @@ work-link:hover {
     text-decoration: none;
     color: #1A1A23;
     font-weight: 400;
-    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    text-shadow: 0px 3px 6px rgba(166, 166, 166, 0.16), 0px 3px 6px rgba(40, 40, 40, 0.23);
     opacity: 1.0;
     filter: alpha(opacity=40);
     transition: ease .2s all;
@@ -657,6 +657,27 @@ div#interview.row img{
         line-height: 40px;
         letter-spacing: -.25px;
         font-family: 'Comfortaa', cursive;
+    }
+
+    .card-body:hover .home-title {
+        cursor: pointer;  
+        text-decoration: none;
+        color: #1A1A23;
+        font-size: 28px;
+        font-weight: 700;
+        text-shadow: 0px 3px 3px rgba(166, 166, 166, 0.16), 0px 3px 6px rgba(40, 40, 40, 0.23);
+        opacity: 1.0;
+        filter: alpha(opacity=40);
+        transition: ease .2s all;
+    }
+
+    .card-body:hover .bd-placeholder-img-lg {
+        cursor: pointer;  
+        text-decoration: none;
+        font-weight: 700;
+        opacity: 0.5;
+        filter: alpha(opacity=40);
+        transition: ease .2s all;
     }
 
     .card-body .home-subtitle {
