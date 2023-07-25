@@ -1012,4 +1012,8 @@ div#interview.row img{
         font-weight: 400;
         margin-top: 24px;
     }
+
+    .navbar .collapse {
+        padding-bottom: 12px;
+    }
 }
