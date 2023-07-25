@@ -213,11 +213,13 @@ header img {
     opacity: 100%;
 }
 
-.nav-item a:active {
+.nav-link.active {
     cursor: pointer;  
     text-decoration: none;
     color: #3c3c50;
     opacity: 100%;
+    font-weight: 400;
+    background-color: #ffffff !important;
 }
 
 .col-md-8 img{
