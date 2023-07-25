@@ -194,25 +194,26 @@ header img {
     color: #757575;
 }
 
-.navbar-brand img {
+.nav-item img {
     transition: transform .7s ease-in-out;
 }
 
-.nav a {
+.nav-item a {
     color: #3c3c50;
     opacity: 60%;
     font-size: 16px;
     font-weight: 400;
+    margin-left: 24px;
 }
 
-.nav a:hover {
+.nav-item a:hover {
     cursor: pointer;  
     text-decoration: none;
     color: #3c3c50;
     opacity: 100%;
 }
 
-.nav a:active {
+.nav-item a:active {
     cursor: pointer;  
     text-decoration: none;
     color: #3c3c50;
@@ -612,386 +613,407 @@ div#interview.row img{
 }
 
 
-    .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-    .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-    .card {
-        --bs-card-spacer-y: 6px !important;
-        --bs-card-spacer-x: 6px !important;
-        border-color: transparent;
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
     }
 
-    .card-body {
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    }
+
+.card {
+    --bs-card-spacer-y: 6px !important;
+    --bs-card-spacer-x: 6px !important;
+    border-color: transparent;
+}
+
+.card-body {
+    position: relative;
+    text-align: left;
+}
+
+.card-body .title-box {
+    position: absolute;
+    max-width: 80%;
+    top: 24px;
+    left: 24px;
+    z-index: +1;
+}
+
+.card-body .home-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3c3c50;
+    opacity: 100%;
+    line-height: 40px;
+    letter-spacing: -.25px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.card-body:hover .home-title {
+    cursor: pointer;  
+    text-decoration: none;
+    color: #1A1A23;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0px 3px 3px rgba(166, 166, 166, 0.16), 0px 3px 6px rgba(40, 40, 40, 0.23);
+    opacity: 1.0;
+    filter: alpha(opacity=40);
+    transition: ease .2s all;
+}
+
+.card-body:hover .bd-placeholder-img-lg {
+    cursor: pointer;  
+    text-decoration: none;
+    font-weight: 700;
+    opacity: 0.5;
+    filter: alpha(opacity=40);
+    transition: ease .2s all;
+}
+
+.card-body .home-subtitle {
+    font-size: 16px;
+    -moz-osx-font-smoothing: initial;
+    -webkit-font-smoothing: initial;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+    text-rendering: auto;
+    margin-top: 10px;
+    letter-spacing: -.25px;
+    opacity: 100%;
+    margin-bottom: 12px;
+}
+
+.overlay {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    background-image: linear-gradient(180deg,transparent 40%,rgba(0,0,0,.6));
+}
+
+.prototype-box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+    
+    .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    }
+
+.link-box {
+    display: inline;
+    text-align: center;
+}
+
+.link-box a{
+    text-decoration: none;
+}
+
+.link-box p{
+    background-color: #fafafa;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+#instagram-box video{
+    width: 80%;
+}
+
+.home-img {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#doodlelingo-box {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.bottom-nav {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position:absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: #242424;
+    padding-top: 40px;
+    padding-bottom:20px;
+}
+
+.bottom-box {
+    margin: 0px;
+}
+
+.bottom1 p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 0px;
+    margin-bottom: 40px;
+    letter-spacing: -.25px;
+    font-family: 'Comfortaa', cursive;
+    color: #fafafa;
+}
+
+.bottom1 a{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 0px;
+    letter-spacing: -.25px;
+    font-family: 'Comfortaa', cursive;
+    color: #5161F3;
+    text-decoration: none;
+}
+
+.bottom2 {
+    margin-top: 60px;
+}
+
+.bottom2 p{
+    font-size: 16px; 
+    font-weight: 300;
+    letter-spacing: 0em;
+    line-height: 1.8em;
+    text-transform: none;
+    font-family: 'Poppins', sans-serif;
+    color: #fafafa;
+}
+
+.point-sentence {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-style: oblique;
+    margin: auto;
+    width: 100%;
+}
+
+.navbar-toggler>.close {
+    display:inline;
+}
+.navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    display:none;
+}
+
+.navbar-toggler {
+    border-color: #ffffff;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+}
+
+@media (min-width : 1024px) {
+    #left-box .home-title {
+        font-size: 46px !important;
+        font-weight: 700;
+        color: #3c3c50;
+        opacity: 100%;
+        letter-spacing: -.25px;
+        font-family: 'Comfortaa', cursive;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+
+    .work-content {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        margin-bottom: 40px !important;
+    }
+
+    .topheader {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 50px;
+        margin-bottom: 40px;
+        letter-spacing: -.25px;
+        font-family: 'Comfortaa', cursive;
+    }
+
+    .row li {
+        font-size: 20px; 
+        color: #3c3c50;
+    }
+
+    .header-text2 {
+        text-align: left;
+        width: 60%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        color: #3c3c50;
+        opacity: 100%;
+    } 
+
+    .topheader {
+        font-size: 38px !important;
+        font-weight: 600 !important;
+        margin-bottom: 40px;
+        line-height: 60px !important;
+        letter-spacing: -.25px;
+        font-family: 'Comfortaa', cursive;
+    }
+
+    #left-box {
         position: relative;
         text-align: left;
+    }
+    
+    #left-box .title-box {
+        width: 30%;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: +1;
+    }
+    
+    #left-box .home-subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        text-rendering: auto;
+        letter-spacing: -.25px;
+        opacity: 100%;
+        margin-bottom: 20px;
+    }
+    
+    #left-box .summary {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px; 
+        font-weight: 400;
+        letter-spacing: 0em;
+        line-height: 1.8em;
+        text-transform: none;
+        opacity: 80%;
     }
 
     .card-body .title-box {
         position: absolute;
         max-width: 80%;
-        top: 24px;
-        left: 24px;
+        top: 50px;
+        left: 50px;
         z-index: +1;
     }
 
-    .card-body .home-title {
-        font-size: 28px;
-        font-weight: 700;
-        color: #3c3c50;
-        opacity: 100%;
-        line-height: 40px;
-        letter-spacing: -.25px;
-        font-family: 'Comfortaa', cursive;
+    .item {
+        font-size: 30px; 
     }
 
-    .card-body:hover .home-title {
-        cursor: pointer;  
-        text-decoration: none;
-        color: #1A1A23;
-        font-size: 28px;
-        font-weight: 700;
-        text-shadow: 0px 3px 3px rgba(166, 166, 166, 0.16), 0px 3px 6px rgba(40, 40, 40, 0.23);
-        opacity: 1.0;
-        filter: alpha(opacity=40);
-        transition: ease .2s all;
+    .subitem {
+        font-size: 22px; 
+        margin-bottom: 0px !important;
     }
 
-    .card-body:hover .bd-placeholder-img-lg {
-        cursor: pointer;  
-        text-decoration: none;
-        font-weight: 700;
-        opacity: 0.5;
-        filter: alpha(opacity=40);
-        transition: ease .2s all;
-    }
+    .box {
+        margin-top: 18px;
+        margin-bottom: 20px;
+    } 
 
-    .card-body .home-subtitle {
-        font-size: 16px;
-        -moz-osx-font-smoothing: initial;
-        -webkit-font-smoothing: initial;
+    .topheader {
+        font-size: 48px;
         font-weight: 400;
-        line-height: 16px;
-        margin: 0;
-        padding: 0;
-        text-rendering: auto;
-        margin-top: 10px;
-        letter-spacing: -.25px;
-        opacity: 100%;
-        margin-bottom: 12px;
-    }
-
-    .overlay {
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 0;
-        background-image: linear-gradient(180deg,transparent 40%,rgba(0,0,0,.6));
-    }
-
-    .prototype-box {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        padding-top: 56.25%; /* 16:9 Aspect Ratio */
-      }
-      
-      .responsive-iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-
-    .link-box {
-        display: inline;
-        text-align: center;
-    }
-
-    .link-box a{
-        text-decoration: none;
-    }
-
-    .link-box p{
-        background-color: #fafafa;
-        border-radius: 4px;
-        padding: 16px;
-    }
-
-    #instagram-box video{
-        width: 80%;
+        line-height: 76px;
+        margin-bottom: 40px;  
     }
 
     .home-img {
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     #doodlelingo-box {
-        margin-bottom: 0px;
-        margin-top: 0px;
+        margin-bottom: 0px !important;
+        margin-top: 40px !important;
     }
 
-    .bottom-nav {
+    .inner-box {
+        padding: 100px;
+    }
+
+    .color-box {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        position:absolute;
-        right: 0;
-        left: 0;
+        margin-bottom: 40px;
         width: 100%;
-        background-color: #242424;
-        padding-top: 40px;
-        padding-bottom:20px;
+        padding: 60px !important;
+        background-color: #FAFAFA;
+    }
+
+        .link-box {
+        display: none;
+    }
+
+    #instagram-box video{
+        width: 50%;
+    }
+
+    .project-content .project-subitem {
+        font-size: 28px; 
+        font-weight: 700;
+        color: #3c3c50; 
+        margin-top: 160px;
+        margin-bottom: 40px;
+        margin-left: 10px;
+        font-family: 'Comfortaa', cursive;
     }
 
     .bottom-box {
-        margin: 0px;
-    }
-
-    .bottom1 p{
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 0px;
-        margin-bottom: 40px;
-        letter-spacing: -.25px;
-        font-family: 'Comfortaa', cursive;
-        color: #fafafa;
-    }
-
-    .bottom1 a{
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 0px;
-        letter-spacing: -.25px;
-        font-family: 'Comfortaa', cursive;
-        color: #5161F3;
-        text-decoration: none;
-    }
-
-    .bottom2 {
-        margin-top: 60px;
-    }
-
-    .bottom2 p{
-        font-size: 16px; 
-        font-weight: 300;
-        letter-spacing: 0em;
-        line-height: 1.8em;
-        text-transform: none;
-        font-family: 'Poppins', sans-serif;
-        color: #fafafa;
+        margin: 40px !important;
     }
 
     .point-sentence {
-        font-size: 26px;
+        width: 70% !important;
+    }
+}
+@media (max-width : 768px) {
+    .prototype-box { display: none;
+    }
+}
+
+@media (max-width : 575px) {
+    .nav-item a {
+        color: #3c3c50;
+        opacity: 60%;
+        font-size: 16px;
         font-weight: 400;
-        line-height: 50px;
-        font-family: 'Poppins', sans-serif;
-        font-style: oblique;
-        margin: auto;
-        width: 100%;
+        margin-top: 24px;
     }
 
-    @media (min-width : 1024px) {
-        #left-box .home-title {
-            font-size: 46px !important;
-            font-weight: 700;
-            color: #3c3c50;
-            opacity: 100%;
-            letter-spacing: -.25px;
-            font-family: 'Comfortaa', cursive;
-            margin-bottom: 40px;
-        }
+    .navbar .collapse {
+        padding-bottom: 24px;
     }
-
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-
-        .nav a {
-            color: #3c3c50;
-            opacity: 60%;
-            font-size: 18px !important;
-            font-weight: 400;
-        }
-
-        .work-content {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%;
-            margin-bottom: 40px !important;
-        }
-
-        .topheader {
-            font-size: 32px;
-            font-weight: 600;
-            line-height: 50px;
-            margin-bottom: 40px;
-            letter-spacing: -.25px;
-            font-family: 'Comfortaa', cursive;
-        }
-
-        .row li {
-            font-size: 20px; 
-            color: #3c3c50;
-        }
-
-        .header-text2 {
-            text-align: left;
-            width: 60%;
-            margin-top: 100px;
-            margin-bottom: 100px;
-            color: #3c3c50;
-            opacity: 100%;
-        } 
-
-        .topheader {
-            font-size: 38px !important;
-            font-weight: 600 !important;
-            margin-bottom: 40px;
-            line-height: 60px !important;
-            letter-spacing: -.25px;
-            font-family: 'Comfortaa', cursive;
-        }
-
-        #left-box {
-            position: relative;
-            text-align: left;
-        }
-        
-        #left-box .title-box {
-            width: 30%;
-            position: absolute;
-            top: 40px;
-            left: 40px;
-            z-index: +1;
-        }
-        
-        #left-box .home-subtitle {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 16px;
-            text-rendering: auto;
-            letter-spacing: -.25px;
-            opacity: 100%;
-            margin-bottom: 20px;
-        }
-        
-        #left-box .summary {
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px; 
-            font-weight: 400;
-            letter-spacing: 0em;
-            line-height: 1.8em;
-            text-transform: none;
-            opacity: 80%;
-        }
-
-        .card-body .title-box {
-            position: absolute;
-            max-width: 80%;
-            top: 50px;
-            left: 50px;
-            z-index: +1;
-        }
-
-        .item {
-            font-size: 30px; 
-        }
-
-        .subitem {
-            font-size: 22px; 
-            margin-bottom: 0px !important;
-        }
-
-        .box {
-            margin-top: 18px;
-            margin-bottom: 20px;
-        } 
-
-        .topheader {
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 76px;
-            margin-bottom: 40px;  
-        }
-
-        .home-img {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        #doodlelingo-box {
-            margin-bottom: 0px !important;
-            margin-top: 40px !important;
-        }
-
-        .inner-box {
-            padding: 100px;
-        }
-
-        .color-box {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 40px;
-            width: 100%;
-            padding: 60px !important;
-            background-color: #FAFAFA;
-        }
-
-          .link-box {
-            display: none;
-        }
-
-        #instagram-box video{
-            width: 50%;
-        }
-
-        .project-content .project-subitem {
-            font-size: 28px; 
-            font-weight: 700;
-            color: #3c3c50; 
-            margin-top: 160px;
-            margin-bottom: 40px;
-            margin-left: 10px;
-            font-family: 'Comfortaa', cursive;
-        }
-
-        .bottom-box {
-            margin: 40px !important;
-        }
-
-        .point-sentence {
-            width: 70% !important;
-        }
-      }
-
-    @media (max-width : 768px) {
-        .prototype-box { display: none;
-        }
-    }
+}

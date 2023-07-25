@@ -5,29 +5,36 @@
 <html lang="en">
 
 <head>
-    <title>Doodle Lingo</title>
+    <title>Miyoun's portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/headers.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 
 <body>
     <script src="./js/bootstrap.min.js"></script>
-    <nav class="navbar sticky-top" style="background-color: #ffffff;">
+
+    <nav  class="navbar navbar-expand-sm sticky-top" id="myTopnav" style="background-color: #ffffff;">
         <div class="container-xl">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.html">  
                 <img id="logo" src="./img/logo.png" alt="logo">
             </a>
 
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="projects.html" class="nav-link">Work</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="./img/resume.pdf" class="nav-link">Resume</a></li>
-            </ul>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="my-1 mx-2 close">X</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav nav-pills ms-auto">
+                    <li class="nav-item mx-auto"><a href="projects.html" class="nav-link">Work</a></li>
+                    <li class="nav-item mx-auto"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item mx-auto"><a href="./img/resume.pdf" class="nav-link">Resume</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
