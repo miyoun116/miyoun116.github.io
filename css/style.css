@@ -261,15 +261,6 @@ header img {
     filter: alpha(opacity=100);
 }
 
-/*.work-link:hover {
-    cursor: pointer;  
-    text-decoration: none;
-    font-weight: 400;
-    opacity: 0.5;
-    filter: alpha(opacity=40);
-    transition: ease .5s all;
-}*/
-
 work-link:hover {
     cursor: pointer;  
     text-decoration: none;
@@ -298,7 +289,6 @@ work-link:hover {
     filter: alpha(opacity=40);
     transition: ease .2s all;
 }
-
 
 .work-content2 p {
     text-align: left;
@@ -356,10 +346,6 @@ work-link:hover {
     width: 70%;
 }
 
-.navbar-brand img:hover {
-      transform: rotate(360deg);
-    }
-
 footer img {
     transition: transform .7s ease-in-out;
 }
@@ -376,7 +362,6 @@ footer img:hover {
     text-transform: none;
     font-family: 'Poppins', sans-serif;
 }
-
 
 .benefits {
     margin-top: 30px;
@@ -426,6 +411,10 @@ div#bottom.col-md-4 {
 
 .navbar-brand img{
     height: 100%;  
+}
+
+.navbar-brand img:hover {
+    transform: rotate(360deg);
 }
 
 /* work page */
