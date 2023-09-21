@@ -411,6 +411,7 @@ div#bottom.col-md-4 {
 
 .navbar-brand img{
     height: 100%;  
+    transition: transform 1s ease;
 }
 
 .navbar-brand img:hover {
