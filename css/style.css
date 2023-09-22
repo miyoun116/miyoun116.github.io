@@ -823,6 +823,7 @@ div#interview.row img{
     box-shadow: 0 0 0 0;
 }
 
+
 @media (min-width : 1024px) {
     #left-box .home-title {
         font-size: 50px !important;
