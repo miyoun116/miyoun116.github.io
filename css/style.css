@@ -98,6 +98,24 @@ b {
     margin-top: 100px;
 }
 
+.page-header{
+    position: relative;
+    text-align: center;
+}
+
+.project-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: -.25px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 32px;
+    font-weight: bold;
+    color: #3c3c50;
+    opacity: 100%;
+}
+
 header img {
     width: 100%;
 }
@@ -369,23 +387,6 @@ footer img:hover {
     font-size: 16px; 
     font-weight: 300;
     opacity: 80%
-}
-
-header .work-header {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.work-header img {
-    width: 100%;
-}
-
-.work-header .work-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .work-content img {
@@ -825,6 +826,19 @@ div#interview.row img{
 
 
 @media (min-width : 1024px) {
+    .project-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: -.25px;
+        font-family: 'Comfortaa', cursive;
+        font-size: 50px;
+        font-weight: 700;
+        color: #3c3c50;
+        opacity: 100%;
+    }
+
     #left-box .home-title {
         font-size: 50px !important;
         font-weight: 700;
@@ -1096,5 +1110,18 @@ div#interview.row img{
 
     .navbar .collapse {
         padding-bottom: 12px;
+    }
+
+    .project-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: -.25px;
+        font-family: 'Comfortaa', cursive;
+        font-size: 26px;
+        font-weight: 700;
+        color: #3c3c50;
+        opacity: 100%;
     }
 }
