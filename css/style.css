@@ -141,7 +141,7 @@ header img {
 }
 
 #left-box .home-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: #3c3c50;
     opacity: 100%;
@@ -155,8 +155,8 @@ header img {
     font-weight: 400;
     letter-spacing: 0em;
     text-rendering: auto;
-    opacity: 100%;
-    margin-bottom: 12px;
+    opacity: 80%;
+    margin-bottom: 20px;
 }
 
 #left-box .summary {
@@ -284,9 +284,10 @@ work-link:hover {
     text-decoration: none;
     color: #1A1A23;
     font-weight: 400;
-    text-shadow: 0px 3px 6px rgba(166, 166, 166, 0.16), 0px 3px 6px rgba(40, 40, 40, 0.23);
+    /*text-shadow: 0px 3px 6px rgba(166, 166, 166, 0.16), 0px 3px 6px rgba(40, 40, 40, 0.23);*/
     opacity: 1.0;
     filter: alpha(opacity=40);
+
     transition: ease .2s all;
 }
 
@@ -325,7 +326,7 @@ work-link:hover {
 }
 
 .project-content .project-subitem {
-    font-size: 28px; 
+    font-size: 32px; 
     font-weight: 700;
     color: #3c3c50; 
     margin-top: 100px;
@@ -643,7 +644,7 @@ div#interview.row img{
 }
 
 .card-body .home-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: #3c3c50;
     opacity: 100%;
@@ -656,9 +657,9 @@ div#interview.row img{
     cursor: pointer;  
     text-decoration: none;
     color: #1A1A23;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
-    text-shadow: 0px 3px 3px rgba(166, 166, 166, 0.16), 0px 3px 6px rgba(40, 40, 40, 0.23);
+    /*text-shadow: 0px 3px 3px rgba(166, 166, 166, 0.16), 0px 3px 6px rgba(40, 40, 40, 0.23);*/
     opacity: 1.0;
     filter: alpha(opacity=40);
     transition: ease .2s all;
@@ -684,8 +685,8 @@ div#interview.row img{
     text-rendering: auto;
     margin-top: 10px;
     letter-spacing: -.25px;
-    opacity: 100%;
-    margin-bottom: 12px;
+    opacity: 80%;
+    margin-bottom: 20px;
 }
 
 .overlay {
@@ -824,7 +825,7 @@ div#interview.row img{
 
 @media (min-width : 1024px) {
     #left-box .home-title {
-        font-size: 46px !important;
+        font-size: 50px !important;
         font-weight: 700;
         color: #3c3c50;
         opacity: 100%;
@@ -898,8 +899,8 @@ div#interview.row img{
         line-height: 16px;
         text-rendering: auto;
         letter-spacing: -.25px;
-        opacity: 100%;
-        margin-bottom: 20px;
+        opacity: 80%;
+        margin-bottom: 30px;
     }
     
     #left-box .summary {
@@ -974,7 +975,7 @@ div#interview.row img{
     }
 
     .project-content .project-subitem {
-        font-size: 28px; 
+        font-size: 38px; 
         font-weight: 700;
         color: #3c3c50; 
         margin-top: 160px;
