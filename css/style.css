@@ -89,6 +89,13 @@ b {
     font-weight: 600;
 }
 
+.maincontent-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
 .page-title {
     text-align: center;
     letter-spacing: -.25px;
@@ -187,6 +194,14 @@ header img {
     line-height: 1.7em;
     text-transform: none;
     opacity: 80%;
+}
+
+.project_title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    font-family: 'Comfortaa', cursive;
+    text-align: left;
 }
 
 .item {
@@ -826,6 +841,13 @@ div#interview.row img{
 
 
 @media (min-width : 1024px) {
+    .maincontent-img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
     .project-title {
         position: absolute;
         top: 50%;
