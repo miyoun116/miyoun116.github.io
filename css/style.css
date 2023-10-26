@@ -113,19 +113,6 @@ b {
     margin-left: 10px;
 }
 
-.project-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    letter-spacing: -.25px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
-    color: #3c3c50;
-    opacity: 100%;
-}
-
 header img {
     width: 100%;
 }
@@ -161,64 +148,13 @@ header img {
     width: 60%;
 }
 
-/*#left-box {
-    position: relative;
-    text-align: left;
-}
-
-#left-box .title-box {
-    max-width: 80%;
-    margin-bottom: 20px;
-    padding-left: 24px;
-    padding-top: 24px;
-}
-
-#left-box .card-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #0B0B0B;
-    opacity: 100%;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 32px;
-}
-
-#left-box .home-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #3c3c50;
-    opacity: 100%;
-    letter-spacing: -.25px;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 24px;
-}
-
-#left-box .home-subtitle {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0em;
-    text-rendering: auto;
-    opacity: 80%;
-    margin-bottom: 20px;
-}
-
-#left-box .summary {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 16px; 
-    font-weight: 400;
-    letter-spacing: 0em;
-    line-height: 1.7em;
-    text-transform: none;
-    opacity: 80%;
-}*/
-
 .project_title {
-    font-size: 48px;
+    font-size: 54px;
     font-weight: 600;
     margin-bottom: 24px;
     font-family: 'Poppins', sans-serif;
     text-align: left;
+    letter-spacing: -.002em;
 }
 
 .item {
@@ -382,14 +318,14 @@ header img {
 }
 
 .project-subitem {
-    font-size: 32px;
+    font-size: 54px;
     font-weight: 600;
     color: #121212;
     opacity: 100%;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
-    line-height: 48px;
-    padding:  80px 0px 10px 0px;
+    line-height: 80px;
+    padding:  120px 0px 20px 0px;
 }
 
 .role-box {
@@ -680,6 +616,7 @@ div#interview.row img{
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
     line-height: 80px;
+    letter-spacing: -.0002em;
 }
 
 .card-text {
@@ -693,7 +630,11 @@ div#interview.row img{
 }
 
 .card-subtitle {
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: #121212;
+    font-size: 16px; 
+    font-weight: 500;
+    letter-spacing: .009em;
 }
 
 .card-body {
@@ -927,21 +868,7 @@ div#interview.row img{
         height: 600px;
         object-fit: cover;
         object-position: center;
-    }
-    
-    .project-title {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        letter-spacing: -.25px;
-        font-family: 'Poppins', sans-serif;
-        font-size: 64px;
-        font-weight: 700;
-        color: #3c3c50;
-        opacity: 100%;
-    }
-    
+    }    
 }
 
 @media (min-width: 768px) {
@@ -1000,14 +927,23 @@ div#interview.row img{
     }
 
     .project-subitem {
-        font-size: 48px;
+        font-size: 54px;
         font-weight: 600;
         color: #121212;
         opacity: 100%;
         font-family: 'Poppins', sans-serif;
         margin-bottom: 20px;
-        line-height: 72px;
+        line-height: 80px;
         padding:  120px 0px 20px 0px;
+    }
+
+    .project_title {
+        font-size: 54px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        letter-spacing: -.002em;
     }
 
     .bottom-box {
@@ -1026,6 +962,7 @@ div#interview.row img{
         font-family: 'Poppins', sans-serif;
         margin-bottom: 20px;
         line-height: 72px;
+        letter-spacing: -.0002em;
     }
 }
 
@@ -1081,6 +1018,7 @@ div#interview.row img{
         font-family: 'Poppins', sans-serif;
         margin-bottom: 20px;
         line-height: 54px;
+        letter-spacing: -.0002em;
     }
 
     .card-text {
@@ -1097,11 +1035,42 @@ div#interview.row img{
     .prototype-box { display: none;
     }
 
+    .project-subitem {
+        font-size: 48px;
+        font-weight: 600;
+        color: #121212;
+        opacity: 100%;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 20px;
+        line-height: 72px;
+        padding:  80px 0px 10px 0px;
+    }
+
+    .project_title {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        letter-spacing: -.002em;
+    }
+
     .card {
         min-height: 500px;
         min-width: 320px;
         border-radius: 12px;
         padding: 60px 40px 60px 40px;
+    }
+
+    .card .card-title {
+        font-size: 36px;
+        font-weight: 600;
+        color: #121212;
+        opacity: 100%;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 20px;
+        line-height: 54px;
+        letter-spacing: -.0002em;
     }
 
     .card-img-bottom img {
@@ -1149,23 +1118,41 @@ div#interview.row img{
         background-color: transparent !important;
     }
 
-    .project-title {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        letter-spacing: -.25px;
-        font-family: 'Poppins', sans-serif;
-        font-size: 26px;
-        font-weight: 700;
-        color: #3c3c50;
+    .project-subitem {
+        font-size: 36px;
+        font-weight: 600;
+        color: #121212;
         opacity: 100%;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 20px;
+        line-height: 54px;
+        padding:  80px 0px 10px 0px;
+    }
+
+    .project_title {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        letter-spacing: -.002em;
     }
 
     .card {
         min-height: 500px;
         min-width: 320px;
         padding: 40px 20px 40px 20px;
+    }
+
+    .card .card-title {
+        font-size: 28px;
+        font-weight: 600;
+        color: #121212;
+        opacity: 100%;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 20px;
+        line-height: 42px;
+        letter-spacing: -.0002em;
     }
 
     .card-img-bottom img {
