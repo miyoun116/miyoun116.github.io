@@ -307,7 +307,7 @@ header img {
     filter: alpha(opacity=100);
 }
 
-work-link:hover {
+.work-link:hover {
     cursor: pointer;  
     text-decoration: none;
     font-weight: 400;
@@ -316,7 +316,15 @@ work-link:hover {
     transition: ease .2s all;
 }
 
-.work-link:hover .home-img {
+*.work-link:hover .home-details {
+    cursor: pointer;  
+    text-decoration: none;
+    opacity: 60%;
+    filter: alpha(opacity=40);
+    transition: ease .2s all;
+}
+
+/*.work-link:hover .home-details {
     cursor: pointer;  
     text-decoration: none;
     font-weight: 400;
@@ -330,12 +338,10 @@ work-link:hover {
     text-decoration: none;
     color: #1A1A23;
     font-weight: 400;
-    /*text-shadow: 0px 3px 6px rgba(166, 166, 166, 0.16), 0px 3px 6px rgba(40, 40, 40, 0.23);*/
     opacity: 1.0;
     filter: alpha(opacity=40);
-
     transition: ease .2s all;
-}
+}*/
 
 .work-content2 p {
     text-align: left;
