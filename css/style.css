@@ -1071,7 +1071,11 @@ div#interview.row img{
         padding: 80px 60px 80px 60px;
     }
 
-    .card img {
+    .card-img-bottom img {
+        max-height: 300px;
+    }
+
+    .card-img-right img{
         max-height: 300px;
     }
 
@@ -1106,7 +1110,11 @@ div#interview.row img{
         padding: 60px 40px 60px 40px;
     }
 
-    .card img {
+    .card-img-bottom img {
+        max-height: 300px;
+    }
+
+    .card-img-right img{
         max-height: 300px;
     }
 }
@@ -1166,7 +1174,11 @@ div#interview.row img{
         padding: 40px 20px 40px 20px;
     }
 
-    .card img {
-        max-height: 250px;
+    .card-img-bottom img {
+        max-height: 300px;
+    }
+
+    .card-img-right img{
+        max-height: 300px;
     }
 }
