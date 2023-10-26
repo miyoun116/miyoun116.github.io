@@ -109,6 +109,10 @@ b {
     text-align: center;
 }
 
+.header-text {
+    margin-left: 10px;
+}
+
 .project-title {
     position: absolute;
     top: 50%;
