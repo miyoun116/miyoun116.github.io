@@ -107,6 +107,9 @@ b {
 .page-header{
     position: relative;
     text-align: center;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 100px;
 }
 
 .header-text {
@@ -116,13 +119,6 @@ b {
 header img {
     width: 100%;
 }
-
-.page-header {
-    text-align: left;
-    width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
-} 
 
 .header-text {
     margin-top: 200px;
@@ -151,7 +147,7 @@ header img {
 .project_title {
     font-size: 54px;
     font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: 50px;
     font-family: 'Poppins', sans-serif;
     text-align: left;
     letter-spacing: -.002em;
@@ -921,7 +917,7 @@ div#interview.row img{
     .project_title {
         font-size: 54px;
         font-weight: 600;
-        margin-bottom: 24px;
+        margin-bottom: 50px;
         font-family: 'Poppins', sans-serif;
         text-align: left;
         letter-spacing: -.002em;
@@ -1030,7 +1026,7 @@ div#interview.row img{
     .project_title {
         font-size: 48px;
         font-weight: 600;
-        margin-bottom: 24px;
+        margin-bottom: 50px;
         font-family: 'Poppins', sans-serif;
         text-align: left;
         letter-spacing: -.002em;
@@ -1113,7 +1109,7 @@ div#interview.row img{
     .project_title {
         font-size: 48px;
         font-weight: 600;
-        margin-bottom: 24px;
+        margin-bottom: 50px;
         font-family: 'Poppins', sans-serif;
         text-align: left;
         letter-spacing: -.002em;
