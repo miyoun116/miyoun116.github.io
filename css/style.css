@@ -765,6 +765,10 @@ div#interview.row img{
     transition: ease .2s all;
 }
 
+.home-details img{
+    position: relative;
+}
+
 .card-img-bottom {
     display: flex;
     align-items: center;
@@ -772,6 +776,10 @@ div#interview.row img{
 
 }
 .card-img-bottom img{
+    max-height: 400px;
+}
+
+.card-img-right img{
     max-height: 400px;
 }
 
