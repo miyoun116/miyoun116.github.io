@@ -296,7 +296,7 @@ b {
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
     line-height: 80px;
-    padding:  120px 0px 20px 0px;
+    padding:  120px 0px 20px 10px;
 }
 
 .role-box {
@@ -905,7 +905,7 @@ div#interview.row img{
         font-family: 'Poppins', sans-serif;
         margin-bottom: 20px;
         line-height: 80px;
-        padding:  120px 0px 20px 0px;
+        padding:  120px 0px 20px 10px;
     }
 
     .project-title {
@@ -1014,7 +1014,7 @@ div#interview.row img{
         font-family: 'Poppins', sans-serif;
         margin-bottom: 20px;
         line-height: 72px;
-        padding:  80px 0px 10px 0px;
+        padding:  80px 0px 10px 10px;
     }
 
     .project-title {
@@ -1097,7 +1097,7 @@ div#interview.row img{
         font-family: 'Poppins', sans-serif;
         margin-bottom: 20px;
         line-height: 54px;
-        padding:  80px 0px 10px 0px;
+        padding:  80px 0px 10px 10px;
     }
 
     .project-title {
