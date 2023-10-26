@@ -779,6 +779,12 @@ div#interview.row img{
     max-height: 400px;
 }
 
+.card-img-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .card-img-right img{
     max-height: 400px;
 }
@@ -1065,6 +1071,10 @@ div#interview.row img{
         padding: 80px 60px 80px 60px;
     }
 
+    .card img {
+        max-height: 300px;
+    }
+
     .card .card-title {
         font-size: 36px;
         font-weight: 600;
@@ -1094,6 +1104,10 @@ div#interview.row img{
         min-width: 320px;
         border-radius: 12px;
         padding: 60px 40px 60px 40px;
+    }
+
+    .card img {
+        max-height: 300px;
     }
 }
 
