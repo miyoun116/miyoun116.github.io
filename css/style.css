@@ -264,25 +264,6 @@ header img {
     transition: ease .2s all;
 }
 
-/*.work-link:hover .home-details {
-    cursor: pointer;  
-    text-decoration: none;
-    font-weight: 400;
-    opacity: 0.5;
-    filter: alpha(opacity=40);
-    transition: ease .2s all;
-}
-
-.work-link:hover .home-title {
-    cursor: pointer;  
-    text-decoration: none;
-    color: #1A1A23;
-    font-weight: 400;
-    opacity: 1.0;
-    filter: alpha(opacity=40);
-    transition: ease .2s all;
-}*/
-
 .work-content2 p {
     text-align: left;
 }
@@ -1161,5 +1142,11 @@ div#interview.row img{
 
     .card-img-right img{
         max-height: 250px;
+    }
+
+    .details-button {
+        width: 40px;
+        right: 20px;
+        bottom: 20px;
     }
 }
