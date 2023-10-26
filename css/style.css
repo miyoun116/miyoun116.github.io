@@ -1165,10 +1165,10 @@ div#interview.row img{
     }
 
     .card-img-bottom img {
-        max-height: 300px;
+        max-height: 250px;
     }
 
     .card-img-right img{
-        max-height: 300px;
+        max-height: 250px;
     }
 }
