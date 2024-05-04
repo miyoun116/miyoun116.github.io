@@ -1,0 +1,62 @@
+/* Miyoun Cho Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    color: #1B1D21;
+}
+
+#summary {
+    line-height: 2.5rem !important;
+}
+
+#top-img {
+    position: relative;
+    text-align: center;
+    height: 600px;
+    min-height: 400px;
+}
+
+.top-title {
+    position: absolute;
+    top: 5%;
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.content-box {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+} 
+
+
+
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+
+}
+
+/* XX-Large devices (larger desktops) */
+/* No media query since the xxl breakpoint has no upper bound on its width */
